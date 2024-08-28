@@ -1,0 +1,40 @@
+@use "config" as *;
+@forward "config";
+
+// .li-button{}
+@mixin b($block) {
+	$B: $namesapce + "-" + $block;
+	.#{$B} {
+		@content;
+	}
+}
+// .li-button.is-xxx
+@mixin when($state) {
+	@at-root {
+		&.#{$state-prefix + $state} {
+			@content;
+		}
+	}
+}
+// &--primary => .li-button--primary
+@mixin m($modifier) {
+	@at-root {
+		#{& + $modifier-separator + $modifier} {
+			@content;
+		}
+	}
+}
+// &--header => .li-button__header
+@mixin e($elem) {
+	@at-root {
+		#{& + $elem-separator + $elem} {
+			@content;
+		}
+	}
+}
+
+@mixin button-variant($color, $backgound-color, $border-color) {
+	color: $color;
+	background-color: $backgound-color;
+	border-color: $border-color;
+}

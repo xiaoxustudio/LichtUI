@@ -1,0 +1,139 @@
+// 定义间距变量
+$spacers: (
+	0: 0,
+	1: 0.25rem,
+	2: 0.5rem,
+	3: 1rem,
+	4: 1.5rem,
+	5: 3rem,
+	// 添加更多间距大小，如果需要
+);
+
+// 创建padding类
+@each $spacer, $size in $spacers {
+	.p-#{$spacer} {
+		padding: $size;
+	}
+	.px-#{$spacer} {
+		padding-right: $size;
+		padding-left: $size;
+	}
+	.py-#{$spacer} {
+		padding-top: $size;
+		padding-bottom: $size;
+	}
+}
+
+// 创建margin类
+@each $spacer, $size in $spacers {
+	.m-#{$spacer} {
+		margin: $size;
+	}
+	.mx-#{$spacer} {
+		margin-right: $size;
+		margin-left: $size;
+	}
+	.my-#{$spacer} {
+		margin-top: $size;
+		margin-bottom: $size;
+	}
+}
+
+// 可以添加更多原子化类，例如单边padding和margin
+@each $spacer, $size in $spacers {
+	.pt-#{$spacer} {
+		padding-top: $size;
+	}
+	.pr-#{$spacer} {
+		padding-right: $size;
+	}
+	.pb-#{$spacer} {
+		padding-bottom: $size;
+	}
+	.pl-#{$spacer} {
+		padding-left: $size;
+	}
+
+	.mt-#{$spacer} {
+		margin-top: $size;
+	}
+	.mr-#{$spacer} {
+		margin-right: $size;
+	}
+	.mb-#{$spacer} {
+		margin-bottom: $size;
+	}
+	.ml-#{$spacer} {
+		margin-left: $size;
+	}
+}
+@each $spacer, $size in $spacers {
+	.pt-#{$spacer} {
+		padding-top: $size;
+	}
+	.pr-#{$spacer} {
+		padding-right: $size;
+	}
+	.pb-#{$spacer} {
+		padding-bottom: $size;
+	}
+	.pl-#{$spacer} {
+		padding-left: $size;
+	}
+
+	.mt-#{$spacer} {
+		margin-top: $size;
+	}
+	.mr-#{$spacer} {
+		margin-right: $size;
+	}
+	.mb-#{$spacer} {
+		margin-bottom: $size;
+	}
+	.ml-#{$spacer} {
+		margin-left: $size;
+	}
+}
+
+// 定义宽度映射，例如，你可以定义宽度单位为百分比或像素
+$number-map: (
+	1: 8.33333%,
+	// 1/12
+	2: 16.66667%,
+	// 2/12
+	3: 25%,
+	// 3/12
+	4: 33.33333%,
+	// 4/12
+	5: 41.66667%,
+	// 5/12
+	6: 50%,
+	// 6/12
+	7: 58.33333%,
+	// 7/12
+	8: 66.66667%,
+	// 8/12
+	9: 75%,
+	// 9/12
+	10: 83.33333%,
+	// 10/12
+	11: 91.66667%,
+	// 11/12
+	12: 100%,
+	// 12/12
+);
+@each $num, $width in $number-map {
+	.w-#{$num} {
+		width: $width;
+	}
+}
+@each $num, $height in $number-map {
+	.h-#{$num} {
+		height: #{$height};
+	}
+}
+@for $i from 1 to 10 {
+	.g-#{$i} {
+		gap: #{$i + "px"};
+	}
+}

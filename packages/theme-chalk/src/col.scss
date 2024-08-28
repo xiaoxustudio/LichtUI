@@ -1,0 +1,53 @@
+@use "mixins/mixins.scss" as *;
+@use "sass:math";
+// 定义栅格系统的基础变量
+$columns: 24;
+$gutter-width: 0px;
+// 创建一个生成列宽度的mixin
+@mixin make-columns($class-prefix) {
+	@for $i from 1 through$columns {
+		&.li--#{$class-prefix}-#{$i} {
+			display: block;
+			flex: 0 0 #{percentage(calc($i / $columns))};
+			max-width: #{percentage(calc($i / $columns))};
+		}
+	}
+}
+
+// 创建一个生成偏移量的mixin
+@mixin make-offsets($class-prefix) {
+	@for $i from 1 through$columns {
+		&.li--offset-#{$class-prefix}-#{$i} {
+			margin-left: percentage(calc($i / $columns));
+		}
+	}
+}
+
+// 创建一个生成响应式断点的mixin
+@mixin respond-to($breakpoint) {
+	@if map-has-key($breakpoints, $breakpoint) {
+		@media (min-width: map-get($breakpoints,$breakpoint)) {
+			@content;
+		}
+	} @else {
+		@warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+	 + "Available breakpoints are: #{map-keys($breakpoints)}.";
+	}
+}
+
+@include b(col) {
+	position: relative;
+	width: 100%;
+	min-height: 1px;
+	padding-right: calc($gutter-width / 2);
+	padding-left: calc($gutter-width / 2);
+
+	@include make-columns("col");
+	@include make-offsets("");
+	@each $breakpoint, $value in $breakpoints {
+		@include respond-to($breakpoint) {
+			@include make-columns("col-#{$breakpoint}");
+			@include make-offsets("col-#{$breakpoint}");
+		}
+	}
+}

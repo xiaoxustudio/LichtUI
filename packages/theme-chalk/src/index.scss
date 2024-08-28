@@ -1,0 +1,10 @@
+@use "common/common.scss" as *;
+@use "common/var.scss" as *;
+body {
+	font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB",
+		"Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+	font-weight: 400;
+	font-size: $li--font-size-base;
+	color: $li--color-black;
+	-webkit-font-smoothing: antialiased;
+}

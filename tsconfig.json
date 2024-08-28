@@ -1,0 +1,36 @@
+{
+	"compilerOptions": {
+		"target": "ES2020",
+		"useDefineForClassFields": true,
+		"module": "ESNext",
+		"lib": ["ES2020", "DOM", "DOM.Iterable"],
+		"skipLibCheck": true,
+		"removeComments": true,
+		/* Bundler mode */
+		"allowImportingTsExtensions": true,
+		"isolatedModules": true,
+		"moduleDetection": "force",
+		"moduleResolution": "Node",
+		"noEmit": true,
+		"jsx": "preserve",
+		"experimentalDecorators": true,
+
+		/* Linting */
+		"strict": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"noFallthroughCasesInSwitch": true,
+		"paths": {
+			"@/*": ["./src/*"]
+		},
+		"types": ["vite/client"]
+	},
+	"exclude": ["node_module", "**/__test__", "dist/**"],
+	"ts-node": {
+		"compilerOptions": {
+			"module": "commonjs"
+		},
+		"transpileOnly": true,
+		"files": true
+	}
+}

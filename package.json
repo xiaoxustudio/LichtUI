@@ -1,0 +1,37 @@
+{
+	"private": true,
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"dev": "pnpm -C play dev",
+		"build": "",
+		"dev:docs": "pnpm -C docs docs:dev",
+		"build:docs": "pnpm -C docs docs:build",
+		"preview:docs": "pnpm -C docs docs:preview"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"@licht-ui/components": "workspace:^",
+		"@licht-ui/theme-chalk": "workspace:^",
+		"@licht-ui/utils": "workspace:^",
+		"shiki": "^1.14.1",
+		"typescript": "^5.5.4",
+		"vitepress-demoblock-xr": "^2.0.2",
+		"vue": "^3.4.38"
+	},
+	"devDependencies": {
+		"@typescript-eslint/eslint-plugin": "^8.2.0",
+		"@typescript-eslint/parser": "^8.2.0",
+		"@vue/eslint-config-typescript": "^13.0.0",
+		"eslint": "^9.9.1",
+		"eslint-plugin-vue": "^9.27.0",
+		"sass": "^1.77.8",
+		"ts-morph": "^23.0.0",
+		"ts-node": "^10.9.2",
+		"typescript-eslint": "^8.2.0",
+		"unplugin-vue-define-options": "^1.4.9"
+	}
+}

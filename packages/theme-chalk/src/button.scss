@@ -1,0 +1,277 @@
+@use "common/var" as *;
+@use "mixins/mixins" as *;
+
+@mixin button-hover($color) {
+	&:hover {
+		cursor: pointer;
+		background-color: rgba($color, 0.9);
+	}
+	&:active {
+		background-color: darken($color, 1%);
+		border-color: mix(
+			$li--color-black,
+			$color,
+			$li--button-active-shade-percent
+		);
+		outline: none;
+		scale: 0.95;
+	}
+}
+
+@include b(button) {
+	color: black;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	outline: none;
+	border: #fafafa;
+	border-radius: 5px;
+	user-select: none;
+	text-align: center;
+	box-sizing: border-box;
+	min-height: 32px;
+	line-height: 1;
+	vertical-align: middle;
+	white-space: nowrap;
+	padding: 0 20px;
+	transition: 0.1s;
+	background-color: $li--color-default;
+	& + .li-button {
+		margin-left: 12px;
+	}
+
+	&:hover {
+		border-color: $li--color-primary-light-7;
+		background-color: $li--color-primary-light-9;
+	}
+
+	@include m(tiny) {
+		padding: 0 15px;
+	}
+	@include m(small) {
+		padding: 0 18px;
+	}
+	@include m(medium) {
+		padding: 0 20px;
+	}
+	@include m(large) {
+		padding: 0 25px;
+	}
+
+	@include when(hover) {
+		&,
+		&:hover {
+			cursor: pointer;
+			background-color: darken($li--color-default, 10%);
+		}
+	}
+	@include when(round) {
+		border-radius: 20px;
+	}
+	@include m(default) {
+		&:hover {
+			cursor: pointer;
+			background-color: darken($li--color-default, 1%);
+		}
+		&:active {
+			background-color: darken($li--color-default, 5%);
+			border-color: mix(
+				$li--color-black,
+				$li--color-default,
+				$li--button-active-shade-percent
+			);
+			outline: none;
+			scale: 0.95;
+		}
+		@include when(plain) {
+			border: solid 1px $li--color-default-light-1;
+			background-color: $li--color-default;
+		}
+		@include when(disabled) {
+			&,
+			&:hover {
+				background-color: darken($li--color-default, 5%);
+				cursor: not-allowed;
+				color: #acacac;
+			}
+			&:active {
+				background-color: darken($li--color-default, 5%);
+				scale: 1;
+			}
+		}
+	}
+
+	// 类型
+	@include m(primary) {
+		@include button-variant(
+			$li--color-white,
+			$li--color-primary,
+			$li--color-primary
+		);
+		@include button-hover($li--color-primary);
+		@include when(plain) {
+			background-color: $li--color-primary-light-9;
+			border: solid 1px $li--color-primary-light-5;
+			color: $li--color-primary;
+			@include when(disabled) {
+				&,
+				&:hover,
+				&:active {
+					background-color: $li--color-primary-light-9;
+					border: solid 1px $li--color-primary-light-5;
+					cursor: not-allowed;
+					color: $li--color-primary-light-5;
+					scale: 1;
+				}
+			}
+		}
+		@include when(disabled) {
+			&,
+			&:hover,
+			&:active {
+				border-color: $li--color-primary-light-5;
+				background-color: $li--color-primary-light-5;
+				cursor: not-allowed;
+				color: white;
+				scale: 1;
+			}
+		}
+	}
+	@include m(success) {
+		@include button-variant(
+			$li--color-white,
+			$li--color-success,
+			$li--color-success
+		);
+		@include button-hover($li--color-success);
+		@include when(plain) {
+			background-color: $li--color-success-light-9;
+			border: solid 1px $li--color-success-light-5;
+			color: $li--color-success;
+			@include when(disabled) {
+				&,
+				&:hover,
+				&:active {
+					background-color: $li--color-success-light-9;
+					border: solid 1px $li--color-success-light-5;
+					cursor: not-allowed;
+					color: $li--color-success-light-5;
+					scale: 1;
+				}
+			}
+		}
+		@include when(disabled) {
+			&,
+			&:hover,
+			&:active {
+				border-color: $li--color-success-light-5;
+				background-color: $li--color-success-light-5;
+				cursor: not-allowed;
+				color: white;
+				scale: 1;
+			}
+		}
+	}
+	@include m(warning) {
+		@include button-variant(
+			$li--color-white,
+			$li--color-warning,
+			$li--color-warning
+		);
+		@include button-hover($li--color-warning);
+		@include when(plain) {
+			background-color: $li--color-warning-light-9;
+			border: solid 1px $li--color-warning-light-5;
+			color: $li--color-warning;
+			@include when(disabled) {
+				&,
+				&:hover,
+				&:active {
+					background-color: $li--color-warning-light-9;
+					border: solid 1px $li--color-warning-light-5;
+					cursor: not-allowed;
+					color: $li--color-warning-light-5;
+					scale: 1;
+				}
+			}
+		}
+		@include when(disabled) {
+			&,
+			&:hover,
+			&:active {
+				border-color: $li--color-warning-light-5;
+				background-color: $li--color-warning-light-5;
+				cursor: not-allowed;
+				color: white;
+				scale: 1;
+			}
+		}
+	}
+	@include m(danger) {
+		@include button-variant(
+			$li--color-white,
+			$li--color-danger,
+			$li--color-danger
+		);
+		@include button-hover($li--color-danger);
+		@include when(plain) {
+			background-color: $li--color-danger-light-9;
+			border: solid 1px $li--color-danger-light-5;
+			color: $li--color-danger;
+			@include when(disabled) {
+				&,
+				&:hover,
+				&:active {
+					background-color: $li--color-danger-light-9;
+					border: solid 1px $li--color-danger-light-5;
+					cursor: not-allowed;
+					color: $li--color-danger-light-5;
+					scale: 1;
+				}
+			}
+		}
+		@include when(disabled) {
+			&,
+			&:hover,
+			&:active {
+				border-color: $li--color-danger-light-5;
+				background-color: $li--color-danger-light-5;
+				cursor: not-allowed;
+				color: white;
+				scale: 1;
+			}
+		}
+	}
+	@include m(info) {
+		@include button-variant($li--color-white, $li--color-info, $li--color-info);
+		@include button-hover($li--color-info);
+		@include when(plain) {
+			background-color: $li--color-info-light-9;
+			border: solid 1px $li--color-info-light-5;
+			color: $li--color-info;
+			@include when(disabled) {
+				&,
+				&:hover,
+				&:active {
+					background-color: $li--color-info-light-9;
+					border: solid 1px $li--color-info-light-5;
+					cursor: not-allowed;
+					color: $li--color-info-light-5;
+					scale: 1;
+				}
+			}
+		}
+		@include when(disabled) {
+			&,
+			&:hover,
+			&:active {
+				border-color: $li--color-info-light-5;
+				background-color: $li--color-info-light-5;
+				cursor: not-allowed;
+				color: white;
+				scale: 1;
+			}
+		}
+	}
+}
