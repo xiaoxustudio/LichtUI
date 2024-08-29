@@ -1,0 +1,175 @@
+@use "mixins/mixins.scss" as *;
+@use "common/var.scss" as *;
+
+@include b(input) {
+	display: inline-flex;
+	flex-wrap: nowrap;
+	position: relative;
+	box-sizing: border-box;
+	box-shadow: 0 0 0 1px lighten($li--color-disbaled, 5%) inset;
+	padding: 1px 11px;
+	height: $li--input-base-height;
+	transition: 0.1s;
+	vertical-align: middle;
+	.show-password {
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		cursor: pointer;
+		user-select: none;
+	}
+	> span {
+		width: 20px;
+		text-wrap: nowrap;
+		font-size: $li--font-size-base;
+		vertical-align: middle;
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		color: $li--color-text-primary;
+		&.left-inner {
+			padding-right: 4px;
+		}
+		&.right-inner {
+			padding-left: 4px;
+		}
+	}
+	@include m(clearable) {
+		cursor: pointer;
+		transform: 0.1s;
+	}
+	> input {
+		width: 100%;
+		flex-grow: 1;
+		font-size: inherit;
+		appearance: none;
+		outline: none;
+		padding: 0;
+		outline: none;
+		border: none;
+		background: none;
+	}
+	&:hover {
+		box-shadow: 0 0 0 1px $li--disabled-border-base inset;
+	}
+	@include m(default) {
+		> input {
+			border-color: $li--color-default;
+		}
+		&:hover,
+		&:active {
+			box-shadow: 0 0 0 1px rgba($li--color-default, 0.5) inset;
+		}
+		@include when(foucs) {
+			box-shadow: 0 0 0 1px $li--border-color-base inset;
+		}
+		@include when(disabled) {
+			box-shadow: 0 0 0 1px rgba($li--color-default, 0.85) inset;
+			background-color: rgba($li--color-disbaled, 0.55);
+			cursor: not-allowed;
+			> input {
+				cursor: not-allowed;
+			}
+		}
+	}
+	@include m(primary) {
+		> input {
+			border-color: $li--color-primary;
+		}
+		&:hover,
+		&:active {
+			box-shadow: 0 0 0 1px rgba($li--color-primary, 0.5) inset;
+		}
+		@include when(foucs) {
+			box-shadow: 0 0 0 1px $li--color-primary inset;
+		}
+		@include when(disabled) {
+			box-shadow: 0 0 0 1px rgba($li--color-primary, 0.15) inset;
+			background-color: rgba($li--color-disbaled, 0.55);
+			cursor: not-allowed;
+			> input {
+				cursor: not-allowed;
+			}
+		}
+	}
+	@include m(success) {
+		> input {
+			border-color: $li--color-success;
+		}
+		&:hover,
+		&:active {
+			box-shadow: 0 0 0 1px rgba($li--color-success, 0.5) inset;
+		}
+		@include when(foucs) {
+			box-shadow: 0 0 0 1px $li--color-success inset;
+		}
+		@include when(disabled) {
+			box-shadow: 0 0 0 1px rgba($li--color-success, 0.15) inset;
+			background-color: rgba($li--color-disbaled, 0.55);
+			cursor: not-allowed;
+			> input {
+				cursor: not-allowed;
+			}
+		}
+	}
+	@include m(danger) {
+		> input {
+			border-color: $li--color-danger;
+		}
+		&:hover,
+		&:active {
+			box-shadow: 0 0 0 1px rgba($li--color-danger, 0.5) inset;
+		}
+		@include when(foucs) {
+			box-shadow: 0 0 0 1px $li--color-danger inset;
+		}
+		@include when(disabled) {
+			box-shadow: 0 0 0 1px rgba($li--color-danger, 0.15) inset;
+			background-color: rgba($li--color-disbaled, 0.55);
+			cursor: not-allowed;
+			> input {
+				cursor: not-allowed;
+			}
+		}
+	}
+	@include m(warning) {
+		> input {
+			border-color: $li--color-warning;
+		}
+		&:hover,
+		&:active {
+			box-shadow: 0 0 0 1px rgba($li--color-warning, 0.5) inset;
+		}
+		@include when(foucs) {
+			box-shadow: 0 0 0 1px $li--color-warning inset;
+		}
+		@include when(disabled) {
+			box-shadow: 0 0 0 1px rgba($li--color-warning, 0.15) inset;
+			background-color: rgba($li--color-disbaled, 0.55);
+			cursor: not-allowed;
+			> input {
+				cursor: not-allowed;
+			}
+		}
+	}
+	@include m(info) {
+		> input {
+			border-color: $li--color-info;
+		}
+		&:hover,
+		&:active {
+			box-shadow: 0 0 0 1px rgba($li--color-info, 0.5) inset;
+		}
+		@include when(foucs) {
+			box-shadow: 0 0 0 1px $li--color-info inset;
+		}
+		@include when(disabled) {
+			box-shadow: 0 0 0 1px rgba($li--color-info, 0.15) inset;
+			background-color: rgba($li--color-disbaled, 0.55);
+			cursor: not-allowed;
+			> input {
+				cursor: not-allowed;
+			}
+		}
+	}
+}

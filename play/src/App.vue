@@ -1,5 +1,10 @@
 <script setup lang="ts">
-	import { AddCircle } from "@vicons/ionicons5";
+	import { AddCircle, CubeOutline } from "@vicons/ionicons5";
+	import { ref } from 'vue';
+	const val = ref('')
+	const handleChange = () => {
+		console.log(val.value)
+	}
 </script>
 
 <template>
@@ -10,7 +15,9 @@
 			</div>
 		</LiCol>
 		<LiCol>
-			<LiIcon><AddCircle /></LiIcon>
+			<LiIcon>
+				<AddCircle />
+			</LiIcon>
 			<LiIcon :size="25">
 				<AddCircle />
 			</LiIcon>
@@ -93,6 +100,60 @@
 			<LiText tag="mline">底部线</LiText>
 			<LiText tag="tline">底部线</LiText>
 			<LiText tag="mark">着重</LiText>
+		</LiCol>
+		<LiCol>
+			<div style="background-color: #eee; padding: 5px 2px">
+				<b>文本组件</b>
+			</div>
+		</LiCol>
+		<LiCol>
+			<LiInput label="$"></LiInput>
+			<LiInput label="$" v-model="val" @change="handleChange" clearable></LiInput>
+		</LiCol>
+		<LiCol>
+			<LiInput>
+				<template #label>
+					<LiIcon>
+						<CubeOutline />
+					</LiIcon>
+				</template>
+			</LiInput>
+			<LiInput>
+				<template #suffix>
+					<LiIcon>
+						<CubeOutline />
+					</LiIcon>
+				</template>
+			</LiInput>
+		</LiCol>
+		<LiCol>
+			<LiInput type="default" disabled></LiInput>
+			<LiInput type="primary" disabled></LiInput>
+			<LiInput type="success" disabled></LiInput>
+			<LiInput type="danger" disabled></LiInput>
+			<LiInput type="warning" disabled></LiInput>
+			<LiInput type="info" disabled></LiInput>
+		</LiCol>
+		<LiCol>
+			<LiInput type="default"></LiInput>
+		</LiCol>
+		<LiCol>
+			<LiInput type="primary"></LiInput>
+		</LiCol>
+		<LiCol>
+			<LiInput type="success"></LiInput>
+		</LiCol>
+		<LiCol>
+			<LiInput type="danger"></LiInput>
+		</LiCol>
+		<LiCol>
+			<LiInput type="warning"></LiInput>
+		</LiCol>
+		<LiCol>
+			<LiInput type="info"></LiInput>
+		</LiCol>
+		<LiCol>
+			<LiInput ntype="password" show-password></LiInput>
 		</LiCol>
 	</LiRow>
 </template>

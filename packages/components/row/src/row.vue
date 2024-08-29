@@ -1,15 +1,12 @@
 <template>
-	<div
-		:class="[
-			bem.b(),
-			bem.is('row', direction === 'row'),
-			bem.is('column', direction === 'column'),
-		]"
-		:style="{
+	<div :class="[
+		bem.b(),
+		bem.is('row', direction === 'row'),
+		bem.is('column', direction === 'column'),
+	]" :style="{
 			marginLeft: gutter ? `${gutter / 2}px` : '',
 			marginRight: gutter ? `${gutter / 2}px` : '',
-		}"
-	>
+		}">
 		<slot />
 	</div>
 </template>
@@ -19,8 +16,9 @@
 	defineOptions({
 		name: "LiRow",
 	});
+	defineProps(rowProp);
+
 	const bem = createNamespace("row");
 
-	defineProps(rowProp);
 </script>
 <style scope lang="scss"></style>

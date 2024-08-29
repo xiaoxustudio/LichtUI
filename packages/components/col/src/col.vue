@@ -9,8 +9,9 @@
 	defineOptions({
 		name: "LiCol",
 	});
+	defineProps(colProp);
+
 	const bem = createNamespace("col");
 
-	defineProps(colProp);
 </script>
 <style scope lang="scss"></style>

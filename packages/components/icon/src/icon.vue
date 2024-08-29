@@ -7,11 +7,11 @@
 	import { createNamespace } from "@licht-ui/utils/create";
 	import { computed } from "vue";
 	import { iconProp } from "./icon";
-
-	const bemClass = createNamespace("icon");
 	defineOptions({
 		name: "LiIcon",
 	});
+	const bemClass = createNamespace("icon");
+
 	const prop = defineProps(iconProp);
 	const style = computed(() => {
 		return {

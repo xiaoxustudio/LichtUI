@@ -31,7 +31,7 @@
 		border-radius: 4px;
 	}
 </style>
-<demo src="../../components/layout.vue" desc="通过使用`row`组件和`col`组件，并通过向`col`组件传递`span`参数进行自由的布局操作" ></demo>
+<demo src="../../components/base/layout.vue" desc="通过使用`row`组件和`col`组件，并通过向`col`组件传递`span`参数进行自由的布局操作" ></demo>
 
 
 

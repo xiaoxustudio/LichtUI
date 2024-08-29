@@ -7,56 +7,239 @@ $li--color-danger: #f25353 !default;
 $li--color-info: #a3a8c3 !default;
 $li--color-default: #eee !default;
 
-$li--color-default-light-1: mix($li--color-white, $li--color-default, 10%) !default;
-$li--color-default-light-2: mix($li--color-white, $li--color-default, 20%) !default;
-$li--color-default-light-3: mix($li--color-white, $li--color-default, 30%) !default;
-$li--color-default-light-4: mix($li--color-white, $li--color-default, 40%) !default;
-$li--color-default-light-5: mix($li--color-white, $li--color-default, 50%) !default;
-$li--color-default-light-6: mix($li--color-white, $li--color-default, 60%) !default;
-$li--color-default-light-7: mix($li--color-white, $li--color-default, 70%) !default;
-$li--color-default-light-8: mix($li--color-white, $li--color-default, 80%) !default;
-$li--color-default-light-9: mix($li--color-white, $li--color-default, 90%) !default;
+$li--color-disbaled: #e5e5e5 !default;
 
+$li--input-base-height: 30px !default;
 
-$li--color-primary-light-1: mix($li--color-white, $li--color-primary, 10%) !default;
-$li--color-primary-light-2: mix($li--color-white, $li--color-primary, 20%) !default;
-$li--color-primary-light-3: mix($li--color-white, $li--color-primary, 30%) !default;
-$li--color-primary-light-4: mix($li--color-white, $li--color-primary, 40%) !default;
-$li--color-primary-light-5: mix($li--color-white, $li--color-primary, 50%) !default;
-$li--color-primary-light-6: mix($li--color-white, $li--color-primary, 60%) !default;
-$li--color-primary-light-7: mix($li--color-white, $li--color-primary, 70%) !default;
-$li--color-primary-light-8: mix($li--color-white, $li--color-primary, 80%) !default;
-$li--color-primary-light-9: mix($li--color-white, $li--color-primary, 90%) !default;
+$li--color-default-light-1: mix(
+	$li--color-white,
+	$li--color-default,
+	10%
+) !default;
+$li--color-default-light-2: mix(
+	$li--color-white,
+	$li--color-default,
+	20%
+) !default;
+$li--color-default-light-3: mix(
+	$li--color-white,
+	$li--color-default,
+	30%
+) !default;
+$li--color-default-light-4: mix(
+	$li--color-white,
+	$li--color-default,
+	40%
+) !default;
+$li--color-default-light-5: mix(
+	$li--color-white,
+	$li--color-default,
+	50%
+) !default;
+$li--color-default-light-6: mix(
+	$li--color-white,
+	$li--color-default,
+	60%
+) !default;
+$li--color-default-light-7: mix(
+	$li--color-white,
+	$li--color-default,
+	70%
+) !default;
+$li--color-default-light-8: mix(
+	$li--color-white,
+	$li--color-default,
+	80%
+) !default;
+$li--color-default-light-9: mix(
+	$li--color-white,
+	$li--color-default,
+	90%
+) !default;
 
-$li--color-success-light-1: mix($li--color-white, $li--color-success, 10%) !default;
-$li--color-success-light-2: mix($li--color-white, $li--color-success, 20%) !default;
-$li--color-success-light-3: mix($li--color-white, $li--color-success, 30%) !default;
-$li--color-success-light-4: mix($li--color-white, $li--color-success, 40%) !default;
-$li--color-success-light-5: mix($li--color-white, $li--color-success, 50%) !default;
-$li--color-success-light-6: mix($li--color-white, $li--color-success, 60%) !default;
-$li--color-success-light-7: mix($li--color-white, $li--color-success, 70%) !default;
-$li--color-success-light-8: mix($li--color-white, $li--color-success, 80%) !default;
-$li--color-success-light-9: mix($li--color-white, $li--color-success, 90%) !default;
+$li--color-primary-light-1: mix(
+	$li--color-white,
+	$li--color-primary,
+	10%
+) !default;
+$li--color-primary-light-2: mix(
+	$li--color-white,
+	$li--color-primary,
+	20%
+) !default;
+$li--color-primary-light-3: mix(
+	$li--color-white,
+	$li--color-primary,
+	30%
+) !default;
+$li--color-primary-light-4: mix(
+	$li--color-white,
+	$li--color-primary,
+	40%
+) !default;
+$li--color-primary-light-5: mix(
+	$li--color-white,
+	$li--color-primary,
+	50%
+) !default;
+$li--color-primary-light-6: mix(
+	$li--color-white,
+	$li--color-primary,
+	60%
+) !default;
+$li--color-primary-light-7: mix(
+	$li--color-white,
+	$li--color-primary,
+	70%
+) !default;
+$li--color-primary-light-8: mix(
+	$li--color-white,
+	$li--color-primary,
+	80%
+) !default;
+$li--color-primary-light-9: mix(
+	$li--color-white,
+	$li--color-primary,
+	90%
+) !default;
 
-$li--color-warning-light-1: mix($li--color-white, $li--color-warning, 10%) !default;
-$li--color-warning-light-2: mix($li--color-white, $li--color-warning, 20%) !default;
-$li--color-warning-light-3: mix($li--color-white, $li--color-warning, 30%) !default;
-$li--color-warning-light-4: mix($li--color-white, $li--color-warning, 40%) !default;
-$li--color-warning-light-5: mix($li--color-white, $li--color-warning, 50%) !default;
-$li--color-warning-light-6: mix($li--color-white, $li--color-warning, 60%) !default;
-$li--color-warning-light-7: mix($li--color-white, $li--color-warning, 70%) !default;
-$li--color-warning-light-8: mix($li--color-white, $li--color-warning, 80%) !default;
-$li--color-warning-light-9: mix($li--color-white, $li--color-warning, 90%) !default;
+$li--color-success-light-1: mix(
+	$li--color-white,
+	$li--color-success,
+	10%
+) !default;
+$li--color-success-light-2: mix(
+	$li--color-white,
+	$li--color-success,
+	20%
+) !default;
+$li--color-success-light-3: mix(
+	$li--color-white,
+	$li--color-success,
+	30%
+) !default;
+$li--color-success-light-4: mix(
+	$li--color-white,
+	$li--color-success,
+	40%
+) !default;
+$li--color-success-light-5: mix(
+	$li--color-white,
+	$li--color-success,
+	50%
+) !default;
+$li--color-success-light-6: mix(
+	$li--color-white,
+	$li--color-success,
+	60%
+) !default;
+$li--color-success-light-7: mix(
+	$li--color-white,
+	$li--color-success,
+	70%
+) !default;
+$li--color-success-light-8: mix(
+	$li--color-white,
+	$li--color-success,
+	80%
+) !default;
+$li--color-success-light-9: mix(
+	$li--color-white,
+	$li--color-success,
+	90%
+) !default;
 
-$li--color-danger-light-1: mix($li--color-white, $li--color-danger, 10%) !default;
-$li--color-danger-light-2: mix($li--color-white, $li--color-danger, 20%) !default;
-$li--color-danger-light-3: mix($li--color-white, $li--color-danger, 30%) !default;
-$li--color-danger-light-4: mix($li--color-white, $li--color-danger, 40%) !default;
-$li--color-danger-light-5: mix($li--color-white, $li--color-danger, 50%) !default;
-$li--color-danger-light-6: mix($li--color-white, $li--color-danger, 60%) !default;
-$li--color-danger-light-7: mix($li--color-white, $li--color-danger, 70%) !default;
-$li--color-danger-light-8: mix($li--color-white, $li--color-danger, 80%) !default;
-$li--color-danger-light-9: mix($li--color-white, $li--color-danger, 90%) !default;
+$li--color-warning-light-1: mix(
+	$li--color-white,
+	$li--color-warning,
+	10%
+) !default;
+$li--color-warning-light-2: mix(
+	$li--color-white,
+	$li--color-warning,
+	20%
+) !default;
+$li--color-warning-light-3: mix(
+	$li--color-white,
+	$li--color-warning,
+	30%
+) !default;
+$li--color-warning-light-4: mix(
+	$li--color-white,
+	$li--color-warning,
+	40%
+) !default;
+$li--color-warning-light-5: mix(
+	$li--color-white,
+	$li--color-warning,
+	50%
+) !default;
+$li--color-warning-light-6: mix(
+	$li--color-white,
+	$li--color-warning,
+	60%
+) !default;
+$li--color-warning-light-7: mix(
+	$li--color-white,
+	$li--color-warning,
+	70%
+) !default;
+$li--color-warning-light-8: mix(
+	$li--color-white,
+	$li--color-warning,
+	80%
+) !default;
+$li--color-warning-light-9: mix(
+	$li--color-white,
+	$li--color-warning,
+	90%
+) !default;
+
+$li--color-danger-light-1: mix(
+	$li--color-white,
+	$li--color-danger,
+	10%
+) !default;
+$li--color-danger-light-2: mix(
+	$li--color-white,
+	$li--color-danger,
+	20%
+) !default;
+$li--color-danger-light-3: mix(
+	$li--color-white,
+	$li--color-danger,
+	30%
+) !default;
+$li--color-danger-light-4: mix(
+	$li--color-white,
+	$li--color-danger,
+	40%
+) !default;
+$li--color-danger-light-5: mix(
+	$li--color-white,
+	$li--color-danger,
+	50%
+) !default;
+$li--color-danger-light-6: mix(
+	$li--color-white,
+	$li--color-danger,
+	60%
+) !default;
+$li--color-danger-light-7: mix(
+	$li--color-white,
+	$li--color-danger,
+	70%
+) !default;
+$li--color-danger-light-8: mix(
+	$li--color-white,
+	$li--color-danger,
+	80%
+) !default;
+$li--color-danger-light-9: mix(
+	$li--color-white,
+	$li--color-danger,
+	90%
+) !default;
 
 $li--color-info-light-1: mix($li--color-white, $li--color-info, 10%) !default;
 $li--color-info-light-2: mix($li--color-white, $li--color-info, 20%) !default;
@@ -68,12 +251,32 @@ $li--color-info-light-7: mix($li--color-white, $li--color-info, 70%) !default;
 $li--color-info-light-8: mix($li--color-white, $li--color-info, 80%) !default;
 $li--color-info-light-9: mix($li--color-white, $li--color-info, 90%) !default;
 
-$li--color-success-light: mix($li--color-white, $li--color-success, 80%) !default;
-$li--color-success-lighter: mix($li--color-white, $li--color-success, 90%) !default;
-$li--color-warning-light: mix($li--color-white, $li--color-warning, 80%) !default;
-$li--color-warning-lighter: mix($li--color-white, $li--color-warning, 90%) !default;
+$li--color-success-light: mix(
+	$li--color-white,
+	$li--color-success,
+	80%
+) !default;
+$li--color-success-lighter: mix(
+	$li--color-white,
+	$li--color-success,
+	90%
+) !default;
+$li--color-warning-light: mix(
+	$li--color-white,
+	$li--color-warning,
+	80%
+) !default;
+$li--color-warning-lighter: mix(
+	$li--color-white,
+	$li--color-warning,
+	90%
+) !default;
 $li--color-danger-light: mix($li--color-white, $li--color-danger, 80%) !default;
-$li--color-danger-lighter: mix($li--color-white, $li--color-danger, 90%) !default;
+$li--color-danger-lighter: mix(
+	$li--color-white,
+	$li--color-danger,
+	90%
+) !default;
 $li--color-info-light: mix($li--color-white, $li--color-info, 80%) !default;
 $li--color-info-lighter: mix($li--color-white, $li--color-info, 90%) !default;
 
@@ -132,7 +335,8 @@ $li--border-color-extra-light: #f2f6fc !default;
 $li--border-width-base: 1px !default;
 $li--border-style-base: solid !default;
 $li--border-color-hover: $li--color-text-placeholder !default;
-$li--border-base: $li--border-width-base $li--border-style-base $li--border-color-base !default;
+$li--border-base: $li--border-width-base $li--border-style-base
+	$li--border-color-base !default;
 /// borderRadius|1|Radius|0
 $li--border-radius-base: 4px !default;
 /// borderRadius|1|Radius|0

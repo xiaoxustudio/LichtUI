@@ -27,7 +27,7 @@ export default defineConfig({
 				],
 			},
 			{
-				text: "基础组件",
+				text: "Base 基础",
 				items: [
 					{
 						text: "Button 按钮",
@@ -40,6 +40,15 @@ export default defineConfig({
 					{
 						text: "Text 文本",
 						link: "/home/base/text",
+					},
+				],
+			},
+			{
+				text: "Form 表单",
+				items: [
+					{
+						text: "Input 输入框",
+						link: "/home/form/input",
 					},
 				],
 			},
