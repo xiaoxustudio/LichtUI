@@ -33,7 +33,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/xiaoxustudio/licht-ui.git"
+		"url": "https://github.com/xiaoxustudio/LichtUI.git"
 	},
 	"dependencies": {
 		"@licht-ui/components": "workspace:^",
@@ -41,13 +41,14 @@
 		"@licht-ui/utils": "workspace:^",
 		"shiki": "^1.14.1",
 		"typescript": "^5.5.4",
-		"vitepress-demoblock-xr": "^2.0.2",
 		"vue": "^3.4.38"
 	},
 	"devDependencies": {
 		"@types/node": "^22.5.1",
 		"@typescript-eslint/eslint-plugin": "^8.2.0",
 		"@typescript-eslint/parser": "^8.2.0",
+		"@vitepress-demo-preview/component": "^2.3.2",
+		"@vitepress-demo-preview/plugin": "^1.2.3",
 		"@vue/eslint-config-typescript": "^13.0.0",
 		"eslint": "^9.9.1",
 		"eslint-plugin-vue": "^9.27.0",

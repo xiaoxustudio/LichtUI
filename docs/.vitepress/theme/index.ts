@@ -3,13 +3,17 @@ import DefaultTheme from "vitepress/theme";
 
 import LichtUI from "@licht-ui/components";
 import "@licht-ui/theme-chalk/index.scss";
-import demo from "vitepress-demoblock-xr/demo.vue";
+
 import "./index.scss";
+import { AntDesignContainer, ElementPlusContainer, NaiveUIContainer } from '@vitepress-demo-preview/component'
+import '@vitepress-demo-preview/component/dist/style.css'
+
+
 export default {
 	...DefaultTheme,
 	enhanceApp(ctx) {
 		const { app } = ctx;
-		app.component("demo", demo);
+		app.component('demo-preview', ElementPlusContainer)
 		LichtUI.install(app);
 	},
 } satisfies Theme;

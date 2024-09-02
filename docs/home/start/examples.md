@@ -1,7 +1,7 @@
 
 # Examples
 
-<demo src="./example.vue"></demo>
+<preivew src="./vitepress/example.vue"></preivew>
 
 ## More
 

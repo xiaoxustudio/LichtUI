@@ -1,5 +1,7 @@
+import { fileURLToPath, URL } from "node:url";
 import { defineConfig } from "vitepress";
-import demoblock from "vitepress-demoblock-xr";
+import { containerPreview, componentPreview } from '@vitepress-demo-preview/plugin'
+
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -11,7 +13,6 @@ export default defineConfig({
 			{ text: "首页", link: "/" },
 			{ text: "示例", link: "/home/start/examples" },
 		],
-
 		sidebar: [
 			{
 				text: "开发指南",
@@ -57,9 +58,8 @@ export default defineConfig({
 				items: [{ text: "示例", link: "/home/start/examples" }],
 			},
 		],
-
 		socialLinks: [
-			{ icon: "github", link: "https://github.com/xiaoxustudio/licht-ui" },
+			{ icon: "github", link: "https://github.com/xiaoxustudio/LichtUI" },
 		],
 		footer: {
 			message: "Released under the MIT License.",
@@ -68,7 +68,17 @@ export default defineConfig({
 	},
 	markdown: {
 		config: (md) => {
-			md.use(demoblock);
+			md.use(containerPreview)
+			md.use(componentPreview)
+		},
+	},
+	base: "/LichtUI/",
+	vite: {
+		resolve: {
+			alias: {
+				// 示例别名
+				"@": fileURLToPath(new URL("../", import.meta.url)),
+			},
 		},
 	},
 });

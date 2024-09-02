@@ -6,19 +6,19 @@
 
 基础用法
 
-<demo src="../../components/base/text/text.vue" ></demo>
+<preview path="../../components/base/text/text.vue" ></preview>
 
 ## 标记
 
 使用`tag`控制文本的变化
 
-<demo src="../../components/base/text/text-tag.vue" ></demo>
+<preview path="../../components/base/text/text-tag.vue" ></preview>
 
 ## 截断
 
 使用`truncated`截断文本
 
-<demo src="../../components/base/text/text-truncated.vue" ></demo>
+<preview path="../../components/base/text/text-truncated.vue" ></preview>
 
 ## Row Attributes
 

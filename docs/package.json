@@ -5,12 +5,12 @@
 	"main": "index.js",
 	"scripts": {
 		"docs:dev": "vitepress dev --port 5000",
-		"docs:build": "vitepress build  --port 5000",
+		"docs:build": "vitepress build",
 		"docs:preview": "vitepress preview --port 5000"
 	},
 	"keywords": [],
 	"author": "",
-	"license": "ISC",
+	"license": "MIT",
 	"dependencies": {
 		"vitepress": "^1.3.4"
 	}

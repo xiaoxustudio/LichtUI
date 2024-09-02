@@ -6,21 +6,19 @@
 
 基础的按钮用法。
 
-<demo src="../../components/base/button/button.vue" desc="按钮基本用法，可以使用`type`控制按钮样式" ></demo>
-
+<preview  path='../../components/base/button/button.vue'></preview>
 
 ## 无装饰
 
 无装饰的按钮用法。
 
-<demo src="../../components/base/button/button-plain.vue" desc="使用`plain`控制" ></demo>
+<preview path="../../components/base/button/button-plain.vue" description="使用`plain`控制"></preview>
 
 ## 圆角
 
 圆角的按钮用法。
 
-<demo src="../../components/base/button/button-round.vue" desc="使用`round`控制" ></demo>
-
+<preview  path="../../components/base/button/button-round.vue" description="使用`round`控制"></preview>
 
 ## Attributes
 

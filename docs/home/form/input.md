@@ -4,26 +4,26 @@
 
 ## 基础用法
 
-<demo src="../../components/form/input/input.vue"></demo>
+<preview path="../../components/form/input/input.vue"></preview>
 
 ## 禁用状态
 
 使用`disabled`控制禁用状态
 
-<demo src="../../components/form/input/input-disabled.vue"></demo>
+<preview path="../../components/form/input/input-disabled.vue"></preview>
 
 ## 清空
 
 使用`clearable`控制清空状态
 
-<demo src="../../components/form/input/input-clearable.vue"></demo>
+<preview path="../../components/form/input/input-clearable.vue"></preview>
 
 
 ## 输入框类型
 
 使用`type`控制输入框类型 
 
-<demo src="../../components/form/input/input-type.vue"></demo>
+<preview path="../../components/form/input/input-type.vue"></preview>
 
 ::: warning
 注意和原始类型区分
@@ -33,7 +33,7 @@
 
 使用`ntype`控制输入框类型 
 
-<demo src="../../components/form/input/input-ntype.vue"></demo>
+<preview path="../../components/form/input/input-ntype.vue"></preview>
 
 ::: warning
 注意和输入框类型区分
@@ -43,11 +43,11 @@
 
 使用`label`控制左侧标签
 
-<demo src="../../components/form/input/input-label.vue"></demo>
+<preview path="../../components/form/input/input-label.vue"></preview>
 
 ## 自定义插槽
 
-<demo src="../../components/form/input/input-custom.vue"></demo>
+<preview path="../../components/form/input/input-custom.vue"></preview>
 
 
 
