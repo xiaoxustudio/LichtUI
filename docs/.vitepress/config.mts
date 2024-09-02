@@ -11,6 +11,7 @@ export default defineConfig({
 		// https://vitepress.dev/reference/default-theme-config
 		nav: [
 			{ text: "首页", link: "/" },
+			{ text: "组件", link: "/home/base/button" },
 			{ text: "示例", link: "/home/start/examples" },
 		],
 		sidebar: [
@@ -73,6 +74,7 @@ export default defineConfig({
 		},
 	},
 	base: "/LichtUI/",
+	outDir: '../public',
 	vite: {
 		resolve: {
 			alias: {
