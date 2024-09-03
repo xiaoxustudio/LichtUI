@@ -1,3 +1,4 @@
+import baseComponentsProp from "@licht-ui/utils/baseComponents";
 import { ExtractPropTypes, PropType } from "vue";
 const _dirType = ["column", "row"];
 type DirType = (typeof _dirType)[number];
@@ -8,4 +9,4 @@ export const rowProp = {
 		default: 0,
 	},
 } as const;
-export type RowProp = ExtractPropTypes<typeof rowProp>;
+export type RowProp = ExtractPropTypes<typeof rowProp & baseComponentsProp>;

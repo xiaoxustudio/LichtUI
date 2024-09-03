@@ -1,9 +1,21 @@
 <script setup lang="ts">
+	import { DropdownProp } from "@licht-ui/components/dropdown";
 	import { AddCircle, CubeOutline } from "@vicons/ionicons5";
 	import { ref } from 'vue';
 	const val = ref('')
+	const dropdown: DropdownProp['list'] = []
+	for (let i in new Array(3).fill(1).map((_val, index) => index)) {
+		dropdown.push({
+			id: i.toString(),
+			label: "列表" + i,
+			data: { id: i }
+		})
+	}
 	const handleChange = () => {
 		console.log(val.value)
+	}
+	const handleDropdownItem = (index: any, item: any) => {
+		console.log(index, item)
 	}
 </script>
 
@@ -154,6 +166,19 @@
 		</LiCol>
 		<LiCol>
 			<LiInput ntype="password" show-password></LiInput>
+		</LiCol>
+		<LiCol>
+			<div style="background-color: #eee; padding: 5px 2px">
+				<b>导航组件</b>
+			</div>
+		</LiCol>
+		<LiCol style="height: 1000px;">
+			<LiDropDown :list="dropdown" @command="handleDropdownItem">
+				<LiButton>测试</LiButton>
+			</LiDropDown>
+			<LiDropDown :list="dropdown" @command="handleDropdownItem" position="top">
+				<LiButton>测试</LiButton>
+			</LiDropDown>
 		</LiCol>
 	</LiRow>
 </template>

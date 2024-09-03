@@ -12,8 +12,9 @@
 npm i -D licht-ui
 ```
 
-# 字体
+# 图标
 
+图标我们使用 `ionicons5`
 ```sh
 npm i -D @vicons/ionicons5
 ```

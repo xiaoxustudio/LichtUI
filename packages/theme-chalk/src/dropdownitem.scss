@@ -1,0 +1,16 @@
+@use "mixins/mixins.scss" as *;
+@use "common/var.scss" as *;
+
+@include b(dropdownitem) {
+	position: relative;
+	padding: 5px 16px;
+	cursor: pointer;
+	user-select: none;
+	transition: 0.1s;
+	width: 100%;
+	white-space: nowrap;
+	line-height: 22px;
+	&:hover {
+		background-color: rgba($li--color-black, 0.05);
+	}
+}
