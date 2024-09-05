@@ -1,7 +1,9 @@
 import { fileURLToPath, URL } from "node:url";
 import { defineConfig } from "vitepress";
-import { containerPreview, componentPreview } from '@vitepress-demo-preview/plugin'
-
+import {
+	containerPreview,
+	componentPreview,
+} from "@vitepress-demo-preview/plugin";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -55,6 +57,15 @@ export default defineConfig({
 				],
 			},
 			{
+				text: "Nav 导航",
+				items: [
+					{
+						text: "DropDown 下拉菜单",
+						link: "/home/nav/dropdown",
+					},
+				],
+			},
+			{
 				text: "Examples",
 				items: [{ text: "示例", link: "/home/start/examples" }],
 			},
@@ -69,12 +80,12 @@ export default defineConfig({
 	},
 	markdown: {
 		config: (md) => {
-			md.use(containerPreview)
-			md.use(componentPreview)
+			md.use(containerPreview);
+			md.use(componentPreview);
 		},
 	},
 	base: "/LichtUI/",
-	outDir: '../public',
+	outDir: "../public",
 	vite: {
 		resolve: {
 			alias: {

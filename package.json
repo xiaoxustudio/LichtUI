@@ -1,10 +1,8 @@
 {
 	"private": true,
+	"name": "licht-ui",
 	"version": "1.0.0",
-	"description": "",
-	"main": "dist/index.es.js",
-	"module": "dist/index.es.js",
-	"unpkg": "dist/index.umd.js",
+	"description": "Licht UI 是一个基于Vue3开发的轻量级组件库",
 	"scripts": {
 		"dev": "pnpm -C play dev",
 		"build": "ts-node script/build",
@@ -23,14 +21,6 @@
 	],
 	"author": "",
 	"license": "MIT",
-	"exports": {
-		".": {
-			"import": "./dist/index.es.js",
-			"require": "./dist/index.umd.js",
-			"types": "./dist/types/index.d.ts"
-		},
-		"./*": "./*"
-	},
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/xiaoxustudio/LichtUI.git"

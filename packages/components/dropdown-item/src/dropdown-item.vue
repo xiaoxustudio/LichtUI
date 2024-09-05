@@ -1,5 +1,5 @@
 <template>
-    <div v-bind="$props" :class="[bem.b()]">
+    <div :class="[bem.b()]">
         <LiCol>
             {{ text }}
         </LiCol>

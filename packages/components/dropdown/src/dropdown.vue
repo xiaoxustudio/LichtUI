@@ -11,7 +11,7 @@
 </template>
 <script setup lang="ts">
 	import { createNamespace } from "@licht-ui/utils/create";
-	import { dropdownEmits, dropdownProp, ListItem } from "./dropdown";
+	import { dropdownEmits, dropdownProp, DropdownDataItem } from "./dropdown";
 	import { CSSProperties, onMounted, onUnmounted, ref, useSlots, watch } from "vue";
 
 	defineOptions({
@@ -29,7 +29,7 @@
 		top: 'auto',
 	})
 	const handleItem = (item:
-		ListItem, index:
+		DropdownDataItem, index:
 			number) => {
 		emit('command', index, item)
 	}
@@ -44,7 +44,8 @@
 			cssStyle.value.transform = ''
 		}
 		const element = slotRef.value;
-		const drc = document.querySelector(`#${randid}`)!;
+		const drc = document.querySelector(`#${randid}`);
+		if (!drc) return
 		const elementRect = element.getBoundingClientRect();
 		const drcRect = drc.getBoundingClientRect();
 		const Reset = () => {

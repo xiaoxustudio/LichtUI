@@ -1,14 +1,5 @@
-.demo {
-	--vp-c-divider-light: rgba(60, 60, 60, 0.12); // 边框颜色
-	--vp-shadow-2: none; // 悬浮阴影
-	--vp-c-brand: #42b883; // 控制按钮悬浮时的文字颜色
-	--vp-c-brand-dimm: none; // 控制按钮悬浮时的背景色
-	--vp-c-text-2: rgba(60, 60, 60, 0.7); // desc文字颜色
-	--vp-c-bg-soft: #fff; //desc框背景色
-	--vp-c-gray-light-2: #c7c7c7; //展开代码or收起代码 文字颜色
-	.demo-show_desc {
-		border: none !important;
-	}
+.vitepress-demo-preview__element-plus__container {
+	overflow: inherit !important;
 }
 .dark {
 	color: white;

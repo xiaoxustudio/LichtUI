@@ -8,6 +8,7 @@
 		"removeComments": true,
 		/* Bundler mode */
 		"allowImportingTsExtensions": true,
+		"allowSyntheticDefaultImports": true,
 		"isolatedModules": true,
 		"moduleDetection": "force",
 		"moduleResolution": "Node",
@@ -23,9 +24,9 @@
 		"paths": {
 			"@/*": ["./src/*"]
 		},
-		"types": ["vite/client"]
+		"types": ["vite/client", "unplugin-vue-define-options/macros-global"]
 	},
-	"exclude": ["node_module", "**/__test__", "dist/**"],
+	"exclude": ["node_module", "**/__test__", "dist/**", "licht-ui/**"],
 	"ts-node": {
 		"compilerOptions": {
 			"module": "commonjs"
