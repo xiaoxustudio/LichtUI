@@ -15,6 +15,8 @@
 
 适用于`中小型`的项目使用，我们旨在用`简洁快速`的组件开发 PC 网站后台产品。
 
+我们的创作灵感来源于[Element Plus](https://github.com/element-plus/element-plus)
+
 ## 安装
 
 ```bash

@@ -59,7 +59,7 @@
 | type     | 类型     | string  | default / primary / success / warning / info / danger | `default` |
 | ntype    | 原始类型 | string  |                                                       | `text`    |
 
-## Slots 
+## Input Slots 
 
 | 插槽名 | 说明     |
 | ------ | -------- |

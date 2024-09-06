@@ -6,6 +6,8 @@ import LiText from "./text";
 import LiInput from "./input";
 import LiDropDown from "./dropdown";
 import LiDropDownItem from "./dropdown-item";
+import LiMenu from "./menu";
+import LiMenuItem from "./menu-item";
 export * from "./button";
 export * from "./icon";
 export * from "./row";
@@ -14,6 +16,8 @@ export * from "./text";
 export * from "./input";
 export * from "./dropdown";
 export * from "./dropdown-item";
+export * from "./menu";
+export * from "./menu-item";
 const List = [
 	LiButton,
 	LiIcon,
@@ -23,6 +27,8 @@ const List = [
 	LiInput,
 	LiDropDown,
 	LiDropDownItem,
+	LiMenu,
+	LiMenuItem,
 ];
 export {
 	LiButton,
@@ -33,6 +39,8 @@ export {
 	LiInput,
 	LiDropDown,
 	LiDropDownItem,
+	LiMenu,
+	LiMenuItem,
 };
 
 export default {

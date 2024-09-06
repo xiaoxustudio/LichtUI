@@ -17,10 +17,31 @@
 	const handleDropdownItem = (index: any, item: any) => {
 		console.log(index, item)
 	}
+	const list = [
+		{
+			icon: 'https://s3.bmp.ovh/imgs/2024/08/28/136ab813ae9e0e5f.png'
+		},
+		{
+			label: "首页",
+		},
+		{
+			label: "合集",
+		},
+		{
+			label: "我的",
+		},
+	]
 </script>
 
 <template>
 	<LiRow>
+		<LiCol style="margin-bottom: 5%;">
+			<LiMenu :default-index="1" :list="list">
+				<template v-for="index in 3" #[index]>
+					页面{{ index }}
+				</template>
+			</LiMenu>
+		</LiCol>
 		<LiCol>
 			<div style="background-color: #eee; padding: 5px 2px">
 				<b>图标组件</b>

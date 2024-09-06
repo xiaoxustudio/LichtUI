@@ -60,6 +60,10 @@ export default defineConfig({
 				text: "Nav 导航",
 				items: [
 					{
+						text: "Menu 菜单",
+						link: "/home/nav/menu",
+					},
+					{
 						text: "DropDown 下拉菜单",
 						link: "/home/nav/dropdown",
 					},

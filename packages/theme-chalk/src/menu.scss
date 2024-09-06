@@ -1,0 +1,20 @@
+@use "./common/var.scss" as *;
+@use "./mixins/mixins.scss" as *;
+
+@include b(menu) {
+	margin: 0;
+	list-style: none;
+	position: relative;
+	padding-left: 0;
+	box-sizing: border-box;
+	border-bottom: solid 1px darken($li--color-default, 4%);
+	@include m(row) {
+		display: flex;
+		flex-wrap: nowrap;
+		border-right: none;
+		height: 60px;
+		> :nth-child(1) {
+			margin-right: auto;
+		}
+	}
+}

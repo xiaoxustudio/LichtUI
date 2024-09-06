@@ -1,0 +1,28 @@
+@use "./common/var.scss" as *;
+@use "./mixins/mixins.scss" as *;
+
+@include b(menuitem) {
+	position: relative;
+	box-sizing: border-box;
+	display: inline-flex;
+	transition: 0.1s;
+	cursor: pointer;
+	user-select: none;
+	justify-content: center;
+	align-items: center;
+	list-style: none;
+	line-height: 56px;
+	padding: 0 20px;
+	&:hover {
+		background-color: rgba($li--color-black, 0.05);
+	}
+	@include m(icon) {
+		width: inherit;
+		height: inherit;
+		object-fit: contain;
+		padding: 0 5px;
+	}
+	@include m(active) {
+		border-bottom: solid 1px blue;
+	}
+}
