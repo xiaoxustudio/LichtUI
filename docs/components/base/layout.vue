@@ -65,12 +65,18 @@
 		height: 36px;
 		background-color: lightgray;
 	}
+
 	.grid-content-light {
 		border-radius: 4px;
 		min-height: 36px;
 		height: 36px;
 		background-color: rgb(235, 235, 235);
 	}
+
+	.li-row {
+		margin-bottom: 16px;
+	}
+
 	.li-col {
 		border-radius: 4px;
 	}

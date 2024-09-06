@@ -68,7 +68,7 @@
 				Reset()
 			}
 		} else if (prop.position === "top") {
-			cssStyle.value.transformOrigin = `bottom`;
+			cssStyle.value.transformOrigin = `center bottom`;
 			if (drcRect.height - elementRect.top < 0) {
 				cssStyle.value.top = 'auto';
 				cssStyle.value.bottom = `${elementRect.height}px`;

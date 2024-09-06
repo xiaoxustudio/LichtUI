@@ -11,26 +11,7 @@
 ## 基础用法
 
 通过使用`row`组件和`col`组件，并通过向`col`组件传递`span`参数进行自由的布局操作
-<style>
-	.grid-content {
-		border-radius: 4px;
-		min-height: 36px;
-		height: 36px;
-		background-color: lightgray;
-	}
-	.grid-content-light {
-		border-radius: 4px;
-		min-height: 36px;
-		height: 36px;
-		background-color: rgb(235, 235, 235);
-	}
-	.li-row{
-		margin-bottom:16px;
-	}
-	.li-col {
-		border-radius: 4px;
-	}
-</style>
+
 <preview path="../../components/base/layout.vue" desciption="通过使用`row`组件和`col`组件，并通过向`col`组件传递`span`参数进行自由的布局操作" ></preview>
 
 
