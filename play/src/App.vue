@@ -173,6 +173,12 @@
 			</div>
 		</LiCol>
 		<LiCol style="height: 1000px;">
+			<LiDropDown :list="dropdown" @command="handleDropdownItem" trigger="click">
+				<LiButton>测试</LiButton>
+			</LiDropDown>
+			<LiDropDown :list="dropdown" @command="handleDropdownItem" position="top" trigger="click">
+				<LiButton>测试</LiButton>
+			</LiDropDown>
 			<LiDropDown :list="dropdown" @command="handleDropdownItem">
 				<LiButton>测试</LiButton>
 			</LiDropDown>

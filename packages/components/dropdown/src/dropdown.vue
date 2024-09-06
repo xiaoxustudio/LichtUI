@@ -1,10 +1,11 @@
 <template>
-	<div :class="[bem.b()]" v-if="slots?.default" @mouseenter="is_show = true" @mouseleave="is_show = false">
+	<div :class="[bem.b()]" v-if="slots?.default" @mouseenter="trigger == 'hover' ? is_show = true : ''"
+		@mouseleave="trigger == 'hover' ? is_show = false : ''">
 		<LiRow :id="randid" :style="cssStyle" :class="[bem.m('container')]">
 			<LiDropDownItem :key="'dropdownitem' + index + item.id" v-for="(item, index) in list" :text="item.label"
 				:meta="item?.data" @click="handleItem(item, index)"></LiDropDownItem>
 		</LiRow>
-		<div ref="slotRef">
+		<div ref="slotRef" @click.stop="handleSlot">
 			<slot />
 		</div>
 	</div>
@@ -33,7 +34,9 @@
 			number) => {
 		emit('command', index, item)
 	}
-
+	const handleSlot = () => {
+		prop.trigger == 'click' ? is_show.value = !is_show.value : ''
+	}
 	const bem = createNamespace("dropdown");
 
 	const scrollEvent = () => {
@@ -74,11 +77,20 @@
 			}
 		}
 	}
+	const clickEvent = (e: MouseEvent) => {
+		if (slotRef.value && e.target && prop.trigger == 'click') {
+			const dom = slotRef.value
+			if (e.currentTarget !== dom)
+				is_show.value = false
+		}
+	}
 	watch([is_show], scrollEvent)
 	onMounted(() => {
 		window.addEventListener('scroll', scrollEvent);
+		window.addEventListener('click', clickEvent);
 	})
 	onUnmounted(() => {
-		window.addEventListener('scroll', scrollEvent);
+		window.removeEventListener('scroll', scrollEvent);
+		window.removeEventListener('click', clickEvent);
 	})
 </script>

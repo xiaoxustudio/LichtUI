@@ -5,6 +5,7 @@ export interface DropdownDataItem {
 	data?: any;
 }
 const _pos = ["top", "bottom"];
+const _trigger = ["hover", "click"];
 export const dropdownProp = {
 	list: {
 		type: Array as PropType<DropdownDataItem[]>,
@@ -13,6 +14,10 @@ export const dropdownProp = {
 	position: {
 		type: String as PropType<(typeof _pos)[number]>,
 		default: "bottom",
+	},
+	trigger: {
+		type: String as PropType<(typeof _trigger)[number]>,
+		default: "hover",
 	},
 };
 export type dropdownEmits = {

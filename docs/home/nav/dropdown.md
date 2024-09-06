@@ -14,6 +14,12 @@
 
 <preview path="../../components/nav/dropdown/dropdown-position.vue" ></preview>
 
+## 触发方式
+
+使用`trigger`进行控制，可选值：`click`、`hover`(默认)
+
+<preview path="../../components/nav/dropdown/dropdown-trigger.vue" ></preview>
+
 ## 事件
 
 使用`command`进行拦截，可接收点击项的参数
@@ -22,12 +28,13 @@
 
 ## DropDown Attributes
 
-| 参数     | 说明     | 类型   | 可选值     | 默认值   |
-| -------- | -------- | ------ | ---------- | -------- |
-| position | 显示位置 | string | top/bottom | `bottom` |
+| 参数     | 说明     | 类型   | 可选值      | 默认值    |
+| -------- | -------- | ------ | ----------- | --------- |
+| position | 显示位置 | string | top/bottom  | `bottom`  |
+| trigger  | 触发方式 | string | click/hover | `trigger` |
 
 ## DropDown Events
 
-| 事件    | 参数                                  | 说明               |
-| ------- | ------------------------------------- | ------------------ |
+| 事件    | 参数                                      | 说明               |
+| ------- | ----------------------------------------- | ------------------ |
 | command | index: `number` ，data:`DropDownDataItem` | 可接收点击项的参数 |
