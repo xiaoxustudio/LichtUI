@@ -8,7 +8,7 @@ hero:
   text: "基于Vue3的UI组件库"
   tagline: TypeScript、简洁、方便
   image:
-    src: public/Logo.png
+    src: /Logo.png
     alt: logo
   actions:
     - theme: brand
