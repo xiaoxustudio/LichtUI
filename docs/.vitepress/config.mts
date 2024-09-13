@@ -54,6 +54,10 @@ export default defineConfig({
 						text: "Input 输入框",
 						link: "/home/form/input",
 					},
+					{
+						text: "CheckBox 复选框",
+						link: "/home/form/checkbox",
+					},
 				],
 			},
 			{
