@@ -4,7 +4,7 @@
 @include b(checkbox) {
 	font-size: $li--font-size-base;
 	display: inline-flex;
-	align-items: flex-start;
+	align-items: center;
 	justify-content: center;
 	position: relative;
 	padding: 0 2px;
