@@ -3,6 +3,7 @@
 	import { AddCircle, CubeOutline } from "@vicons/ionicons5";
 	import { ref } from 'vue';
 	const val = ref('')
+	const booleanVal = ref(false)
 	const dropdown: DropdownProp['list'] = []
 	for (let i in new Array(3).fill(1).map((_val, index) => index)) {
 		dropdown.push({
@@ -136,7 +137,7 @@
 		</LiCol>
 		<LiCol>
 			<div style="background-color: #eee; padding: 5px 2px">
-				<b>文本组件</b>
+				<b>表单组件</b>
 			</div>
 		</LiCol>
 		<LiCol>
@@ -187,6 +188,22 @@
 		</LiCol>
 		<LiCol>
 			<LiInput ntype="password" show-password></LiInput>
+		</LiCol>
+		<LiCol>
+			<LiCheckBox v-model="booleanVal">测试</LiCheckBox>
+			<LiCheckBox type="primary" v-model="booleanVal">测试</LiCheckBox>
+			<LiCheckBox type="success" v-model="booleanVal">测试</LiCheckBox>
+			<LiCheckBox type="danger" v-model="booleanVal">测试</LiCheckBox>
+			<LiCheckBox type="warning" v-model="booleanVal">测试</LiCheckBox>
+			<LiCheckBox type="info" v-model="booleanVal">测试</LiCheckBox>
+		</LiCol>
+		<LiCol>
+			<LiCheckBox disabled v-model="booleanVal">测试</LiCheckBox>
+			<LiCheckBox disabled type="primary" v-model="booleanVal" label="测试" />
+			<LiCheckBox disabled type="success" v-model="booleanVal">测试</LiCheckBox>
+			<LiCheckBox disabled type="danger" v-model="booleanVal">测试</LiCheckBox>
+			<LiCheckBox disabled type="warning" v-model="booleanVal">测试</LiCheckBox>
+			<LiCheckBox disabled type="info" v-model="booleanVal">测试</LiCheckBox>
 		</LiCol>
 		<LiCol>
 			<div style="background-color: #eee; padding: 5px 2px">

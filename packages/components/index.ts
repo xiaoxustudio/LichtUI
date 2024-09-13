@@ -4,6 +4,7 @@ import LiRow from "./row";
 import LiCol from "./col";
 import LiText from "./text";
 import LiInput from "./input";
+import LiCheckBox from "./checkbox";
 import LiDropDown from "./dropdown";
 import LiDropDownItem from "./dropdown-item";
 import LiMenu from "./menu";
@@ -14,6 +15,7 @@ export * from "./row";
 export * from "./col";
 export * from "./text";
 export * from "./input";
+export * from "./checkbox";
 export * from "./dropdown";
 export * from "./dropdown-item";
 export * from "./menu";
@@ -29,6 +31,7 @@ const List = [
 	LiDropDownItem,
 	LiMenu,
 	LiMenuItem,
+	LiCheckBox,
 ];
 export {
 	LiButton,
@@ -41,6 +44,7 @@ export {
 	LiDropDownItem,
 	LiMenu,
 	LiMenuItem,
+	LiCheckBox,
 };
 
 export default {

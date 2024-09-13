@@ -4,6 +4,44 @@
 .dark {
 	color: white;
 	body {
+		--vp-sidebar-bg-color: black;
 		color: white;
+		::-webkit-scrollbar {
+			width: 8px;
+			height: 8px;
+		}
+		::-webkit-scrollbar-corner {
+			background-color: transparent;
+		}
+		::-webkit-scrollbar-track {
+			background-color: transparent;
+		}
+		::-webkit-scrollbar-thumb {
+			border-radius: 8px;
+			background-color: #2d2d2d;
+			&:hover {
+				background-color: #3e3e3e;
+			}
+		}
+	}
+}
+:root {
+	--vp-sidebar-bg-color: white;
+}
+::-webkit-scrollbar {
+	width: 8px;
+	height: 8px;
+}
+::-webkit-scrollbar-corner {
+	background-color: transparent;
+}
+::-webkit-scrollbar-track {
+	background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+	border-radius: 8px;
+	background-color: #eeeef3;
+	&:hover {
+		background-color: #dcdceb;
 	}
 }

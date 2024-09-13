@@ -11,7 +11,6 @@ import {
 } from "@vitepress-demo-preview/component";
 import "@vitepress-demo-preview/component/dist/style.css";
 import "./index.scss";
-
 export default {
 	...DefaultTheme,
 	enhanceApp(ctx) {

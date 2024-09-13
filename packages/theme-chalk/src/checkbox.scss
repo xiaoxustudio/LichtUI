@@ -1,0 +1,131 @@
+@use "./common/var.scss" as *;
+@use "./mixins/mixins.scss" as *;
+
+@include b(checkbox) {
+	font-size: $li--font-size-base;
+	display: inline-flex;
+	align-items: flex-start;
+	justify-content: center;
+	position: relative;
+	padding: 0 2px;
+	@include m(default) {
+		.li-checkbox--prefix-icon-active {
+			background-color: $li--color-text-primary;
+		}
+		@include when(disabled) {
+			color: $li--disabled-color-base;
+			cursor: not-allowed;
+			.li-checkbox--prefix-icon {
+				pointer-events: none;
+			}
+			.li-checkbox--prefix-icon-active {
+				pointer-events: none;
+				background-color: rgba($li--color-text-primary, 0.3);
+			}
+		}
+	}
+	@include m(primary) {
+		.li-checkbox--prefix-icon-active {
+			background-color: $li--color-primary;
+		}
+		@include when(disabled) {
+			color: $li--disabled-color-base;
+			cursor: not-allowed;
+			.li-checkbox--prefix-icon {
+				pointer-events: none;
+			}
+			.li-checkbox--prefix-icon-active {
+				pointer-events: none;
+				background-color: rgba($li--color-primary, 0.3);
+			}
+		}
+	}
+	@include m(success) {
+		.li-checkbox--prefix-icon-active {
+			background-color: $li--color-success;
+		}
+		@include when(disabled) {
+			color: $li--disabled-color-base;
+			cursor: not-allowed;
+			.li-checkbox--prefix-icon {
+				pointer-events: none;
+			}
+			.li-checkbox--prefix-icon-active {
+				pointer-events: none;
+				background-color: rgba($li--color-success, 0.3);
+			}
+		}
+	}
+	@include m(danger) {
+		.li-checkbox--prefix-icon-active {
+			background-color: $li--color-danger;
+		}
+		@include when(disabled) {
+			color: $li--disabled-color-base;
+			cursor: not-allowed;
+			.li-checkbox--prefix-icon {
+				pointer-events: none;
+			}
+			.li-checkbox--prefix-icon-active {
+				pointer-events: none;
+				background-color: rgba($li--color-danger, 0.3);
+			}
+		}
+	}
+	@include m(warning) {
+		.li-checkbox--prefix-icon-active {
+			background-color: $li--color-warning;
+		}
+		@include when(disabled) {
+			color: $li--disabled-color-base;
+			cursor: not-allowed;
+			.li-checkbox--prefix-icon {
+				pointer-events: none;
+			}
+			.li-checkbox--prefix-icon-active {
+				pointer-events: none;
+				background-color: rgba($li--color-warning, 0.3);
+			}
+		}
+	}
+	@include m(info) {
+		.li-checkbox--prefix-icon-active {
+			background-color: $li--color-info;
+		}
+		@include when(disabled) {
+			color: $li--disabled-color-base;
+			cursor: not-allowed;
+			.li-checkbox--prefix-icon {
+				pointer-events: none;
+			}
+			.li-checkbox--prefix-icon-active {
+				pointer-events: none;
+				background-color: rgba($li--color-info, 0.3);
+			}
+		}
+	}
+	@include m(prefix-icon) {
+		width: 14px;
+		height: 14px;
+		margin-right: 2px;
+		user-select: none;
+		position: relative;
+		cursor: pointer;
+		border: solid 1px $li--border-color-base;
+		border-radius: 4px;
+		outline: none;
+		box-sizing: border-box;
+		padding: 0;
+	}
+	@include m(prefix-icon-active) {
+		width: 14px;
+		height: 14px;
+		margin-right: 2px;
+		user-select: none;
+		cursor: pointer;
+		transition: 0.1s;
+		scale: 0;
+		border-radius: 4px;
+		box-shadow: 0 0 4px $li--color-default;
+	}
+}
