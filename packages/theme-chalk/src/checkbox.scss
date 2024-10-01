@@ -111,8 +111,8 @@
 		user-select: none;
 		position: relative;
 		cursor: pointer;
-		border: solid 1px $li--border-color-base;
-		border-radius: 4px;
+		border: $li--border-base;
+		border-radius: $li--border-radius-base;
 		outline: none;
 		box-sizing: border-box;
 		padding: 0;

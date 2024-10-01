@@ -1,0 +1,9 @@
+@use "./common/var.scss" as *;
+@use "./mixins/mixins.scss" as *;
+
+@include b(radioGroup) {
+	display: inline-flex;
+	align-items: center;
+	flex-wrap: wrap;
+	font-size: 0;
+}

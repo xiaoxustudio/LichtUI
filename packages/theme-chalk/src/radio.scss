@@ -1,0 +1,149 @@
+@use "./common/var.scss" as *;
+@use "./mixins/mixins.scss" as *;
+
+@include b(radio) {
+	margin: 0;
+	padding: 0;
+	font-size: $li--font-size-base;
+	overflow-wrap: break-word;
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+	@include e(original) {
+		opacity: 0;
+		outline: none;
+		position: absolute;
+		z-index: -1;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: 0;
+	}
+	@include e(circle) {
+		border: $li--border-base;
+		margin-right: 2px;
+		border-radius: 50%;
+		width: 14px;
+		height: 14px;
+		position: relative;
+		cursor: pointer;
+		display: inline-block;
+		box-sizing: border-box;
+		&::after {
+			width: 4px;
+			height: 4px;
+			background-color: white;
+			content: "";
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%) scale(0);
+			transition: transform 0.15s ease-in;
+			border-radius: $li--border-radius-base;
+		}
+	}
+	@include e(circle-active) {
+		border: none;
+		background-color: $li--color-text-primary;
+		&::after {
+			transform: translate(-50%, -50%) scale(1);
+		}
+	}
+	@include m(default) {
+		.li-radio__circle-active {
+			background-color: $li--color-text-primary;
+		}
+		@include when(disabled) {
+			color: $li--disabled-color-base;
+			cursor: not-allowed;
+			.li-radio__circle-active {
+				pointer-events: none;
+				background-color: rgba($li--color-text-primary, 0.3);
+			}
+			.li-radio__circle {
+				pointer-events: none;
+			}
+		}
+	}
+	@include m(primary) {
+		.li-radio__circle-active {
+			background-color: $li--color-primary;
+		}
+		@include when(disabled) {
+			color: $li--disabled-color-base;
+			cursor: not-allowed;
+			.li-radio__circle-active {
+				pointer-events: none;
+				background-color: rgba($li--color-primary, 0.3);
+			}
+			.li-radio__circle {
+				pointer-events: none;
+			}
+		}
+	}
+	@include m(success) {
+		.li-radio__circle-active {
+			background-color: $li--color-success;
+		}
+		@include when(disabled) {
+			color: $li--disabled-color-base;
+			cursor: not-allowed;
+			.li-radio__circle-active {
+				pointer-events: none;
+				background-color: rgba($li--color-success, 0.3);
+			}
+			.li-radio__circle {
+				pointer-events: none;
+			}
+		}
+	}
+	@include m(danger) {
+		.li-radio__circle-active {
+			background-color: $li--color-danger;
+		}
+		@include when(disabled) {
+			color: $li--disabled-color-base;
+			cursor: not-allowed;
+			.li-radio__circle-active {
+				pointer-events: none;
+				background-color: rgba($li--color-danger, 0.3);
+			}
+			.li-radio__circle {
+				pointer-events: none;
+			}
+		}
+	}
+	@include m(warning) {
+		.li-radio__circle-active {
+			background-color: $li--color-warning;
+		}
+		@include when(disabled) {
+			color: $li--disabled-color-base;
+			cursor: not-allowed;
+			.li-radio__circle-active {
+				pointer-events: none;
+				background-color: rgba($li--color-warning, 0.3);
+			}
+			.li-radio__circle {
+				pointer-events: none;
+			}
+		}
+	}
+	@include m(info) {
+		.li-radio__circle-active {
+			background-color: $li--color-info;
+		}
+		@include when(disabled) {
+			color: $li--disabled-color-base;
+			cursor: not-allowed;
+			.li-radio__circle-active {
+				pointer-events: none;
+				background-color: rgba($li--color-info, 0.3);
+			}
+			.li-radio__circle {
+				pointer-events: none;
+			}
+		}
+	}
+}

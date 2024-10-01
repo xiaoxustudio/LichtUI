@@ -4,6 +4,8 @@
 	import { ref } from 'vue';
 	const val = ref('')
 	const booleanVal = ref(false)
+	const booleanVal1 = ref(false)
+	const group = ref(false)
 	const dropdown: DropdownProp['list'] = []
 	for (let i in new Array(3).fill(1).map((_val, index) => index)) {
 		dropdown.push({
@@ -204,6 +206,24 @@
 			<LiCheckBox disabled type="danger" v-model="booleanVal">测试</LiCheckBox>
 			<LiCheckBox disabled type="warning" v-model="booleanVal">测试</LiCheckBox>
 			<LiCheckBox disabled type="info" v-model="booleanVal">测试</LiCheckBox>
+		</LiCol>
+		<LiCol>
+			<LiRadioGroup v-model="group">
+				<LiRadio v-model="booleanVal1">测试</LiRadio>
+				<LiRadio type="primary" v-model="booleanVal1">测试</LiRadio>
+				<LiRadio type="success" v-model="booleanVal1">测试</LiRadio>
+				<LiRadio type="danger" v-model="booleanVal1">测试</LiRadio>
+				<LiRadio type="warning" v-model="booleanVal1">测试</LiRadio>
+				<LiRadio type="info" v-model="booleanVal1">测试</LiRadio>
+			</LiRadioGroup>
+		</LiCol>
+		<LiCol>
+			<LiRadio disabled v-model="booleanVal1">测试</LiRadio>
+			<LiRadio disabled type="primary" v-model="booleanVal1" label="测试" />
+			<LiRadio disabled type="success" v-model="booleanVal1">测试</LiRadio>
+			<LiRadio disabled type="danger" v-model="booleanVal1">测试</LiRadio>
+			<LiRadio disabled type="warning" v-model="booleanVal1">测试</LiRadio>
+			<LiRadio disabled type="info" v-model="booleanVal1">测试</LiRadio>
 		</LiCol>
 		<LiCol>
 			<div style="background-color: #eee; padding: 5px 2px">

@@ -29,6 +29,7 @@
 		"@licht-ui/components": "workspace:^",
 		"@licht-ui/theme-chalk": "workspace:^",
 		"@licht-ui/utils": "workspace:^",
+		"lodash-unified": "^1.0.3",
 		"shiki": "^1.14.1",
 		"typescript": "^5.5.4",
 		"vue": "^3.4.38"
