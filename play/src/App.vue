@@ -214,8 +214,9 @@
 				<LiRadio type="success" v-model="booleanVal1">测试</LiRadio>
 				<LiRadio type="danger" v-model="booleanVal1">测试</LiRadio>
 				<LiRadio type="warning" v-model="booleanVal1">测试</LiRadio>
-				<LiRadio type="info" v-model="booleanVal1">测试</LiRadio>
+				<LiRadio type="info" v-model="booleanVal1" value="测试">测试</LiRadio>
 			</LiRadioGroup>
+			<LiButton>获取值 {{ group }}</LiButton>
 		</LiCol>
 		<LiCol>
 			<LiRadio disabled v-model="booleanVal1">测试</LiRadio>

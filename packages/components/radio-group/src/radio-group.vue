@@ -26,7 +26,7 @@
 			select: _select,
 			emitChange(e) {
 				_select.value = e
-				modelValue.value = e?.checked
+				modelValue.value = e?.value !== 'on' ? e?.value : e?.checked
 			}
 		})
 	)

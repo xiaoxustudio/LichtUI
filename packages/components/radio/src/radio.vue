@@ -6,7 +6,7 @@
     type === 'warning' && bem.m('warning'),
     type === 'info' && bem.m('info'),
     bem.is('disabled', disabled)]">
-        <input ref="radioRef" :class="bem.e('original')" :name="data.name" type="radio" :value="label"
+        <input ref="radioRef" :class="bem.e('original')" :name="data.name" type="radio" :value="value"
             :disabled="disabled" @click.stop="handleChange">
         <span :class="[bem.e('circle'), data.select == radioRef ? bem.e('circle-active') : '']"></span>
         <span v-if="label" @keydown.stop>
