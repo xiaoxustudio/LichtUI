@@ -58,6 +58,10 @@ export default defineConfig({
 						text: "CheckBox 复选框",
 						link: "/home/form/checkbox",
 					},
+					{
+						text: "Radio 单选框",
+						link: "/home/form/radio",
+					},
 				],
 			},
 			{

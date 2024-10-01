@@ -4,7 +4,6 @@
 	import { ref } from 'vue';
 	const val = ref('')
 	const booleanVal = ref(false)
-	const booleanVal1 = ref(false)
 	const group = ref(false)
 	const dropdown: DropdownProp['list'] = []
 	for (let i in new Array(3).fill(1).map((_val, index) => index)) {
@@ -209,22 +208,22 @@
 		</LiCol>
 		<LiCol>
 			<LiRadioGroup v-model="group">
-				<LiRadio v-model="booleanVal1">测试</LiRadio>
-				<LiRadio type="primary" v-model="booleanVal1">测试</LiRadio>
-				<LiRadio type="success" v-model="booleanVal1">测试</LiRadio>
-				<LiRadio type="danger" v-model="booleanVal1">测试</LiRadio>
-				<LiRadio type="warning" v-model="booleanVal1">测试</LiRadio>
-				<LiRadio type="info" v-model="booleanVal1" value="测试">测试</LiRadio>
+				<LiRadio>测试</LiRadio>
+				<LiRadio type="primary">测试</LiRadio>
+				<LiRadio type="success">测试</LiRadio>
+				<LiRadio type="danger">测试</LiRadio>
+				<LiRadio type="warning">测试</LiRadio>
+				<LiRadio type="info" value="测试">测试</LiRadio>
 			</LiRadioGroup>
 			<LiButton>获取值 {{ group }}</LiButton>
 		</LiCol>
 		<LiCol>
-			<LiRadio disabled v-model="booleanVal1">测试</LiRadio>
-			<LiRadio disabled type="primary" v-model="booleanVal1" label="测试" />
-			<LiRadio disabled type="success" v-model="booleanVal1">测试</LiRadio>
-			<LiRadio disabled type="danger" v-model="booleanVal1">测试</LiRadio>
-			<LiRadio disabled type="warning" v-model="booleanVal1">测试</LiRadio>
-			<LiRadio disabled type="info" v-model="booleanVal1">测试</LiRadio>
+			<LiRadio disabled>测试</LiRadio>
+			<LiRadio disabled type="primary" label="测试" />
+			<LiRadio disabled type="success">测试</LiRadio>
+			<LiRadio disabled type="danger">测试</LiRadio>
+			<LiRadio disabled type="warning">测试</LiRadio>
+			<LiRadio disabled type="info">测试</LiRadio>
 		</LiCol>
 		<LiCol>
 			<div style="background-color: #eee; padding: 5px 2px">

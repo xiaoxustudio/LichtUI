@@ -27,7 +27,8 @@
 			emitChange(e) {
 				_select.value = e
 				modelValue.value = e?.value !== 'on' ? e?.value : e?.checked
-			}
+			},
+			disabled: prop.disabled
 		})
 	)
 </script>

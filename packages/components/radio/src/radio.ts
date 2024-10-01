@@ -17,6 +17,7 @@ export const radioProp = {
 		default: "",
 	},
 	disabled: Boolean,
+	default: Boolean,
 } as const;
 export const radioEmits = {
 	[EmitsEnum.CHANGE_EVENT]: (val: string | number | boolean | undefined) =>
