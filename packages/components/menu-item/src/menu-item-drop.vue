@@ -20,8 +20,7 @@
     const prop = defineProps(menuItemDropProp)
     const UpdatePos = () => {
         if (MIDropRef.value) {
-            const bound = MIDropRef.value.getBoundingClientRect()
-            MIDropRef.value.style.top = `${Math.floor(bound.height + bound.top - 2)}px`
+            MIDropRef.value.style.top = `100%`
         }
     }
     const enterDrop = inject('enterDrop')
