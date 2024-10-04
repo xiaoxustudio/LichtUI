@@ -19,6 +19,8 @@
 
 ## 安装
 
+本项目采用`monorepo`架构，并使用`pnpm`包管理工具
+
 ```bash
 # 通过 npm 安装
 npm i licht-ui

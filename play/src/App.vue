@@ -1,11 +1,11 @@
 <script setup lang="ts">
-	import { DropdownProp } from "@licht-ui/components/dropdown";
+	import { DropdownDataItem, MenuItemData } from "@licht-ui/components";
 	import { AddCircle, CubeOutline } from "@vicons/ionicons5";
 	import { ref } from 'vue';
 	const val = ref('')
 	const booleanVal = ref(false)
 	const group = ref(false)
-	const dropdown: DropdownProp['list'] = []
+	const dropdown: DropdownDataItem[] = []
 	for (let i in new Array(3).fill(1).map((_val, index) => index)) {
 		dropdown.push({
 			id: i.toString(),
@@ -19,7 +19,13 @@
 	const handleDropdownItem = (index: any, item: any) => {
 		console.log(index, item)
 	}
-	const list = [
+	const handleMenuItem = (index: any, item: any) => {
+		console.log(index, item)
+	}
+	const handleSubMenuItem = (index: any, item: any) => {
+		console.log(index, item)
+	}
+	const list: MenuItemData[] = [
 		{
 			icon: 'https://s3.bmp.ovh/imgs/2024/08/28/136ab813ae9e0e5f.png'
 		},
@@ -31,6 +37,11 @@
 		},
 		{
 			label: "我的",
+			list: [
+				{
+					label: '测试'
+				}
+			]
 		},
 	]
 </script>
@@ -38,7 +49,7 @@
 <template>
 	<LiRow>
 		<LiCol style="margin-bottom: 5%;">
-			<LiMenu :default-index="1" :list="list">
+			<LiMenu :default-index="1" @command="handleMenuItem" @sub-command="handleSubMenuItem" :list>
 				<template v-for="index in 3" #[index]>
 					页面{{ index }}
 				</template>

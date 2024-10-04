@@ -16,4 +16,8 @@ export const menuProp = {
 		default: [],
 	},
 } as const;
+export type MenuEmits = {
+	command: [index: number, item: MenuItemData];
+	subCommand: [index: number, item: MenuItemData];
+};
 export type MenuProp = ExtractPropTypes<typeof menuProp>;
