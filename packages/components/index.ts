@@ -6,6 +6,7 @@ import LiText from "./text";
 import LiInput from "./input";
 import LiCheckBox from "./checkbox";
 import LiRadio from "./radio";
+import LiSwitch from "./switch";
 import LiRadioGroup from "./radio-group";
 import LiDropDown from "./dropdown";
 import LiDropDownItem from "./dropdown-item";
@@ -20,6 +21,7 @@ export * from "./text";
 export * from "./input";
 export * from "./checkbox";
 export * from "./radio";
+export * from "./switch";
 export * from "./radio-group";
 export * from "./dropdown";
 export * from "./dropdown-item";
@@ -38,6 +40,7 @@ const List = [
 	LiMenuItem,
 	LiCheckBox,
 	LiRadio,
+	LiSwitch,
 	LiRadioGroup,
 ];
 export {
@@ -53,6 +56,7 @@ export {
 	LiMenuItem,
 	LiCheckBox,
 	LiRadio,
+	LiSwitch,
 	LiRadioGroup,
 };
 

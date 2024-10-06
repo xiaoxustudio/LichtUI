@@ -5,6 +5,7 @@
 	const val = ref('')
 	const booleanVal = ref(false)
 	const group = ref(false)
+	const switchVal = ref(false)
 	const dropdown: DropdownDataItem[] = []
 	for (let i in new Array(3).fill(1).map((_val, index) => index)) {
 		dropdown.push({
@@ -24,6 +25,9 @@
 	}
 	const handleSubMenuItem = (index: any, item: any) => {
 		console.log(index, item)
+	}
+	const handleSwitchChange = () => {
+		console.log(switchVal.value)
 	}
 	const list: MenuItemData[] = [
 		{
@@ -235,6 +239,22 @@
 			<LiRadio disabled type="danger">测试</LiRadio>
 			<LiRadio disabled type="warning">测试</LiRadio>
 			<LiRadio disabled type="info">测试</LiRadio>
+		</LiCol>
+		<LiCol>
+			<LiSwitch v-model="switchVal"></LiSwitch>
+			<LiSwitch v-model="switchVal" type="primary" label="开" />
+			<LiSwitch v-model="switchVal" type="success">开</LiSwitch>
+			<LiSwitch v-model="switchVal" type="danger">开</LiSwitch>
+			<LiSwitch v-model="switchVal" type="warning">开</LiSwitch>
+			<LiSwitch v-model="switchVal" type="info">开</LiSwitch>
+		</LiCol>
+		<LiCol>
+			<LiSwitch v-model="switchVal" disabled>开</LiSwitch>
+			<LiSwitch v-model="switchVal" disabled type="primary" label="开" />
+			<LiSwitch v-model="switchVal" disabled type="success">开</LiSwitch>
+			<LiSwitch v-model="switchVal" disabled type="danger">开</LiSwitch>
+			<LiSwitch v-model="switchVal" disabled type="warning">开</LiSwitch>
+			<LiSwitch v-model="switchVal" disabled type="info">开</LiSwitch>
 		</LiCol>
 		<LiCol>
 			<div style="background-color: #eee; padding: 5px 2px">

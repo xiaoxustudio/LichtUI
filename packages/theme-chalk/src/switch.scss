@@ -1,0 +1,122 @@
+@use "common/var" as *;
+@use "mixins/mixins" as *;
+
+@include b(switch) {
+	display: inline-flex;
+	align-items: center;
+	width: 45px;
+	height: 32px;
+	font-size: 12px;
+	@include e(wrapper) {
+		width: 100%;
+		height: 60%;
+		border-radius: 100px;
+		background-color: #d7d8da;
+		border: 1px solid #d7d8da;
+		position: relative;
+		display: inline-block;
+		box-sizing: border-box;
+		overflow: visible;
+		padding: 0;
+		margin: 0;
+		cursor: pointer;
+		vertical-align: bottom;
+		transition: 200ms cubic-bezier(0.645, 0.045, 0.355, 1) all;
+		@include m(default) {
+			background-color: darken($li--color-default, $amount: 20%);
+			border: 1px solid darken($li--color-default, $amount: 20%);
+			color: $li--color-white;
+		}
+		@include m(primary) {
+			background-color: $li--color-primary;
+			border: 1px solid $li--color-primary;
+			color: $li--color-white;
+		}
+		@include m(success) {
+			background-color: $li--color-success;
+			border: 1px solid $li--color-success;
+			color: $li--color-white;
+		}
+		@include m(danger) {
+			background-color: $li--color-danger;
+			border: 1px solid $li--color-danger;
+			color: $li--color-white;
+		}
+		@include m(warning) {
+			background-color: $li--color-warning;
+			border: 1px solid $li--color-warning;
+			color: $li--color-white;
+		}
+		@include m(info) {
+			background-color: $li--color-info;
+			border: 1px solid $li--color-info;
+			color: $li--color-white;
+		}
+		// disabled
+		@include m(disabled) {
+			color: $li--disabled-color-base;
+			@include m(default) {
+				background-color: $li--color-default-light-2;
+				border: 1px solid $li--color-default-light-2;
+				cursor: not-allowed;
+			}
+			@include m(primary) {
+				background-color: $li--color-primary-light-5;
+				border: 1px solid $li--color-primary-light-5;
+				cursor: not-allowed;
+			}
+			@include m(success) {
+				background-color: $li--color-success-light-5;
+				border: 1px solid $li--color-success-light-5;
+				cursor: not-allowed;
+			}
+			@include m(danger) {
+				background-color: $li--color-danger-light-5;
+				border: 1px solid $li--color-danger-light-5;
+				cursor: not-allowed;
+			}
+			@include m(warning) {
+				background-color: $li--color-warning-light-5;
+				border: 1px solid $li--color-warning-light-5;
+				cursor: not-allowed;
+			}
+			@include m(info) {
+				background-color: $li--color-info-light-5;
+				border: 1px solid $li--color-info-light-5;
+				cursor: not-allowed;
+			}
+		}
+	}
+	@include e(inner) {
+		display: inline-block;
+		width: 100%;
+		height: 100%;
+		box-sizing: border-box;
+		user-select: none;
+		position: relative;
+		transition: 200ms cubic-bezier(0.645, 0.045, 0.355, 1) all;
+		overflow: hidden;
+		@include m(left) {
+			position: absolute;
+			left: 10%;
+		}
+		@include m(right) {
+			position: absolute;
+			left: 50%;
+		}
+	}
+	@include e(circle) {
+		width: 16px;
+		height: 16px;
+		position: absolute;
+		border-radius: 50%;
+		margin-left: 0.1rem;
+		background-color: white;
+		z-index: 1;
+		transition: 200ms cubic-bezier(0.645, 0.045, 0.355, 1) all;
+		left: 0.1rem;
+		@include when(left) {
+			left: 20px;
+		}
+	}
+}
