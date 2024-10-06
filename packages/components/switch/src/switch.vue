@@ -17,7 +17,7 @@
 			type === 'danger' && is_check && bem.em('wrapper', 'danger'),
 			type === 'warning' && is_check && bem.em('wrapper', 'warning'),
 			type === 'info' && is_check && bem.em('wrapper', 'info'),
-			disabled && bem.em('wrapper', 'disabled--' + type)]">
+			bem.is('disabled', disabled)]">
 			<div :class="[bem.e('inner'),
 			is_check ? bem.em('inner', 'left') : bem.em('inner', 'right')]">
 				<span v-if="label">{{ label }}</span>
