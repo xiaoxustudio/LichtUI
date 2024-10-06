@@ -20,8 +20,8 @@
 			bem.is('disabled', disabled)]">
 			<div :class="[bem.e('inner'),
 			is_check ? bem.em('inner', 'left') : bem.em('inner', 'right')]">
-				<span v-if="label">{{ label }}</span>
-				<slot v-else />
+				<slot v-if="$slots.default" :checked="is_check" />
+				<span v-else>{{ is_check ? enableVal ? enableVal : '' : disableVal ? disableVal : '' }}</span>
 			</div>
 			<span :class="[bem.e('circle'), is_check ? bem.is('left', is_check) : '']"></span>
 		</span>

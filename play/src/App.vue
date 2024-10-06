@@ -242,19 +242,31 @@
 		</LiCol>
 		<LiCol>
 			<LiSwitch v-model="switchVal"></LiSwitch>
-			<LiSwitch v-model="switchVal" type="primary" label="开" />
-			<LiSwitch v-model="switchVal" type="success">开</LiSwitch>
-			<LiSwitch v-model="switchVal" type="danger">开</LiSwitch>
-			<LiSwitch v-model="switchVal" type="warning">开</LiSwitch>
-			<LiSwitch v-model="switchVal" type="info">开</LiSwitch>
+			<LiSwitch v-model="switchVal" type="primary" />
+			<LiSwitch v-model="switchVal" type="success"></LiSwitch>
+			<LiSwitch v-model="switchVal" type="danger"></LiSwitch>
+			<LiSwitch v-model="switchVal" type="warning"></LiSwitch>
+			<LiSwitch v-model="switchVal" type="info"></LiSwitch>
 		</LiCol>
 		<LiCol>
-			<LiSwitch v-model="switchVal" disabled>开</LiSwitch>
-			<LiSwitch v-model="switchVal" disabled type="primary" label="开" />
-			<LiSwitch v-model="switchVal" disabled type="success">开</LiSwitch>
-			<LiSwitch v-model="switchVal" disabled type="danger">开</LiSwitch>
-			<LiSwitch v-model="switchVal" disabled type="warning">开</LiSwitch>
-			<LiSwitch v-model="switchVal" disabled type="info">开</LiSwitch>
+			<LiSwitch v-model="switchVal" enable-val="开" disable-val="关">
+				<template #default="{ checked }">
+					{{ checked }}
+				</template>
+			</LiSwitch>
+			<LiSwitch v-model="switchVal" enable-val="开" disable-val="关" type="primary" />
+			<LiSwitch v-model="switchVal" enable-val="开" disable-val="关" type="success"></LiSwitch>
+			<LiSwitch v-model="switchVal" enable-val="开" disable-val="关" type="danger"></LiSwitch>
+			<LiSwitch v-model="switchVal" enable-val="开" disable-val="关" type="warning"></LiSwitch>
+			<LiSwitch v-model="switchVal" enable-val="开" disable-val="关" type="info"></LiSwitch>
+		</LiCol>
+		<LiCol>
+			<LiSwitch v-model="switchVal" disabled></LiSwitch>
+			<LiSwitch v-model="switchVal" disabled type="primary" />
+			<LiSwitch v-model="switchVal" disabled type="success"></LiSwitch>
+			<LiSwitch v-model="switchVal" disabled type="danger"></LiSwitch>
+			<LiSwitch v-model="switchVal" disabled type="warning"></LiSwitch>
+			<LiSwitch v-model="switchVal" disabled type="info"></LiSwitch>
 		</LiCol>
 		<LiCol>
 			<div style="background-color: #eee; padding: 5px 2px">

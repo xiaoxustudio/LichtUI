@@ -62,6 +62,10 @@ export default defineConfig({
 						text: "Radio 单选框",
 						link: "/home/form/radio",
 					},
+					{
+						text: "Switch 开关",
+						link: "/home/form/switch",
+					},
 				],
 			},
 			{

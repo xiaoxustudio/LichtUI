@@ -6,7 +6,8 @@ export const switchProp = {
 		default: "default",
 	},
 	disabled: Boolean,
-	label: String,
+	enableVal: String,
+	disableVal: String,
 	modelValue: Boolean,
 } as const;
 export type SwitchProp = ExtractPropTypes<typeof switchProp>;
