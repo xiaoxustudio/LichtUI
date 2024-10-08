@@ -8,7 +8,7 @@
 		type === 'warning' && bem.m('warning'),
 		type === 'info' && bem.m('info'),
 
-	]" @click="handleClick">
+	]">
 		<span :class="[
 			bem.e('wrapper'),
 			type === 'default' && is_check && bem.em('wrapper', 'default'),
@@ -17,7 +17,7 @@
 			type === 'danger' && is_check && bem.em('wrapper', 'danger'),
 			type === 'warning' && is_check && bem.em('wrapper', 'warning'),
 			type === 'info' && is_check && bem.em('wrapper', 'info'),
-			bem.is('disabled', disabled)]">
+			bem.is('disabled', disabled)]" @click="handleClick">
 			<div :class="[bem.e('inner'),
 			is_check ? bem.em('inner', 'left') : bem.em('inner', 'right')]">
 				<slot v-if="$slots.default" :checked="is_check" />

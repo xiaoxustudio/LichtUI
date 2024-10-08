@@ -7,12 +7,13 @@ import LiInput from "./input";
 import LiCheckBox from "./checkbox";
 import LiRadio from "./radio";
 import LiSwitch from "./switch";
+import LiSelect from "./select";
 import LiRadioGroup from "./radio-group";
 import LiDropDown from "./dropdown";
 import LiDropDownItem from "./dropdown-item";
 import LiMenu from "./menu";
 import LiMenuItem from "./menu-item";
-import { RadioItemToken } from "@licht-ui/utils/types";
+import { RadioItemToken } from "../utils/types";
 export * from "./button";
 export * from "./icon";
 export * from "./row";
@@ -22,6 +23,7 @@ export * from "./input";
 export * from "./checkbox";
 export * from "./radio";
 export * from "./switch";
+export * from "./select";
 export * from "./radio-group";
 export * from "./dropdown";
 export * from "./dropdown-item";
@@ -42,6 +44,7 @@ const List = [
 	LiRadio,
 	LiSwitch,
 	LiRadioGroup,
+	LiSelect,
 ];
 export {
 	LiButton,
@@ -58,6 +61,7 @@ export {
 	LiRadio,
 	LiSwitch,
 	LiRadioGroup,
+	LiSelect,
 };
 
 const RadioPool: RadioItemToken[] = [];

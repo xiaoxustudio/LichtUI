@@ -1,11 +1,12 @@
 <script setup lang="ts">
-	import { DropdownDataItem, MenuItemData } from "@licht-ui/components";
+	import { DropdownDataItem, ListData, MenuItemData } from "@licht-ui/components";
 	import { AddCircle, CubeOutline } from "@vicons/ionicons5";
 	import { ref } from 'vue';
 	const val = ref('')
 	const booleanVal = ref(false)
 	const group = ref(false)
 	const switchVal = ref(false)
+	const selectVal = ref('')
 	const dropdown: DropdownDataItem[] = []
 	for (let i in new Array(3).fill(1).map((_val, index) => index)) {
 		dropdown.push({
@@ -14,6 +15,20 @@
 			data: { id: i }
 		})
 	}
+	const optionList: ListData[] = [
+		{
+			name: '测试',
+			value: '123'
+		},
+		{
+			name: '测试1',
+			value: '1234'
+		},
+		{
+			name: '测试2',
+			value: '12345'
+		},
+	]
 	const handleChange = () => {
 		console.log(val.value)
 	}
@@ -25,9 +40,6 @@
 	}
 	const handleSubMenuItem = (index: any, item: any) => {
 		console.log(index, item)
-	}
-	const handleSwitchChange = () => {
-		console.log(switchVal.value)
 	}
 	const list: MenuItemData[] = [
 		{
@@ -267,6 +279,11 @@
 			<LiSwitch v-model="switchVal" disabled type="danger"></LiSwitch>
 			<LiSwitch v-model="switchVal" disabled type="warning"></LiSwitch>
 			<LiSwitch v-model="switchVal" disabled type="info"></LiSwitch>
+		</LiCol>
+		<LiCol>
+			<LiSelect v-model="selectVal" :list="optionList" @command="(index, item) => console.log(index, item)">
+			</LiSelect>
+			<LiSelect v-model="selectVal" disabled></LiSelect>
 		</LiCol>
 		<LiCol>
 			<div style="background-color: #eee; padding: 5px 2px">

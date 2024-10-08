@@ -1,0 +1,105 @@
+@use "./common/var.scss" as *;
+@use "./mixins/mixins.scss" as *;
+
+@include b(select) {
+	position: relative;
+	width: 100%;
+	& + & {
+		margin: 2px 0;
+	}
+
+	@include e(droplist) {
+		width: 100%;
+		position: absolute;
+		cursor: pointer;
+		border-radius: 2px;
+		color: $li--color-black;
+		list-style: none;
+		top: 100%;
+		padding: 0;
+		margin: 0;
+		box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.12);
+		flex-direction: column;
+		display: inline-flex;
+		z-index: 1052;
+		@include m(droplist-item) {
+			transition: background-color 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+			background-color: $li--color-white;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			width: 100%;
+			padding: 5px 0;
+			&:hover {
+				background-color: rgb(245, 245, 245);
+			}
+		}
+	}
+	@include e(selection) {
+		display: flex;
+		align-items: center;
+		position: relative;
+		cursor: pointer;
+		border: 1px solid #d7d8da;
+		border-radius: 2px;
+		background-color: $li--color-white;
+		color: $li--color-black;
+		@include when(disabled) {
+			cursor: not-allowed;
+			user-select: none;
+			background-color: rgba(0, 0, 0, 0.05);
+		}
+	}
+	@include e(input) {
+		cursor: pointer;
+		width: 100%;
+		height: 30px;
+		padding: 4px 28px 4px 10px;
+		color: $li--color-black;
+		vertical-align: middle;
+		outline: none;
+		background: none;
+		box-sizing: border-box;
+		border: none;
+		transition: border-color 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+		height: 22px;
+		@include when(disabled) {
+			cursor: not-allowed;
+		}
+	}
+	@include e(arrow) {
+		display: inline-flex;
+		align-items: center;
+		margin: 0 2px;
+		transform: rotate3d(0, 0, 1, 0);
+		transition: transform 0.25s ease-out;
+		svg path {
+			fill: #71757f;
+		}
+		@include when(open) {
+			transform: rotate3d(0, 0, 1, 180deg);
+		}
+	}
+
+	@include m(default) {
+		color: $li--color-text-primary;
+	}
+	@include m(primary) {
+		color: $li--color-primary;
+	}
+	@include m(success) {
+		color: $li--color-success;
+	}
+	@include m(danger) {
+		color: $li--color-danger;
+	}
+	@include m(warning) {
+		color: $li--color-warning;
+	}
+	@include m(info) {
+		color: $li--color-info;
+	}
+	@include m(bold) {
+		font-weight: bold;
+	}
+}

@@ -28,7 +28,13 @@ async function main() {
 					outDir: path.resolve(packageOutDir, "types"),
 				}),
 			],
+			optimizeDeps: {
+				include: ["../packages/components/**/src/*.vue"],
+			},
 			build: {
+				commonjsOptions: {
+					include: [/docs/, /node_modules/, /play/],
+				},
 				lib: {
 					entry,
 					name: "licht-ui",
@@ -40,9 +46,7 @@ async function main() {
 				rollupOptions: {
 					external: ["vue"],
 					output: {
-						globals: {
-							vue: "Vue",
-						},
+						globals: (_name) => _name,
 						exports: "named",
 					},
 				},
