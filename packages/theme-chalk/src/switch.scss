@@ -126,5 +126,8 @@
 		@include when(left) {
 			left: 20px;
 		}
+		@include when(disabled) {
+			background-color: rgb(240, 240, 240);
+		}
 	}
 }

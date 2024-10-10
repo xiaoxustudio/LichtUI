@@ -23,7 +23,7 @@
 				<slot v-if="$slots.default" :checked="is_check" />
 				<span v-else>{{ is_check ? enableVal ? enableVal : '' : disableVal ? disableVal : '' }}</span>
 			</div>
-			<span :class="[bem.e('circle'), is_check ? bem.is('left', is_check) : '']"></span>
+			<span :class="[bem.e('circle'), bem.is('disabled', disabled), bem.is('left', is_check)]"></span>
 		</span>
 	</div>
 </template>
