@@ -8,6 +8,7 @@
 		"docs:build": "vitepress build",
 		"docs:preview": "vitepress preview --port 5000"
 	},
+	"type": "module",
 	"keywords": [],
 	"author": "",
 	"license": "MIT",

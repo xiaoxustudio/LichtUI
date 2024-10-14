@@ -4,20 +4,23 @@
 
 ## 基础用法
 
+:::raw
 <preview path="../../components/form/select/select.vue"></preview>
+:::
 
 ## 禁用状态
 
 使用`disabled`控制禁用状态
-
+:::raw
 <preview path="../../components/form/select/select-disabled.vue"></preview>
-
+:::
 ## 事件
 
 使用`command`监听选择事件
 
+:::raw
 <preview path="../../components/form/select/select-command.vue"></preview>
-
+:::
 ## Input Attributes
 
 | 参数     | 说明 | 类型    | 可选值 | 默认值  |
