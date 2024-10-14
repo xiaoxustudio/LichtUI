@@ -22,6 +22,8 @@
 		flex-direction: column;
 		display: inline-flex;
 		z-index: 1052;
+		background-color: $li--color-white;
+
 		@include m(droplist-item) {
 			transition: background-color 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 			background-color: $li--color-white;
@@ -63,6 +65,7 @@
 		border: none;
 		transition: border-color 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 		height: 22px;
+		text-align: center;
 		@include when(disabled) {
 			cursor: not-allowed;
 		}

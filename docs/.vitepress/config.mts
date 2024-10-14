@@ -66,6 +66,10 @@ export default defineConfig({
 						text: "Switch 开关",
 						link: "/home/form/switch",
 					},
+					{
+						text: "Select 下拉框",
+						link: "/home/form/select",
+					},
 				],
 			},
 			{

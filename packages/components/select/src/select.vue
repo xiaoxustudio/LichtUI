@@ -9,8 +9,8 @@
 		type === 'info' && bem.m('info')
 	]" @click.stop="handleClick">
 		<div :class="[bem.e('selection'), bem.is('disabled', disabled)]">
-			<input :class="[bem.e('input'), bem.is('disabled', disabled)]" type="text" readonly :disabled>
-			<slot />
+			<input :class="[bem.e('input'), bem.is('disabled', disabled)]" v-model="modelValue" type="text" readonly
+				:disabled>
 			<span :class="[bem.e('arrow'), bem.is('open', is_show), bem.is('disabled', disabled)]">
 				<AIcon></AIcon>
 			</span>
@@ -25,7 +25,7 @@
 </template>
 <script setup lang="ts">
 	import { createNamespace } from "@licht-ui/utils/create";
-	import { ListData, selectEmits, selectProp } from "./select";
+	import { ListData, selectEmits, selectProp } from './select';
 	import AIcon from './arrow-icon.vue';
 	import { onMounted, onUnmounted, ref } from "vue";
 	defineOptions({ name: "LiSelect" });
@@ -34,6 +34,7 @@
 	const bem = createNamespace("select");
 	const is_show = ref(false)
 	const selectRef = ref<HTMLDivElement>()
+	const modelValue = defineModel<typeof selectProp['modelValue']>()
 	const handleClick = () => {
 		if (prop.disabled) return
 		is_show.value = !is_show.value
@@ -47,6 +48,7 @@
 	}
 	const handleDropDown = (index: number, list: ListData) => {
 		emit('command', index, list)
+		modelValue.value = list.value
 	}
 	onMounted(() => {
 		window.addEventListener('click', clickEvent);
