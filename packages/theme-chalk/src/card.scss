@@ -1,0 +1,33 @@
+@use "./common/var.scss" as *;
+@use "./mixins/mixins.scss" as *;
+
+@include b(card) {
+	position: relative;
+	display: block;
+	padding: 16px 20px;
+	border-radius: 8px;
+	cursor: pointer;
+	transition: box-shadow 0.3s cubic-bezier(0.645, 0.045, 0.355, 1),
+		transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+	box-shadow: $li--box-shadow-base;
+	transform: translateY(0);
+	background-color: $li--color-white;
+	@include m(shadow) {
+		box-shadow: 0 4px 16px 0 rgba(37, 43, 58, 0.12);
+		transform: translateY(-5px);
+	}
+	@include e(header) {
+		display: block;
+		font-size: 14px;
+		font-weight: 600;
+		color: $li--color-black;
+		@include m(title) {
+			font-size: 16px;
+		}
+	}
+	@include e(footer) {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+	}
+}
