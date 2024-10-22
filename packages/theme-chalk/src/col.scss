@@ -41,7 +41,6 @@ $gutter-width: 0px;
 	min-height: 1px;
 	padding-right: calc($gutter-width / 2);
 	padding-left: calc($gutter-width / 2);
-
 	@include make-columns("col");
 	@include make-offsets("");
 	@each $breakpoint, $value in $breakpoints {

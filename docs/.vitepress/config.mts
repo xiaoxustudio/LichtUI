@@ -86,6 +86,15 @@ export default defineConfig({
 				],
 			},
 			{
+				text: "Show 数据展示",
+				items: [
+					{
+						text: "Card 卡片",
+						link: "/home/show/card",
+					},
+				],
+			},
+			{
 				text: "Examples",
 				items: [{ text: "示例", link: "/home/start/examples" }],
 			},
