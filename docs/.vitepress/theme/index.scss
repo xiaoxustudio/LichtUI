@@ -28,6 +28,19 @@
 :root {
 	--vp-sidebar-bg-color: white;
 }
+@media (prefers-reduced-motion: reduce) {
+	*,
+	::before,
+	::after {
+		animation-delay: inherit !important;
+		animation-duration: inherit !important;
+		animation-iteration-count: inherit !important;
+		background-attachment: inherit !important;
+		scroll-behavior: inherit !important;
+		transition-duration: 0.25s !important;
+		transition-delay: inherit !important;
+	}
+}
 ::-webkit-scrollbar {
 	width: 8px;
 	height: 8px;
