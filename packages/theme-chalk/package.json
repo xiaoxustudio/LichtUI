@@ -3,7 +3,7 @@
 	"private": "true",
 	"version": "1.0.0",
 	"description": "",
-	"types": "types/index.d.ts",
+	"types": "./index.d.ts",
 	"keywords": [],
 	"author": "",
 	"license": "MIT"

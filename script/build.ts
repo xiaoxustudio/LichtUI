@@ -3,7 +3,7 @@ import { build, defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import dts from "vite-plugin-dts";
 
-const DefineOptions = require("unplugin-vue-define-options/vite");
+// const DefineOptions = require("unplugin-vue-define-options/vite");
 const path = require("path");
 const rootDir = path.resolve(__dirname, "../");
 
@@ -13,7 +13,6 @@ function resolve(...urlOrUrls: string[]) {
 const packages = readdirSync(resolve("./packages/"));
 
 const buildDir = "licht-ui";
-
 async function main() {
 	for (let i of packages) {
 		const packageRoot = resolve("./packages/" + i);
@@ -21,16 +20,26 @@ async function main() {
 		const entry = resolve(packageRoot + "/index.ts");
 		const baseConfig = defineConfig({
 			plugins: [
+				// DefineOptions({
+				// 	exclude: "../docs",
+				// }),
 				vue(),
-				DefineOptions(),
 				dts({
 					include: packageRoot,
-					outDir: path.resolve(packageOutDir, "types"),
+					outDir: resolve(buildDir, i),
+					exclude: ["../docs", "node_modules/**"],
+					cleanVueFileName: true,
+					beforeWriteFile: (filePath: string, content: string) => {
+						return Promise.resolve({
+							filePath: filePath.replace(
+								/components\/components/i,
+								"components/types"
+							),
+							content,
+						});
+					},
 				}),
 			],
-			optimizeDeps: {
-				include: ["../packages/components/**/src/*.vue"],
-			},
 			build: {
 				commonjsOptions: {
 					include: [/docs/, /node_modules/, /play/],

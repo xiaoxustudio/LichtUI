@@ -2,7 +2,7 @@
 	"name": "@licht-ui/utils",
 	"private": "true",
 	"version": "1.0.0",
-	"types": "types/index.d.ts",
+	"types": "./index.d.ts",
 	"description": "",
 	"keywords": [],
 	"author": "",
