@@ -14,6 +14,7 @@ import LiDropDownItem from "./dropdown-item";
 import LiMenu from "./menu";
 import LiMenuItem from "./menu-item";
 import LiCard from "./card";
+import LiAvatar from "./avatar";
 import { RadioItemToken } from "../utils/types";
 export * from "./button";
 export * from "./icon";
@@ -31,6 +32,7 @@ export * from "./dropdown-item";
 export * from "./menu";
 export * from "./menu-item";
 export * from "./card";
+export * from "./avatar";
 const List = [
 	LiButton,
 	LiIcon,
@@ -48,6 +50,7 @@ const List = [
 	LiRadioGroup,
 	LiSelect,
 	LiCard,
+	LiAvatar,
 ];
 export {
 	LiButton,
@@ -66,6 +69,7 @@ export {
 	LiRadioGroup,
 	LiSelect,
 	LiCard,
+	LiAvatar,
 };
 
 const RadioPool: RadioItemToken[] = [];

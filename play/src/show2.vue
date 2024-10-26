@@ -27,6 +27,12 @@
                 </template>
             </LiCard>
         </LiCol>
+        <LiCol>
+            <LiAvatar name="徐然" bgcolor="#ccc"></LiAvatar>
+            <LiAvatar src="https://vue-devui.github.io/assets/logo.svg"></LiAvatar>
+            <LiAvatar src="asdasd"></LiAvatar>
+            <LiAvatar bgcolor="#ccc" round></LiAvatar>
+        </LiCol>
     </LiRow>
 </template>
 <script setup lang="ts">

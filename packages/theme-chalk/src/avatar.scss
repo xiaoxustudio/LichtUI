@@ -1,0 +1,59 @@
+@use "./common/var.scss" as *;
+@use "./mixins/mixins.scss" as *;
+
+@mixin extend-size($size) {
+	height: $size;
+	width: $size;
+	line-height: $size;
+	max-width: $size;
+	max-height: $size;
+	overflow: hidden;
+}
+@mixin limit-size($size) {
+	height: $size;
+	width: $size;
+}
+
+@include b(avatar) {
+	display: inline-block;
+	position: relative;
+	height: 36px;
+	width: 36px;
+	line-height: 36px;
+	font-size: 12px;
+	border-radius: 100%;
+	@include e(img-warpper) {
+		> img {
+			object-fit: cover;
+		}
+	}
+	@include e(name) {
+		text-align: center;
+		display: inline-block;
+		font-size: 12px;
+		border-radius: 100%;
+	}
+
+	@include m(small) {
+		$size: 18px;
+		@include extend-size($size);
+		> img {
+			object-fit: contain;
+		}
+	}
+	@include m(middle) {
+		$size: 36px;
+		@include extend-size($size);
+		> img {
+			@include limit-size($size);
+		}
+	}
+	@include m(large) {
+		$size: 56px;
+		@include extend-size($size);
+	}
+
+	@include when(round) {
+		border-radius: 10px;
+	}
+}
