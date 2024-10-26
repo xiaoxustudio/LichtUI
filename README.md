@@ -17,6 +17,8 @@
 
 我们的创作灵感来源于[Element Plus](https://github.com/element-plus/element-plus)
 
+**PS : 目前处于`预发布`状态，暂未出正式版本，预发布版本为v1，正式版本版号将更新为v2**
+
 ## 安装
 
 本项目采用`monorepo`架构，并使用`pnpm`包管理工具
