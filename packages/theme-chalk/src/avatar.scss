@@ -21,7 +21,6 @@
 	width: 36px;
 	line-height: 36px;
 	font-size: 12px;
-	border-radius: 100%;
 	@include e(img-warpper) {
 		> img {
 			object-fit: cover;
@@ -54,6 +53,6 @@
 	}
 
 	@include when(round) {
-		border-radius: 10px;
+		border-radius: 100%;
 	}
 }

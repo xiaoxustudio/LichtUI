@@ -89,6 +89,10 @@ export default defineConfig({
 				text: "Show 数据展示",
 				items: [
 					{
+						text: "Avatar 头像",
+						link: "/home/show/avatar",
+					},
+					{
 						text: "Card 卡片",
 						link: "/home/show/card",
 					},

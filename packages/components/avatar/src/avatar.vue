@@ -1,24 +1,14 @@
 <template>
-	<span
-		:class="[bem.b(), bem.is('round', round), bem.m(size)]"
-		:style="{
-			backgroundColor: bgcolor,
-		}"
-	>
-		<span
-			:class="[bem.e('warpper'), bem.is('round', round), bem.m(size)]"
-			v-if="src"
-		>
-			<img
-				v-if="!is_show_default"
-				:style="styleImg"
-				:src="src"
-				:alt="alt"
-				@error="handleError"
-			/>
+	<span :class="[bem.b(), bem.is('round', round), bem.m(size)]" :style="{
+		backgroundColor: bgColor,
+	}">
+		<span :class="[bem.e('warpper'), bem.is('round', round), bem.m(size)]" v-if="src">
+			<img v-if="!is_show_default" :style="styleImg" :src="src" :alt="alt" @error="handleError" />
 			<Default v-if="is_show_default" />
 		</span>
-		<span :class="[bem.e('name'), bem.m(size)]" v-else-if="name">{{
+		<span :class="[bem.e('name'), bem.m(size)]" v-else-if="name" :style="{
+			color: nameColor,
+		}">{{
 			name
 		}}</span>
 		<slot v-else />

@@ -21,15 +21,22 @@
 
 本项目采用`monorepo`架构，并使用`pnpm`包管理工具
 
-```bash
-# 通过 npm 安装
-npm i licht-ui
+使用 `npm` 安装。
 
-# 通过 yarn 安装
-yarn add licht-ui
+```sh
+npm i licht-design
+```
 
-# 通过 pnpm 安装
-pnpm i licht-ui
+使用 `pnpm` 安装。
+
+```sh
+pnpm i licht-design
+```
+
+使用 `yarn` 安装。
+
+```sh
+yarn add licht-design
 ```
 
 ## 关于

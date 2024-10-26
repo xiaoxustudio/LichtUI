@@ -27,3 +27,6 @@ dist-ssr
 public
 licht-ui
 @licht-ui
+
+# vite cache
+cache

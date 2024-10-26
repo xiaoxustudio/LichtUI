@@ -15,6 +15,7 @@ export const avatarProp = {
 	name: String,
 	src: String,
 	round: Boolean,
-	bgcolor: String,
+	bgColor: String,
+	nameColor: String,
 } as const;
 export type AvatarProp = ExtractPropTypes<typeof avatarProp>;

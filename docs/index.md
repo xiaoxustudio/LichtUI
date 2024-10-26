@@ -46,7 +46,7 @@ const members = [
     avatar: 'https://avatars.githubusercontent.com/u/52703373?v=4&size=64',
     name: '徐然',
     title: 'Creator',
-    desc:"前端工程师，独立游戏开发者",
+    desc:"前端工程师，独立游戏开发者，开源爱好者",
     links: [
       { icon: 'github', link: 'https://github.com/xiaoxustudio' }
     ]
@@ -54,4 +54,6 @@ const members = [
 ]
 </script>
 
-<center><VPTeamMembers size="small" :members="members" /></center>
+<div style="display:flex;align-item:center;justify-content:center;">
+  <VPTeamMembers size="small" :members="members" />
+</div>
