@@ -27,6 +27,25 @@
 }
 :root {
 	--vp-sidebar-bg-color: white;
+	.VPSidebarItem {
+		.item {
+			.indicator + .text {
+				font-size: 16px;
+			}
+		}
+		&.is-active {
+			.VPLink .text {
+				font-weight: bold;
+			}
+		}
+		.VPLink {
+			padding: 0 10px;
+			border-radius: 10px;
+			&:hover {
+				background-color: #f7f7f7;
+			}
+		}
+	}
 }
 @media (prefers-reduced-motion: reduce) {
 	*,
