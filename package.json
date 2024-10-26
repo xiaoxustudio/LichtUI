@@ -1,6 +1,6 @@
 {
 	"name": "licht-design",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Licht UI 是一个基于Vue3开发的轻量级组件库",
 	"scripts": {
 		"dev": "pnpm -C play dev",
