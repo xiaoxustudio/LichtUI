@@ -1,3 +1,3 @@
 <template>
-    <s>Error!</s>
+	<s>Error!</s>
 </template>

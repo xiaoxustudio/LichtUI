@@ -34,7 +34,7 @@ pnpm i licht-ui
 
 ## 关于
 
-作者：[徐然](https://github.com/xiaoxustudio)  
+作者：[徐然](https://github.com/xiaoxustudio)
 
 联系方式：[xugame@qq.com](emailto://xugame@qq.com)
 

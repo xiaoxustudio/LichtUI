@@ -1,13 +1,17 @@
 <template>
-	<button :class="[
-		bem.b(),
-		bem.m(type),
-		bem.m(size),
-		bem.is('round', round),
-		bem.is('plain', plain),
-		bem.is('loading', loading),
-		bem.is('disabled', disabled),
-	]" :type="ntype" :disabled="disabled || loading">
+	<button
+		:class="[
+			bem.b(),
+			bem.m(type),
+			bem.m(size),
+			bem.is('round', round),
+			bem.is('plain', plain),
+			bem.is('loading', loading),
+			bem.is('disabled', disabled),
+		]"
+		:type="ntype"
+		:disabled="disabled || loading"
+	>
 		<span>
 			<slot />
 		</span>

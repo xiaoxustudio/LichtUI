@@ -12,6 +12,5 @@
 	defineProps(colProp);
 
 	const bem = createNamespace("col");
-
 </script>
 <style scope lang="scss"></style>

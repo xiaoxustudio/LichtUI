@@ -33,7 +33,7 @@
 | enable-val  | 开值 | string  |                                                       |           |
 | type        | 类型 | string  | default / primary / success / warning / info / danger | `default` |
 
-## Input Slots 
+## Input Slots
 
 | 插槽名 | 说明                      |
 | ------ | ------------------------- |

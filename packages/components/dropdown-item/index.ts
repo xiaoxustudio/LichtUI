@@ -6,7 +6,7 @@ export * from "./src/dropdown-item";
 export default withInstall(_DDI);
 
 declare module "vue" {
-    export interface GlobalComponents {
-        LiDropDownItem: typeof _DDI;
-    }
+	export interface GlobalComponents {
+		LiDropDownItem: typeof _DDI;
+	}
 }

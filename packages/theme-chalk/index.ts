@@ -1,1 +1,1 @@
-export default './index.scss'
+export default "./index.scss";

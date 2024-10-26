@@ -1,3 +1,3 @@
 <template>
-    <LiInput placeholder="Licht UI" disabled></LiInput>
+	<LiInput placeholder="Licht UI" disabled></LiInput>
 </template>

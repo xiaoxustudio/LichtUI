@@ -1,10 +1,16 @@
 <template>
-	<span :class="[
-		bem.b(),
-		showType == 'hover' ? enter ? bem.m('shadow') : '' : ''
-	]" @mouseenter="enter = true" @mouseleave="enter = false">
+	<span
+		:class="[
+			bem.b(),
+			showType == 'hover' ? (enter ? bem.m('shadow') : '') : '',
+		]"
+		@mouseenter="enter = true"
+		@mouseleave="enter = false"
+	>
 		<div :class="[bem.e('header')]" v-if="header || $slots.header">
-			<span v-if="header" :class="[bem.em('header', 'title')]">{{ header }}</span>
+			<span v-if="header" :class="[bem.em('header', 'title')]">{{
+				header
+			}}</span>
 			<component v-else :is="$slots.header"></component>
 		</div>
 		<div :class="[bem.e('content')]">
@@ -24,6 +30,6 @@
 	defineOptions({ name: "LiCard" });
 	defineProps(cardProp);
 	const bem = createNamespace("card");
-	const enter = ref(false)
+	const enter = ref(false);
 </script>
 <style scope lang="scss"></style>

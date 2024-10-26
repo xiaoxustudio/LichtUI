@@ -1,11 +1,20 @@
 <template>
-	<ul :class="[
-		bem.b(),
-		direction == 'row' && bem.m('row'),
-		direction == 'col' && bem.m('col'),
-	]">
-		<LiMenuItem @select-menu="handleSelectMenu" @select-sub-menu="handleSubSelectMenu" :key="index"
-			v-for="(item, index) in list" :index="index" :data="item" :active="CurrentIndex === index">
+	<ul
+		:class="[
+			bem.b(),
+			direction == 'row' && bem.m('row'),
+			direction == 'col' && bem.m('col'),
+		]"
+	>
+		<LiMenuItem
+			@select-menu="handleSelectMenu"
+			@select-sub-menu="handleSubSelectMenu"
+			:key="index"
+			v-for="(item, index) in list"
+			:index="index"
+			:data="item"
+			:active="CurrentIndex === index"
+		>
 			{{ item.label }}
 		</LiMenuItem>
 	</ul>
@@ -23,14 +32,14 @@
 	defineOptions({ name: "LiMenu" });
 	const prop = defineProps(menuProp);
 	const bem = createNamespace("menu");
-	const emit = defineEmits<MenuEmits>()
-	const CurrentIndex = ref<number>(prop.defaultIndex)
+	const emit = defineEmits<MenuEmits>();
+	const CurrentIndex = ref<number>(prop.defaultIndex);
 	const handleSelectMenu = (index: number, _data: MenuItemData) => {
-		CurrentIndex.value = index
-		emit('command', index, _data)
-	}
+		CurrentIndex.value = index;
+		emit("command", index, _data);
+	};
 	const handleSubSelectMenu = (index: number, _data: MenuItemData) => {
-		emit('subCommand', index, _data)
-	}
+		emit("subCommand", index, _data);
+	};
 </script>
 <style scope lang="scss"></style>

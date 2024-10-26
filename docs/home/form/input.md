@@ -18,10 +18,9 @@
 
 <preview path="../../components/form/input/input-clearable.vue"></preview>
 
-
 ## 输入框类型
 
-使用`type`控制输入框类型 
+使用`type`控制输入框类型
 
 <preview path="../../components/form/input/input-type.vue"></preview>
 
@@ -31,7 +30,7 @@
 
 ## 原始类型
 
-使用`ntype`控制输入框类型 
+使用`ntype`控制输入框类型
 
 <preview path="../../components/form/input/input-ntype.vue"></preview>
 
@@ -49,8 +48,6 @@
 
 <preview path="../../components/form/input/input-custom.vue"></preview>
 
-
-
 ## Input Attributes
 
 | 参数     | 说明     | 类型    | 可选值                                                | 默认值    |
@@ -59,7 +56,7 @@
 | type     | 类型     | string  | default / primary / success / warning / info / danger | `default` |
 | ntype    | 原始类型 | string  |                                                       | `text`    |
 
-## Input Slots 
+## Input Slots
 
 | 插槽名 | 说明     |
 | ------ | -------- |

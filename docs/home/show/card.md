@@ -28,7 +28,7 @@
 | --------- | -------- | ------ | ---------- | ------ |
 | show-type | 移入效果 | string | none/hover | `none` |
 
-## Card Slots 
+## Card Slots
 
 | 插槽名 | 说明 |
 | ------ | ---- |

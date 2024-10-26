@@ -1,12 +1,12 @@
 <template>
-    <LiSwitch v-model="val">
-        <template #default="{ checked }">
-            {{ checked }}
-        </template>
-    </LiSwitch>
+	<LiSwitch v-model="val">
+		<template #default="{ checked }">
+			{{ checked }}
+		</template>
+	</LiSwitch>
 </template>
 <script setup lang="ts">
-    import { ref } from 'vue';
+	import { ref } from "vue";
 
-    const val = ref(false)
+	const val = ref(false);
 </script>

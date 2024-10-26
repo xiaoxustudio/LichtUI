@@ -14,16 +14,12 @@
 
 <preview path="../../components/base/layout.vue" desciption="通过使用`row`组件和`col`组件，并通过向`col`组件传递`span`参数进行自由的布局操作" ></preview>
 
-
-
 ## Row Attributes
 
 | 参数      | 说明     | 类型   | 可选值       | 默认值   |
 | --------- | -------- | ------ | ------------ | -------- |
 | gutter    | 栅格间隔 | number |              | `0`      |
 | direction | 排列方向 | string | row / column | `column` |
-
-
 
 ## Col Attributes
 
