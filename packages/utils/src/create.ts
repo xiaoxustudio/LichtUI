@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 // css 类名规则转换
 function _bem(prefix: string, block: string, elem: string, modifier: string) {
 	if (block) {
@@ -45,15 +44,3 @@ export function createNamespace(name: string) {
 	const prefix_name = `li-${name}`;
 	return createBEM(prefix_name);
 }
-/* 
-const bem = createNamespace("button");
-console.log(bem.b("box"));
-console.log(bem.e("elem"));
-console.log(bem.m("modifier"));
-console.log(bem.bem("box", "elem", "modifier"));
-console.log(bem.is("checked", true));
-
-console.log(bem.be("box", "elem"));
-console.log(bem.bm("box", "modifier"));
-console.log(bem.em("elem", "modifier"));
- */

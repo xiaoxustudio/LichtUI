@@ -1,4 +1,4 @@
-import baseComponentsProp from "@licht-ui/utils/baseComponents";
+import { baseComponentsProp } from "@licht-ui/utils";
 import { ExtractPropTypes, PropType } from "vue";
 const _dirType = ["column", "row"];
 type DirType = (typeof _dirType)[number];

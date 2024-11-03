@@ -1,31 +1,20 @@
 <template>
-	<label
-		:class="[
-			bem.b(),
-			type === 'default' && bem.m('default'),
-			type === 'primary' && bem.m('primary'),
-			type === 'success' && bem.m('success'),
-			type === 'danger' && bem.m('danger'),
-			type === 'warning' && bem.m('warning'),
-			type === 'info' && bem.m('info'),
-			bem.is('disabled', data.disabled ?? disabled),
-		]"
-	>
-		<input
-			ref="radioRef"
-			:class="bem.e('original')"
-			:name="data.name"
-			type="radio"
-			:value="value"
-			:disabled="data.disabled ?? disabled"
-			@click.stop="handleChange"
-		/>
-		<span
-			:class="[
-				bem.e('circle'),
-				data.select == radioRef ? bem.e('circle-active') : '',
-			]"
-		></span>
+	<label :class="[
+		bem.b(),
+		type === 'default' && bem.m('default'),
+		type === 'primary' && bem.m('primary'),
+		type === 'success' && bem.m('success'),
+		type === 'danger' && bem.m('danger'),
+		type === 'warning' && bem.m('warning'),
+		type === 'info' && bem.m('info'),
+		bem.is('disabled', data.disabled ?? disabled),
+	]">
+		<input ref="radioRef" :class="bem.e('original')" :name="data.name" type="radio" :value="value"
+			:disabled="data.disabled ?? disabled" @click.stop="handleChange" />
+		<span :class="[
+			bem.e('circle'),
+			data.select == radioRef ? bem.e('circle-active') : '',
+		]"></span>
 		<span v-if="label" @keydown.stop>
 			{{ label }}
 		</span>
@@ -36,7 +25,7 @@
 	import { createNamespace } from "@licht-ui/utils";
 	import { radioEmits, radioProp } from "./radio";
 	import { inject, nextTick, onMounted, ref } from "vue";
-	import EmitsEnum from "@licht-ui/utils/EmitEnum";
+	import { EmitsEnum } from "@licht-ui/utils";
 	import { radioGroupKey } from "@licht-ui/components/radio-group/src/constants";
 	defineOptions({
 		name: "LiRadio",

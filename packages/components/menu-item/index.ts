@@ -1,4 +1,4 @@
-import withInstall from "@licht-ui/utils/withInstall";
+import { withInstall } from "@licht-ui/utils";
 import _DDI from "./src/menu-item.vue";
 import "@licht-ui/theme-chalk/src/menuitem.scss";
 import "@licht-ui/theme-chalk/src/menuitemdrop.scss";

@@ -4,7 +4,7 @@
 	</div>
 </template>
 <script setup lang="ts">
-	import { createNamespace } from "@licht-ui/utils/create";
+	import { createNamespace } from "@licht-ui/utils";
 	import { colProp } from "./col";
 	defineOptions({
 		name: "LiCol",

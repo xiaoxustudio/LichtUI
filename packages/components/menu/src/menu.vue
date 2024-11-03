@@ -1,20 +1,11 @@
 <template>
-	<ul
-		:class="[
-			bem.b(),
-			direction == 'row' && bem.m('row'),
-			direction == 'col' && bem.m('col'),
-		]"
-	>
-		<LiMenuItem
-			@select-menu="handleSelectMenu"
-			@select-sub-menu="handleSubSelectMenu"
-			:key="index"
-			v-for="(item, index) in list"
-			:index="index"
-			:data="item"
-			:active="CurrentIndex === index"
-		>
+	<ul :class="[
+		bem.b(),
+		direction == 'row' && bem.m('row'),
+		direction == 'col' && bem.m('col'),
+	]">
+		<LiMenuItem @select-menu="handleSelectMenu" @select-sub-menu="handleSubSelectMenu" :key="index"
+			v-for="(item, index) in list" :index="index" :data="item" :active="CurrentIndex === index">
 			{{ item.label }}
 		</LiMenuItem>
 	</ul>
@@ -25,7 +16,7 @@
 	</LiRow>
 </template>
 <script setup lang="ts">
-	import { createNamespace } from "@licht-ui/utils/create";
+	import { createNamespace } from "@licht-ui/utils";
 	import { MenuItemData } from "@licht-ui/components/menu-item";
 	import { MenuEmits, menuProp } from "./menu";
 	import { ref } from "vue";

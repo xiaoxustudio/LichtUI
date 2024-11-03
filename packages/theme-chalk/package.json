@@ -1,6 +1,5 @@
 {
 	"name": "@licht-ui/theme-chalk",
-	"private": "true",
 	"version": "1.0.0",
 	"description": "",
 	"types": "./index.d.ts",

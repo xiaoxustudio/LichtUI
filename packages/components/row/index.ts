@@ -1,4 +1,4 @@
-import withInstall from "@licht-ui/utils/withInstall";
+import { withInstall } from "@licht-ui/utils";
 import _Row from "./src/row.vue";
 import "@licht-ui/theme-chalk/src/row.scss";
 export * from "./src/row";

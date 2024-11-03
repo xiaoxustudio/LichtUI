@@ -15,7 +15,7 @@ import LiMenu from "./menu";
 import LiMenuItem from "./menu-item";
 import LiCard from "./card";
 import LiAvatar from "./avatar";
-import { RadioItemToken } from "../utils/types";
+import { RadioItemToken } from "@licht-ui/utils";
 export * from "./button";
 export * from "./icon";
 export * from "./row";

@@ -1,4 +1,4 @@
-import withInstall from "@licht-ui/utils/withInstall";
+import { withInstall } from "@licht-ui/utils";
 import _Card from "./src/card.vue";
 import "@licht-ui/theme-chalk/src/card.scss";
 export * from "./src/card";

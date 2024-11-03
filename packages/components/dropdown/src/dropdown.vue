@@ -1,18 +1,9 @@
 <template>
-	<div
-		:class="[bem.b()]"
-		v-if="slots?.default"
-		@mouseenter="trigger == 'hover' ? (is_show = true) : ''"
-		@mouseleave="trigger == 'hover' ? (is_show = false) : ''"
-	>
+	<div :class="[bem.b()]" v-if="slots?.default" @mouseenter="trigger == 'hover' ? (is_show = true) : ''"
+		@mouseleave="trigger == 'hover' ? (is_show = false) : ''">
 		<LiRow :id="randid" :style="cssStyle" :class="[bem.m('container')]">
-			<LiDropDownItem
-				:key="'dropdownitem' + index + item.id"
-				v-for="(item, index) in list"
-				:text="item.label"
-				:meta="item?.data"
-				@click="handleItem(item, index)"
-			></LiDropDownItem>
+			<LiDropDownItem :key="'dropdownitem' + index + item.id" v-for="(item, index) in list" :text="item.label"
+				:meta="item?.data" @click="handleItem(item, index)"></LiDropDownItem>
 		</LiRow>
 		<div ref="slotRef" @click.stop="handleSlot">
 			<slot />
@@ -20,7 +11,7 @@
 	</div>
 </template>
 <script setup lang="ts">
-	import { createNamespace } from "@licht-ui/utils/create";
+	import { createNamespace } from "@licht-ui/utils";
 	import { dropdownEmits, dropdownProp, DropdownDataItem } from "./dropdown";
 	import {
 		CSSProperties,

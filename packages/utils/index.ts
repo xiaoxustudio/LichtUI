@@ -1,11 +1,10 @@
 import { isNil } from "lodash-unified";
-import { ComputedRef } from "vue";
-
-export * from "./baseComponents";
-export * from "./create";
-export * from "./withInstall";
-export * from "./rand";
-
+export * from "./src/baseComponents";
+export * from "./src/create";
+export * from "./src/withInstall";
+export * from "./src/rand";
+export * from "./src/types";
+export * from "./src/EmitEnum";
 export {
 	isArray,
 	isFunction,
@@ -23,5 +22,3 @@ export const isNumber = (val: any): val is number => typeof val === "number";
 export const isPropAbsent = (prop: unknown): prop is null | undefined => {
 	return isNil(prop);
 };
-
-export type ComputedValueType<T> = T extends ComputedRef<infer V> ? V : never;

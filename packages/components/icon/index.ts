@@ -1,5 +1,5 @@
 // 整合组件并导出
-import withInstall from "@licht-ui/utils/withInstall";
+import { withInstall } from "@licht-ui/utils";
 import _Icon from "./src/icon.vue";
 import "@licht-ui/theme-chalk/src/icon.scss";
 export * from "./src/icon";

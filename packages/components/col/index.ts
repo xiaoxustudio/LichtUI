@@ -1,4 +1,4 @@
-import withInstall from "@licht-ui/utils/withInstall";
+import { withInstall } from "@licht-ui/utils";
 import _Col from "./src/col.vue";
 import "@licht-ui/theme-chalk/src/col.scss";
 export * from "./src/col";

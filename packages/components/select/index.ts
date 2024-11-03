@@ -1,4 +1,4 @@
-import withInstall from "@licht-ui/utils/withInstall";
+import { withInstall } from "@licht-ui/utils";
 import _Select from "./src/select.vue";
 import "@licht-ui/theme-chalk/src/select.scss";
 export * from "./src/select";

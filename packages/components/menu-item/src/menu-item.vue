@@ -1,32 +1,18 @@
 <template>
-	<li
-		ref="LiRef"
-		:class="[bem.b(), active && bem.m('active')]"
-		@click.stop="handleClick"
-		@mouseenter="_is_show_sub_menu = true"
-		@mouseleave="!enterDrop && (_is_show_sub_menu = false)"
-	>
+	<li ref="LiRef" :class="[bem.b(), active && bem.m('active')]" @click.stop="handleClick"
+		@mouseenter="_is_show_sub_menu = true" @mouseleave="!enterDrop && (_is_show_sub_menu = false)">
 		<div :style="{ width: '100%', height: '100%' }">
 			<LiIcon v-if="data?.icon">
-				<img
-					:class="[bem.m('icon')]"
-					ref="IconRef"
-					:src="data?.icon"
-					style="height: inherit"
-				/>
+				<img :class="[bem.m('icon')]" ref="IconRef" :src="data?.icon" style="height: inherit" />
 			</LiIcon>
 			<slot />
 		</div>
-		<MenuItemDrop
-			v-if="_is_show_sub_menu && data?.list"
-			:data="data?.list"
-			@SelectSubMenu="handleSubMenu"
-		>
+		<MenuItemDrop v-if="_is_show_sub_menu && data?.list" :data="data?.list" @SelectSubMenu="handleSubMenu">
 		</MenuItemDrop>
 	</li>
 </template>
 <script setup lang="ts">
-	import { createNamespace } from "@licht-ui/utils/create";
+	import { createNamespace } from "@licht-ui/utils";
 	import { MenuItemData, MenuItemEmits, menuItemProp } from "./menu-item";
 	import MenuItemDrop from "./menu-item-drop.vue";
 	import { onMounted, provide, ref } from "vue";

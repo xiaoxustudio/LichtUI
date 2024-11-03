@@ -1,4 +1,4 @@
-import withInstall from "@licht-ui/utils/withInstall";
+import { withInstall } from "@licht-ui/utils";
 import _Text from "./src/text.vue";
 import "@licht-ui/theme-chalk/src/text.scss";
 export * from "./src/text";

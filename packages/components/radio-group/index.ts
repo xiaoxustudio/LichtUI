@@ -1,4 +1,4 @@
-import withInstall from "@licht-ui/utils/withInstall";
+import { withInstall } from "@licht-ui/utils";
 import _Group from "./src/radio-group.vue";
 import "@licht-ui/theme-chalk/src/radioGroup.scss";
 export * from "./src/radio-group";

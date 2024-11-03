@@ -4,7 +4,7 @@
 	</div>
 </template>
 <script setup lang="ts">
-	import { createNamespace } from "@licht-ui/utils/create";
+	import { createNamespace } from "@licht-ui/utils";
 	import { radioGroupProp } from "./radio-group";
 	import { computed, provide, reactive, ref } from "vue";
 	import { RadioGroupInjection, radioGroupKey } from "./constants";

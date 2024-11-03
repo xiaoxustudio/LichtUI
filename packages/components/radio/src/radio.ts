@@ -1,5 +1,5 @@
 import { isBoolean, isNumber, isString, isUndefined } from "@licht-ui/utils";
-import EmitsEnum from "@licht-ui/utils/EmitEnum";
+import { EmitsEnum } from "@licht-ui/utils";
 import { ExtractPropTypes, PropType } from "vue";
 const RType = ["default", "primary", "warnning", "danger", "info"];
 export const radioProp = {

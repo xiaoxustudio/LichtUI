@@ -3,7 +3,7 @@ import { build, defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import dts from "vite-plugin-dts";
 
-// const DefineOptions = require("unplugin-vue-define-options/vite");
+const DefineOptions = require("unplugin-vue-define-options/vite");
 const path = require("path");
 const rootDir = path.resolve(__dirname, "../");
 
@@ -12,7 +12,7 @@ function resolve(...urlOrUrls: string[]) {
 }
 const packages = readdirSync(resolve("./packages/"));
 
-const buildDir = "licht-ui";
+const buildDir = "dist";
 async function main() {
 	for (let i of packages) {
 		const packageRoot = resolve("./packages/" + i);
@@ -20,9 +20,9 @@ async function main() {
 		const entry = resolve(packageRoot + "/index.ts");
 		const baseConfig = defineConfig({
 			plugins: [
-				// DefineOptions({
-				// 	exclude: "../docs",
-				// }),
+				DefineOptions({
+					exclude: "../docs",
+				}),
 				vue(),
 				dts({
 					include: packageRoot,
@@ -63,6 +63,7 @@ async function main() {
 		});
 		await build(baseConfig);
 		copyFileSync(resolve("README.md"), resolve(`./${buildDir}/README.md`));
+		copyFileSync(resolve("./dist.json"), resolve(`./${buildDir}/package.json`));
 		copyFileSync(
 			resolve(packageRoot + "/package.json"),
 			resolve(`./${buildDir}/${i}/package.json`)

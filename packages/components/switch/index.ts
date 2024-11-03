@@ -1,4 +1,4 @@
-import withInstall from "@licht-ui/utils/withInstall";
+import { withInstall } from "@licht-ui/utils";
 import _Swtich from "./src/switch.vue";
 import "@licht-ui/theme-chalk/src/switch.scss";
 export * from "./src/switch";

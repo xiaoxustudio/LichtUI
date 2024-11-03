@@ -15,7 +15,7 @@
 	</span>
 </template>
 <script setup lang="ts">
-	import { createNamespace } from "@licht-ui/utils/create";
+	import { createNamespace } from "@licht-ui/utils";
 	import { avatarProp } from "./avatar";
 	import Default from "./default.vue";
 	import { ref } from "vue";

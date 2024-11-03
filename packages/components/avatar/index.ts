@@ -1,4 +1,4 @@
-import withInstall from "@licht-ui/utils/withInstall";
+import { withInstall } from "@licht-ui/utils";
 import _Avatar from "./src/avatar.vue";
 import "@licht-ui/theme-chalk/src/avatar.scss";
 export * from "./src/avatar";

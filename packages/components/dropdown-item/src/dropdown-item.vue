@@ -6,7 +6,7 @@
 	</div>
 </template>
 <script setup lang="ts">
-	import { createNamespace } from "@licht-ui/utils/create";
+	import { createNamespace } from "@licht-ui/utils";
 	import { dropdownItemProp } from "./dropdown-item";
 	defineOptions({
 		name: "LiDropDownItem",
