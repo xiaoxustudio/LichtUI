@@ -15,6 +15,7 @@ import LiMenu from "./menu";
 import LiMenuItem from "./menu-item";
 import LiCard from "./card";
 import LiAvatar from "./avatar";
+import LiAlert from "./alert";
 import { RadioItemToken } from "@licht-ui/utils";
 export * from "./button";
 export * from "./icon";
@@ -33,6 +34,7 @@ export * from "./menu";
 export * from "./menu-item";
 export * from "./card";
 export * from "./avatar";
+export * from "./alert";
 const List = [
 	LiButton,
 	LiIcon,
@@ -51,6 +53,7 @@ const List = [
 	LiSelect,
 	LiCard,
 	LiAvatar,
+	LiAlert,
 ];
 export {
 	LiButton,
@@ -70,6 +73,7 @@ export {
 	LiSelect,
 	LiCard,
 	LiAvatar,
+	LiAlert,
 };
 
 const RadioPool: RadioItemToken[] = [];

@@ -1,0 +1,51 @@
+@use "./common/var.scss" as *;
+@use "./mixins/mixins.scss" as *;
+
+@include b(alert) {
+	display: flex;
+	align-items: center;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 8px 12px;
+	font-size: 14px;
+	line-height: 1.58;
+	list-style: none;
+	position: relative;
+	word-wrap: break-word;
+	border-radius: 8px;
+	@include m(default) {
+		border: solid 1px $li--color-default-light-1;
+		background: $li--color-default-light-7;
+	}
+	@include m(primary) {
+		border: solid 1px $li--color-primary-light-5;
+		background: $li--color-primary-light-9;
+	}
+	@include m(success) {
+		border: solid 1px $li--color-success-light-5;
+		background: $li--color-success-light-9;
+	}
+	@include m(danger) {
+		border: solid 1px $li--color-danger-light-5;
+		background: $li--color-danger-light-9;
+	}
+	@include m(warning) {
+		border: solid 1px $li--color-warning-light-5;
+		background: $li--color-warning-light-9;
+	}
+	@include m(info) {
+		border: solid 1px $li--color-info-light-5;
+		background: $li--color-info-light-9;
+	}
+	@include e(close) {
+		position: absolute;
+		right: 2%;
+		cursor: pointer;
+		&:hover {
+			color: #666;
+		}
+		&:active {
+			color: #aaa;
+		}
+	}
+}
