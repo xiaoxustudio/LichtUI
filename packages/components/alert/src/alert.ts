@@ -6,5 +6,9 @@ export const alertProp = {
 		default: "default",
 	},
 	autoClose: Number,
+	closable: Boolean,
 } as const;
+export type AlertEmits = {
+	onClose: [];
+};
 export type AlertProp = ExtractPropTypes<typeof alertProp>;

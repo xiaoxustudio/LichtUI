@@ -96,6 +96,10 @@ export default defineConfig({
 						text: "Card 卡片",
 						link: "/home/show/card",
 					},
+					{
+						text: "Alert 警告提示",
+						link: "/home/show/alert",
+					},
 				],
 			},
 			{

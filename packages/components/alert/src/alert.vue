@@ -9,22 +9,27 @@
 			type === 'warning' && bem.m('warning'),
 			type === 'info' && bem.m('info'),
 		]">
-			<Close :class="[bem.e('close')]" @click.once="show = !show" />
+			<Close v-if="closable" :class="[bem.e('close')]" @click.once="handleClose" />
 			<slot />
 		</div>
 	</Transition>
 </template>
 <script setup lang="ts">
 	import { createNamespace } from "@licht-ui/utils";
-	import { alertProp } from "./alert";
+	import { alertProp, AlertEmits } from "./alert";
 	import Close from "./close.vue";
 	import { onMounted, ref } from "vue";
 	defineOptions({ name: "LiAlert" });
+	const emit = defineEmits<AlertEmits>()
 	const prop = defineProps(alertProp);
 	const bem = createNamespace("alert");
 	const show = ref(true)
+	const handleClose = () => {
+		show.value = !show.value
+		emit("onClose")
+	}
 	onMounted(() => {
-		if (prop.autoClose && typeof prop.autoClose === "number") {
+		if (!prop.closable && prop.autoClose && typeof prop.autoClose === "number") {
 			setTimeout(() => {
 				show.value = !show.value
 			}, prop.autoClose);
