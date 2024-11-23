@@ -1,0 +1,21 @@
+@use "./common/var.scss" as *;
+@use "./mixins/mixins.scss" as *;
+.licht-overlayer {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vh;
+}
+@include b(messagecontainer) {
+	margin: 0;
+	padding: 0;
+	top: 0;
+	left: 0;
+	position: absolute;
+	width: 100%;
+	@include e(wrapper) {
+		width: 100%;
+		position: absolute;
+		right: 0;
+	}
+}

@@ -1,0 +1,53 @@
+@use "./common/var.scss" as *;
+@use "./mixins/mixins.scss" as *;
+
+@include b(message) {
+	align-self: center;
+	margin: 0;
+	padding: 0;
+	font-size: $li--font-size-base;
+	overflow-wrap: break-word;
+	top: 10%;
+	right: 10%;
+	border-radius: $li--border-radius-base;
+	padding: 10px 40px;
+	height: 16px;
+	position: fixed;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: $li--color-white;
+	right: 5%;
+	border: none;
+	@include e(close) {
+		position: absolute;
+		right: 12%;
+		font-weight: bold;
+		cursor: pointer;
+		user-select: none;
+	}
+	@include m(default) {
+		color: $li--color-black;
+		border: solid 1px #ccc;
+	}
+	@include m(primary) {
+		background: $li--color-primary-light-9;
+		color: $li--color-primary;
+	}
+	@include m(success) {
+		background: $li--color-success-light-9;
+		color: $li--color-success;
+	}
+	@include m(danger) {
+		background: $li--color-danger-light-9;
+		color: $li--color-danger;
+	}
+	@include m(warning) {
+		background: $li--color-warning-light-9;
+		color: $li--color-warning;
+	}
+	@include m(info) {
+		background: $li--color-info-light-9;
+		color: $li--color-info;
+	}
+}

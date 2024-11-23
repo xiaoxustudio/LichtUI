@@ -2,6 +2,7 @@
 	import { MenuItemData } from "@licht-ui/components";
 	import Show1 from "./show1.vue";
 	import Show2 from "./show2.vue";
+	import Show3 from "./show3.vue";
 
 	const handleMenuItem = (index: any, item: any) => {
 		console.log(index, item);
@@ -33,15 +34,11 @@
 <template>
 	<LiRow>
 		<LiCol style="margin-bottom: 5%">
-			<LiMenu
-				:default-index="2"
-				@command="handleMenuItem"
-				@sub-command="handleSubMenuItem"
-				:list
-			>
+			<LiMenu :default-index="3" @command="handleMenuItem" @sub-command="handleSubMenuItem" :list>
 				<template v-for="index in 3" #[index]>
 					<Show1 v-if="index === 1" />
 					<Show2 v-if="index === 2" />
+					<Show3 v-if="index === 3" />
 				</template>
 			</LiMenu>
 		</LiCol>

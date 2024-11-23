@@ -5,6 +5,7 @@ export * from "./src/withInstall";
 export * from "./src/rand";
 export * from "./src/types";
 export * from "./src/EmitEnum";
+export * from "./src/uuid";
 export {
 	isArray,
 	isFunction,

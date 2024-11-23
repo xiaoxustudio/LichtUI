@@ -35,6 +35,7 @@ export * from "./menu-item";
 export * from "./card";
 export * from "./avatar";
 export * from "./alert";
+export * from "./message";
 const List = [
 	LiButton,
 	LiIcon,
