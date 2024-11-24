@@ -22,16 +22,20 @@
 <script setup lang="ts">
 	import { createNamespace } from "@licht-ui/utils";
 	import { CSSProperties, onMounted, ref } from "vue";
-	import { messageProp } from "./message";
+	import { MessageEmits, messageProp } from "./message";
 	import { remove } from "./useMessage";
 	defineOptions({ name: "LiMessage" });
 	const props = defineProps(messageProp);
 	const bem = createNamespace("message");
 	const show = ref(true);
 	const messageRef = ref<HTMLSpanElement>();
-	const dynamicStyles = ref<CSSProperties>({});
+	const emit = defineEmits<MessageEmits>();
+	const dynamicStyles = ref<CSSProperties>({
+		top: `${props.index! * 52 + 20}px`,
+	});
 	const handleClose = () => {
 		show.value = !show.value;
+		emit("onRender", props.uuid!);
 		setTimeout(() => {
 			remove(props.index!);
 		}, 500);

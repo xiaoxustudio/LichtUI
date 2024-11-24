@@ -3,9 +3,7 @@
 		<div :class="bem.e('wrapper')">
 			<TransitionGroup name="fade" tag="div">
 				<Msg
-					v-for="(item, index) in queue.value.filter(
-						(v) => !v.location || v.location === 'left'
-					)"
+					v-for="(item, index) in queueLeft"
 					:key="item.key"
 					:index="index"
 					:uuid="item.uuid"
@@ -14,18 +12,14 @@
 					:duration="item.duration"
 					:closed="item.closed"
 					:location="item.location"
-					:style="{
-						top: `${index * 52 + 20}px`,
-					}"
+					@on-render="handleRender"
 				/>
 			</TransitionGroup>
 		</div>
 		<div :class="bem.e('wrapper')">
 			<TransitionGroup name="fade" tag="div">
 				<Msg
-					v-for="(item, index) in queue.value.filter(
-						(v) => v.location === 'center'
-					)"
+					v-for="(item, index) in queueCenter"
 					:key="item.key"
 					:index="index"
 					:uuid="item.uuid"
@@ -34,18 +28,14 @@
 					:duration="item.duration"
 					:closed="item.closed"
 					:location="item.location"
-					:style="{
-						top: `${index * 52 + 20}px`,
-					}"
+					@on-render="handleRender"
 				/>
 			</TransitionGroup>
 		</div>
 		<div :class="bem.e('wrapper')">
 			<TransitionGroup name="fade" tag="div">
 				<Msg
-					v-for="(item, index) in queue.value.filter(
-						(v) => v.location === 'right'
-					)"
+					v-for="(item, index) in queueRight"
 					:key="item.key"
 					:index="index"
 					:uuid="item.uuid"
@@ -54,9 +44,7 @@
 					:duration="item.duration"
 					:closed="item.closed"
 					:location="item.location"
-					:style="{
-						top: `${index * 52 + 20}px`,
-					}"
+					@on-render="handleRender"
 				/>
 			</TransitionGroup>
 		</div>
@@ -65,15 +53,31 @@
 <script setup lang="ts">
 	import "@licht-ui/theme-chalk/src/message-container.scss";
 	import { createNamespace } from "@licht-ui/utils";
-	import { Ref } from "vue";
+	import { computed, Ref } from "vue";
 	import { MessageEX } from "./message";
 	import Msg from "./message.vue";
 	interface Prop {
 		queue: Ref<MessageEX[]>;
 	}
 	const { queue } = defineProps<Prop>();
+	const queueLeft = computed(() =>
+		queue.value.filter(
+			(v) => !v.location || (v.location === "left" && !v.render)
+		)
+	);
+	const queueCenter = computed(() =>
+		queue.value.filter((v) => v.location === "center" && !v.render)
+	);
+	const queueRight = computed(() =>
+		queue.value.filter((v) => v.location === "right" && !v.render)
+	);
 	defineOptions({ name: "LiMessageContainer" });
 	const bem = createNamespace("messagecontainer");
+
+	const handleRender = (uuid: string) => {
+		const r = queue.value.find((v) => v.uuid === uuid);
+		if (r) r.render = true;
+	};
 </script>
 <style scope lang="scss">
 	.fade-move,

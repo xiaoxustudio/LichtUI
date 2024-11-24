@@ -27,6 +27,8 @@ export const message = (prop: MessageP) => {
 		...prop,
 		location: prop.location ? prop.location : "right",
 		key: _uuid,
+		uuid: _uuid,
+		render: false,
 	} as MessageEX;
 	messageQueue.value.push(_msg);
 };

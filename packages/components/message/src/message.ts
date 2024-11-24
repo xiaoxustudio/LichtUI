@@ -35,10 +35,14 @@ export interface MessageP {
 	uuid?: string;
 	closed?: boolean;
 	location?: Locatoins;
+	render?: boolean;
 }
 
 export type MessageEX = MessageP & {
 	key: string;
 	vueInstance?: ComponentPublicInstance;
+};
+export type MessageEmits = {
+	onRender: [uuid: string];
 };
 export type MessageProp = ExtractPropTypes<typeof messageProp>;
