@@ -15,7 +15,7 @@
 					:closed="item.closed"
 					:location="item.location"
 					:style="{
-						top: `${index * 48 + 16}px`,
+						top: `${index * 52 + 20}px`,
 					}"
 				/>
 			</TransitionGroup>
@@ -35,7 +35,7 @@
 					:closed="item.closed"
 					:location="item.location"
 					:style="{
-						top: `${index * 48 + 16}px`,
+						top: `${index * 52 + 20}px`,
 					}"
 				/>
 			</TransitionGroup>
@@ -55,7 +55,7 @@
 					:closed="item.closed"
 					:location="item.location"
 					:style="{
-						top: `${index * 48 + 16}px`,
+						top: `${index * 52 + 20}px`,
 					}"
 				/>
 			</TransitionGroup>

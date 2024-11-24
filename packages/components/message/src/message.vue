@@ -10,7 +10,7 @@
 			type === 'primary' && bem.m('primary'),
 			type === 'success' && bem.m('success'),
 			type === 'danger' && bem.m('danger'),
-			type === 'warnning' && bem.m('warning'),
+			type === 'warning' && bem.m('warning'),
 			type === 'info' && bem.m('info'),
 		]"
 		:style="dynamicStyles"

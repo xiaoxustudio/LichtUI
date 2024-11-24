@@ -26,7 +26,7 @@
 		});
 		message({
 			content: "测试",
-			type: "warnning",
+			type: "warning",
 			closed: true,
 			location: "center",
 		});

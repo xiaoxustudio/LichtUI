@@ -103,6 +103,12 @@ export default defineConfig({
 				],
 			},
 			{
+				text: "Feedback 反馈",
+				items: [
+					{ text: "Message  全局消息", link: "/home/feedback/message" }
+				],
+			},
+			{
 				text: "Examples",
 				items: [{ text: "示例", link: "/home/start/examples" }],
 			},

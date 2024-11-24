@@ -3,7 +3,7 @@ const Type = [
 	"default",
 	"primary",
 	"success",
-	"warnning",
+	"warning",
 	"danger",
 	"info",
 ] as const;
