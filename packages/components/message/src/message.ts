@@ -16,11 +16,17 @@ export const messageProp = {
 		type: Number,
 		default: 2000,
 	},
+	location: {
+		type: String as PropType<Locatoins[number]>,
+		default: "right",
+	},
 	closed: Boolean,
 	uuid: String,
 	index: Number,
 	content: String,
 } as const;
+
+type Locatoins = "left" | "center" | "right";
 
 export interface MessageP {
 	content: string;
@@ -28,6 +34,7 @@ export interface MessageP {
 	duration?: number;
 	uuid?: string;
 	closed?: boolean;
+	location?: Locatoins;
 }
 
 export type MessageEX = MessageP & {

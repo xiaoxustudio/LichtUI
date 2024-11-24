@@ -2,7 +2,6 @@
 @use "./mixins/mixins.scss" as *;
 
 @include b(message) {
-	align-self: center;
 	margin: 0;
 	padding: 0;
 	font-size: $li--font-size-base;
@@ -17,8 +16,15 @@
 	justify-content: center;
 	align-items: center;
 	background: $li--color-white;
-	right: 5%;
 	border: none;
+	@include when(right) {
+		right: 5%;
+		left: inherit;
+	}
+	@include when(left) {
+		left: 5%;
+		right: inherit;
+	}
 	@include e(close) {
 		position: absolute;
 		right: 12%;

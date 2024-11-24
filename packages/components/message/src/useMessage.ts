@@ -17,6 +17,10 @@ export const remove = (index: number) => {
 
 export const message = (prop: MessageP) => {
 	const _uuid = uuid();
-	let _msg = { ...prop, key: _uuid } as MessageEX;
+	let _msg = {
+		...prop,
+		location: prop.location ? prop.location : "right",
+		key: _uuid,
+	} as MessageEX;
 	messageQueue.value.push(_msg);
 };
