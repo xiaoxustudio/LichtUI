@@ -1,4 +1,4 @@
-import { ComponentPublicInstance, ExtractPropTypes, PropType } from "vue";
+import { ExtractPropTypes, PropType } from "vue";
 const Type = [
 	"default",
 	"primary",
@@ -17,13 +17,15 @@ export const messageProp = {
 		default: 2000,
 	},
 	location: {
-		type: String as PropType<Locatoins[number]>,
+		type: String as PropType<Locatoins>,
 		default: "right",
 	},
+	render: Boolean,
 	closed: Boolean,
 	uuid: String,
 	index: Number,
 	content: String,
+	_close: Boolean,
 } as const;
 
 type Locatoins = "left" | "center" | "right";
@@ -36,13 +38,14 @@ export interface MessageP {
 	closed?: boolean;
 	location?: Locatoins;
 	render?: boolean;
+	_close: boolean;
 }
 
 export type MessageEX = MessageP & {
 	key: string;
-	vueInstance?: ComponentPublicInstance;
 };
 export type MessageEmits = {
-	onRender: [uuid: string];
+	onRender: [uuid: string, location: Locatoins];
+	onClose: [uuid: string, location: Locatoins];
 };
 export type MessageProp = ExtractPropTypes<typeof messageProp>;
