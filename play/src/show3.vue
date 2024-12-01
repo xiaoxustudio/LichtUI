@@ -3,6 +3,7 @@
 	<LiButton @click="handleModal">Madal</LiButton>
 	<LiModal
 		:show="showModal"
+		ok-text="徐然"
 		@on-ok="showModal = !showModal"
 		@on-cancle="showModal = !showModal"
 	>

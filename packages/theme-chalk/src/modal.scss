@@ -13,7 +13,8 @@
 	position: relative;
 	line-height: 1.5;
 	background-color: #fff;
-	
+
+	border-radius: $li--border-radius-base;
 	transition: transform 0.3s linear;
 	@include e(titleWrapper) {
 		border-bottom: solid 1px #ccc;
