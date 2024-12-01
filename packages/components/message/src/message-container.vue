@@ -15,6 +15,7 @@
 					:render="item.render"
 					:_close="item._close"
 					@on-render="handleRender"
+					@on-close="handleClose"
 				/>
 			</TransitionGroup>
 		</div>
@@ -33,6 +34,7 @@
 					:render="item.render"
 					:_close="item._close"
 					@on-render="handleRender"
+					@on-close="handleClose"
 				/>
 			</TransitionGroup>
 		</div>
@@ -51,6 +53,7 @@
 					:render="item.render"
 					:_close="item._close"
 					@on-render="handleRender"
+					@on-close="handleClose"
 				/>
 			</TransitionGroup>
 		</div>
@@ -61,7 +64,7 @@
 	import { createNamespace } from "@licht-ui/utils";
 	import { MessageEX } from "./message";
 	import Msg from "./message.vue";
-	import { onMounted, Ref } from "vue";
+	import { Ref } from "vue";
 	interface Prop {
 		queueLeft: Ref<MessageEX[]>;
 		queueCenter: Ref<MessageEX[]>;
@@ -86,9 +89,22 @@
 		}
 		if (r) r.render = !r.render;
 	};
-	onMounted(() => {
-		console.log([queueCenter]);
-	});
+	const handleClose = (uuid: string, loc: string) => {
+		let r;
+		switch (loc) {
+			case "center":
+				r = queueCenter.value.find((v) => v.uuid === uuid);
+				break;
+			case "left":
+				r = queueLeft.value.find((v) => v.uuid === uuid);
+				break;
+			case "right":
+				r = queueRight.value.find((v) => v.uuid === uuid);
+				break;
+		}
+		if (r) r._close = !r._close;
+		console.log(uuid)
+	};
 </script>
 <style scope lang="scss">
 	.fade-move,

@@ -1,0 +1,30 @@
+@use "./common/var.scss" as *;
+@use "./mixins/mixins.scss" as *;
+
+@include b(modal) {
+	padding: 10px 20px;
+	position: fixed;
+	top: 50%;
+	top: calc(50% - 88px);
+	left: calc(50% - 520px / 2);
+	padding: 10px 20px;
+	width: 520px;
+	max-width: calc(100vw - 32px);
+	position: relative;
+	line-height: 1.5;
+	background-color: #fff;
+	
+	transition: transform 0.3s linear;
+	@include e(titleWrapper) {
+		border-bottom: solid 1px #ccc;
+		padding: 16px 24px;
+	}
+	@include e(contentWrapper) {
+		padding: 24px;
+	}
+	@include e(bottomWrapper) {
+		padding: 10px 16px;
+		display: flex;
+		justify-content: right;
+	}
+}

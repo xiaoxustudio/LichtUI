@@ -38,7 +38,7 @@ export interface MessageP {
 	closed?: boolean;
 	location?: Locatoins;
 	render?: boolean;
-	_close: boolean;
+	_close?: boolean;
 }
 
 export type MessageEX = MessageP & {
