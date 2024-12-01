@@ -3,15 +3,14 @@
 		<div
 			v-if="show"
 			:class="bem_mask.b()"
-			@wheel="(e) => e.stopPropagation()"
-			@click="(e) => e.stopPropagation()"
-			:style="dy_styles"
+			@wheel.stop.prevent
+			@click.stop.prevent
+			@scroll.stop.prevent
 		>
-			<div :class="[bem.b()]">
+			<div :class="[bem.b()]" :style="dy_styles">
 				<div :class="[bem.e('titleWrapper')]">
 					<span v-if="title">{{ title }}</span>
 					<slot v-else-if="$slots.title" name="title" />
-					<span v-else>默认标题</span>
 				</div>
 				<div :class="[bem.e('contentWrapper')]">
 					<span v-if="content">{{ content }}</span>
@@ -19,7 +18,7 @@
 				</div>
 				<div :class="[bem.e('bottomWrapper')]">
 					<LiButton @click="handleCancle">{{
-						cacheText ? cacheText : "取消"
+						cancleText ? cancleText : "取消"
 					}}</LiButton>
 					<LiButton type="primary" @click="handleOk">{{
 						okText ? okText : "确认"

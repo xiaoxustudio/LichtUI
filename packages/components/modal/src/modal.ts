@@ -4,7 +4,7 @@ export const modalProp = {
 	title: String,
 	content: String,
 	okText: String,
-	cacheText: String,
+	cancleText: String,
 } as const;
 export type ModalEmits = {
 	onOk: [];

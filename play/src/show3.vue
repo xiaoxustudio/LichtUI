@@ -4,6 +4,7 @@
 	<LiModal
 		:show="showModal"
 		ok-text="徐然"
+		cancle-text="徐然"
 		@on-ok="showModal = !showModal"
 		@on-cancle="showModal = !showModal"
 	>

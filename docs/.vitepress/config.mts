@@ -105,6 +105,7 @@ export default defineConfig({
 			{
 				text: "Feedback 反馈",
 				items: [
+					{ text: "Modal  模态框", link: "/home/feedback/modal" },
 					{ text: "Message  全局消息", link: "/home/feedback/message" }
 				],
 			},
