@@ -25,3 +25,12 @@
 使用`location`控制
 
 <preview path="../../components/feedback/message/msg-location.vue"></preview>
+
+## message Attributes
+
+| 参数     | 说明         | 类型    | 可选值                                                | 默认值    |
+| -------- | ------------ | ------- | ----------------------------------------------------- | --------- |
+| type     | 类型         | string  | default / primary / success / warning / info / danger | `default` |
+| duration | 退出时间     | number  |                                                       | `2000`    |
+| closed   | 是否可以关闭 | boolean |                                                       | `2000`    |
+| location | 位置         | string  | left / middle / right                                 | `2000`    |
