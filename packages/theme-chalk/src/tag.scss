@@ -1,0 +1,79 @@
+@use "./common/var.scss" as *;
+@use "./mixins/mixins.scss" as *;
+
+@include b(tag) {
+	margin: 0;
+	padding: 0 10px;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	vertical-align: middle;
+	font-size: $li--font-size-base;
+	border-radius: $li--border-radius-base;
+	border: $li--border-base;
+	box-sizing: border-box;
+	white-space: nowrap;
+	height: 24px;
+	@include e(closed) {
+		border-radius: $li--border-radius-circle;
+		height: 14px;
+		width: 14px;
+		margin-left: 6px;
+		user-select: none;
+		cursor: pointer;
+		transition: background-color 0.2s linear;
+		@include m(default) {
+			color: $li--color-black;
+			background-color: $li--color-default;
+		}
+		@include m(primary) {
+			color: $li--color-primary-light-9;
+			background-color: $li--color-primary-light-4;
+		}
+		@include m(success) {
+			color: $li--color-success-light-9;
+			background-color: $li--color-success-light-4;
+		}
+		@include m(danger) {
+			color: $li--color-danger-light-9;
+			background-color: $li--color-danger-light-4;
+		}
+		@include m(warning) {
+			color: $li--color-warning-light-9;
+			background-color: $li--color-warning-light-4;
+		}
+		@include m(info) {
+			color: $li--color-info-light-9;
+			background-color: $li--color-info-light-4;
+		}
+	}
+	@include m(default) {
+		color: $li--color-black;
+		background-color: $li--color-default-light-5;
+	}
+	@include m(primary) {
+		color: $li--color-primary;
+		background-color: $li--color-primary-light-9;
+		border-color: $li--color-primary-light-8;
+	}
+	@include m(success) {
+		color: $li--color-success;
+		background-color: $li--color-success-light-9;
+		border-color: $li--color-success-light-8;
+	}
+	@include m(danger) {
+		color: $li--color-danger;
+		background-color: $li--color-danger-light-9;
+		border-color: $li--color-danger-light-8;
+	}
+	@include m(warning) {
+		color: $li--color-warning;
+		background-color: $li--color-warning-light-9;
+		border-color: $li--color-warning-light-8;
+	}
+	@include m(info) {
+		color: $li--color-info;
+		background-color: $li--color-info-light-9;
+		border-color: $li--color-info-light-8;
+	}
+}
