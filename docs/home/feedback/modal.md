@@ -6,7 +6,7 @@
 
 <preview  path='../../components/feedback/modal/modal.vue'></preview>
 
-## 退出时间
+## 按钮文本
 
 使用`ok-text`、`cancle-text`控制
 
