@@ -10,7 +10,7 @@ export const tagProp = {
 		type: String as PropType<(typeof ThemeType)[number]>,
 		default: "light",
 	},
-	closed: Boolean,
+	closable: Boolean,
 	round: Boolean,
 } as const;
 export type TagProp = ExtractPropTypes<typeof tagProp>;

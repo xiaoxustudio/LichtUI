@@ -14,7 +14,7 @@
 	box-sizing: border-box;
 	white-space: nowrap;
 	height: 24px;
-	@include e(closed) {
+	@include e(closable) {
 		border-radius: $li--border-radius-circle;
 		height: 14px;
 		width: 14px;

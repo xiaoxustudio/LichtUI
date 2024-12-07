@@ -27,15 +27,15 @@
 		>
 			<span><slot /></span>
 			<span
-				v-if="closed"
+				v-if="closable"
 				:class="[
-					bem.e('closed'),
-					type === 'default' && hover && bem.em('closed', 'default'),
-					type === 'primary' && hover && bem.em('closed', 'primary'),
-					type === 'success' && hover && bem.em('closed', 'success'),
-					type === 'danger' && hover && bem.em('closed', 'danger'),
-					type === 'warning' && hover && bem.em('closed', 'warning'),
-					type === 'info' && hover && bem.em('closed', 'info'),
+					bem.e('closable'),
+					type === 'default' && hover && bem.em('closable', 'default'),
+					type === 'primary' && hover && bem.em('closable', 'primary'),
+					type === 'success' && hover && bem.em('closable', 'success'),
+					type === 'danger' && hover && bem.em('closable', 'danger'),
+					type === 'warning' && hover && bem.em('closable', 'warning'),
+					type === 'info' && hover && bem.em('closable', 'info'),
 				]"
 				@mouseenter="hover = true"
 				@mouseleave="hover = false"

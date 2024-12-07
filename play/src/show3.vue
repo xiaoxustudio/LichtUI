@@ -20,12 +20,12 @@
 			<LiTag type="warning">测试</LiTag>
 		</LiCol>
 		<LiCol style="display: flex; gap: 20px">
-			<LiTag closed>测试</LiTag>
-			<LiTag type="primary" closed>测试</LiTag>
-			<LiTag type="success" closed>测试</LiTag>
-			<LiTag type="danger" closed>测试</LiTag>
-			<LiTag type="info" closed>测试</LiTag>
-			<LiTag type="warning" closed>测试</LiTag>
+			<LiTag closable>测试</LiTag>
+			<LiTag type="primary" closable>测试</LiTag>
+			<LiTag type="success" closable>测试</LiTag>
+			<LiTag type="danger" closable>测试</LiTag>
+			<LiTag type="info" closable>测试</LiTag>
+			<LiTag type="warning" closable>测试</LiTag>
 		</LiCol>
 		<LiCol style="display: flex; gap: 20px">
 			<LiTag theme="dark">测试</LiTag>
