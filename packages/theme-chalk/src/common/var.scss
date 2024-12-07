@@ -6,6 +6,7 @@ $li--color-warning: #f2d553 !default;
 $li--color-danger: #f25353 !default;
 $li--color-info: #a3a8c3 !default;
 $li--color-default: #eee !default;
+$li--color-defaultDark: darken($li--color-default, 50%) !default;
 
 $li--color-disbaled: #e5e5e5 !default;
 

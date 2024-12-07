@@ -76,4 +76,65 @@
 		background-color: $li--color-info-light-9;
 		border-color: $li--color-info-light-8;
 	}
+	@include e(dark) {
+		@include m(default) {
+			color: $li--color-default-light-9;
+			background-color: $li--color-defaultDark;
+		}
+		@include m(primary) {
+			color: $li--color-primary-light-9;
+			background-color: $li--color-primary;
+		}
+		@include m(success) {
+			color: $li--color-success-light-9;
+			background-color: $li--color-success;
+		}
+		@include m(danger) {
+			color: $li--color-danger-light-9;
+			background-color: $li--color-danger;
+		}
+		@include m(warning) {
+			color: $li--color-warning-light-9;
+			background-color: $li--color-warning;
+		}
+		@include m(info) {
+			color: $li--color-info-light-9;
+			background-color: $li--color-info;
+		}
+	}
+	@include e(plain) {
+		@include m(default) {
+			background-color: white;
+			color: $li--color-defaultDark;
+			border: 1px solid $li--color-defaultDark;
+		}
+		@include m(primary) {
+			background-color: white;
+			color: $li--color-primary;
+			border: 1px solid $li--color-primary;
+		}
+		@include m(success) {
+			background-color: white;
+			color: $li--color-success;
+			border: 1px solid $li--color-success;
+		}
+		@include m(danger) {
+			background-color: white;
+			color: $li--color-danger;
+			border: 1px solid $li--color-danger;
+		}
+		@include m(warning) {
+			background-color: white;
+			color: $li--color-warning;
+			border: 1px solid $li--color-warning;
+		}
+		@include m(info) {
+			background-color: white;
+			color: $li--color-info;
+			border: 1px solid $li--color-info;
+		}
+	}
+	@include when(round) {
+		border-radius: 20px;
+	}
 }

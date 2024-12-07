@@ -4,12 +4,25 @@
 			v-if="show"
 			:class="[
 				bem.b(),
+				bem.is('round', round),
 				type === 'default' && bem.m('default'),
 				type === 'primary' && bem.m('primary'),
 				type === 'success' && bem.m('success'),
 				type === 'danger' && bem.m('danger'),
 				type === 'warning' && bem.m('warning'),
 				type === 'info' && bem.m('info'),
+				theme === 'dark' && type === 'default' && bem.em('dark', 'default'),
+				theme === 'dark' && type === 'primary' && bem.em('dark', 'primary'),
+				theme === 'dark' && type === 'success' && bem.em('dark', 'success'),
+				theme === 'dark' && type === 'danger' && bem.em('dark', 'danger'),
+				theme === 'dark' && type === 'warning' && bem.em('dark', 'warning'),
+				theme === 'dark' && type === 'info' && bem.em('dark', 'info'),
+				theme === 'plain' && type === 'default' && bem.em('plain', 'default'),
+				theme === 'plain' && type === 'primary' && bem.em('plain', 'primary'),
+				theme === 'plain' && type === 'success' && bem.em('plain', 'success'),
+				theme === 'plain' && type === 'danger' && bem.em('plain', 'danger'),
+				theme === 'plain' && type === 'warning' && bem.em('plain', 'warning'),
+				theme === 'plain' && type === 'info' && bem.em('plain', 'info'),
 			]"
 		>
 			<span><slot /></span>
