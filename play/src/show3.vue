@@ -51,6 +51,22 @@
 			<LiTag type="info" round>测试</LiTag>
 			<LiTag type="warning" round>测试</LiTag>
 		</LiCol>
+		<LiCol style="display: flex; gap: 20px">
+			<LiLink href="http://www.baidu.com">测试</LiLink>
+			<LiLink type="primary" href="http://www.baidu.com">测试</LiLink>
+			<LiLink type="success" href="http://www.baidu.com">测试</LiLink>
+			<LiLink type="danger" href="http://www.baidu.com">测试</LiLink>
+			<LiLink type="info" href="http://www.baidu.com">测试</LiLink>
+			<LiLink type="warning" href="http://www.baidu.com">测试</LiLink>
+		</LiCol>
+		<LiCol style="display: flex; gap: 20px">
+			<LiLink href="http://www.baidu.com" disabled>测试</LiLink>
+			<LiLink type="primary" href="http://www.baidu.com" disabled>测试</LiLink>
+			<LiLink type="success" href="http://www.baidu.com" disabled>测试</LiLink>
+			<LiLink type="danger" href="http://www.baidu.com" disabled>测试</LiLink>
+			<LiLink type="info" href="http://www.baidu.com" disabled>测试</LiLink>
+			<LiLink type="warning" href="http://www.baidu.com" disabled>测试</LiLink>
+		</LiCol>
 	</LiRow>
 </template>
 <script setup lang="ts">

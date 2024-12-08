@@ -1,0 +1,77 @@
+@use "./common/var.scss" as *;
+@use "./mixins/mixins.scss" as *;
+
+@mixin hover($color) {
+	&:hover:not(.is-disabled) {
+		&::after {
+			content: "";
+			position: absolute;
+			left: 0;
+			right: 0;
+			height: 0;
+			bottom: 0;
+			border-bottom: 1px solid $color;
+		}
+	}
+}
+
+@include b(link) {
+	display: inline-flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	vertical-align: middle;
+	position: relative;
+	text-decoration: none;
+	outline: none;
+	cursor: pointer;
+	padding: 0;
+	@include m(default) {
+		color: $li--color-text-primary;
+		@include hover($li--color-defaultDark);
+		@include when(disabled) {
+			color: darken($color: $li--color-default, $amount: 20);
+			cursor: not-allowed;
+		}
+	}
+	@include m(primary) {
+		color: $li--color-primary;
+		@include hover($li--color-primary);
+		@include when(disabled) {
+			color: $li--color-primary-light-5;
+			cursor: not-allowed;
+		}
+	}
+	@include m(success) {
+		color: $li--color-success;
+		@include hover($li--color-success);
+		@include when(disabled) {
+			color: $li--color-success-light-5;
+			cursor: not-allowed;
+		}
+	}
+	@include m(danger) {
+		color: $li--color-danger;
+		@include hover($li--color-danger);
+		@include when(disabled) {
+			color: $li--color-danger-light-5;
+			cursor: not-allowed;
+		}
+	}
+	@include m(warning) {
+		color: $li--color-warning;
+		@include hover($li--color-warning);
+		@include when(disabled) {
+			color: $li--color-warning-light-5;
+			cursor: not-allowed;
+		}
+	}
+	@include m(info) {
+		color: $li--color-info;
+		@include hover($li--color-info);
+		@include when(disabled) {
+			color: $li--color-info-light-5;
+			cursor: not-allowed;
+		}
+	}
+}
