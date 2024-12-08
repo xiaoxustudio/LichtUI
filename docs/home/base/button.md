@@ -20,7 +20,7 @@
 
 <preview  path="../../components/base/button/button-round.vue" description="使用`round`控制"></preview>
 
-## Attributes
+## Button Attributes
 
 | 参数     | 说明     | 类型    | 可选值                                                | 默认值    |
 | -------- | -------- | ------- | ----------------------------------------------------- | --------- |

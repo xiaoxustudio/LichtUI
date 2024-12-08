@@ -45,6 +45,10 @@ export default defineConfig({
 						text: "Text 文本",
 						link: "/home/base/text",
 					},
+					{
+						text: "Link 链接",
+						link: "/home/base/link",
+					},
 				],
 			},
 			{
