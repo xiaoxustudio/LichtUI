@@ -71,10 +71,10 @@
 			<LiSlider />
 		</LiCol>
 		<LiCol style="display: flex; gap: 20px">
-			<LiSlider :value="progress" @on-change="handleSliderChange" />
+			<LiSlider v-model="progress" @on-change="handleSliderChange" />
 		</LiCol>
 		<LiCol style="display: flex; gap: 20px">
-			<LiSlider :value="progress" :step="10" @on-change="handleSliderChange" />
+			<LiSlider v-model="progress" :step="10" @on-change="handleSliderChange" />
 		</LiCol>
 		<LiCol style="display: flex; gap: 20px">
 			<LiSlider :value="30" disabled />

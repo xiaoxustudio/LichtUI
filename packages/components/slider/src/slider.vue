@@ -18,7 +18,7 @@
 <script setup lang="ts">
 	import { createNamespace } from "@licht-ui/utils";
 	import { SliderEmits, sliderProp } from "./slider";
-	import { onBeforeMount, ref } from "vue";
+	import { ref } from "vue";
 	import { round } from "lodash-unified";
 	defineOptions({ name: "LiSlider" });
 	const props = defineProps(sliderProp);
@@ -55,8 +55,5 @@
 		window.addEventListener("mousemove", handleMoseMove);
 		window.addEventListener("mouseup", handleMoseUp);
 	};
-	onBeforeMount(() => {
-		modelValue.value = props.value;
-	});
 </script>
 <style scope lang="scss"></style>
