@@ -67,6 +67,12 @@
 			<LiLink type="info" href="http://www.baidu.com" disabled>测试</LiLink>
 			<LiLink type="warning" href="http://www.baidu.com" disabled>测试</LiLink>
 		</LiCol>
+		<LiCol style="display: flex; gap: 20px">
+			<LiSlider />
+		</LiCol>
+		<LiCol style="display: flex; gap: 20px">
+			<LiSlider :value="progress" @on-change="handleSliderChange" />
+		</LiCol>
 	</LiRow>
 </template>
 <script setup lang="ts">
@@ -107,6 +113,8 @@
 		});
 	};
 	const showModal = ref(false);
+	const progress = ref(0);
 	const handleModal = () => (showModal.value = !showModal.value);
+	const handleSliderChange = (val: number) => console.log("SliderChange:", val);
 </script>
 <style scope lang="scss"></style>

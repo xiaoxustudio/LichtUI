@@ -20,6 +20,7 @@ import LiAlert from "./alert";
 import LiModal from "./modal";
 import LiTag from "./tag";
 import LiLink from "./link";
+import LiSlider from "./slider";
 export * from "./button";
 export * from "./icon";
 export * from "./row";
@@ -42,6 +43,7 @@ export * from "./message";
 export * from "./modal";
 export * from "./tag";
 export * from "./link";
+export * from "./slider";
 const List = [
 	LiButton,
 	LiIcon,
@@ -64,6 +66,7 @@ const List = [
 	LiModal,
 	LiTag,
 	LiLink,
+	LiSlider,
 ];
 export {
 	LiButton,
@@ -87,6 +90,7 @@ export {
 	LiModal,
 	LiTag,
 	LiLink,
+	LiSlider,
 };
 
 const RadioPool: RadioItemToken[] = [];
