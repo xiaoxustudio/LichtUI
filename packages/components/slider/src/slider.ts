@@ -13,7 +13,14 @@ export const sliderProp = {
 		type: Number,
 		default: 0,
 	},
-	value: Number,
+	step: {
+		type: Number,
+		default: 1,
+	},
+	value: {
+		type: Number,
+		default: 0,
+	},
 	disabled: Boolean,
 } as const;
 

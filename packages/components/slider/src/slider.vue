@@ -8,7 +8,7 @@
 			<div
 				:class="[bem.e('button')]"
 				:style="{ left: `${modelValue}%` }"
-				@mousedown.stop="!disabled && handleMoseDown"
+				@mousedown.stop="handleMoseDown"
 			>
 				<div :class="[bem.e('trigger'), bem.is('disabled', disabled)]" />
 			</div>
@@ -27,26 +27,36 @@
 	const posX = ref(0);
 	const modelValue = defineModel({ default: 0 });
 	const emit = defineEmits<SliderEmits>();
+
+	// 用于将值四舍五入到最近的步长
+	const roundToStep = (value: number, step: number) => {
+		if (step === 0) return value;
+		return Math.round(value / step) * step;
+	};
 	const handleMoseMove = (e: MouseEvent) => {
 		if (!sliderWrapper.value) return;
 		const { left, width } = sliderWrapper.value.getBoundingClientRect();
 		const _cacheVal = e.clientX - left;
 		const newValue = (_cacheVal / width) * 100;
 		const _calc = round(Math.max(0, Math.min(newValue, 100)), 0);
-		if (modelValue.value != _calc) emit("onChange", _calc, modelValue.value);
-		modelValue.value = _calc;
+		const steppedValue = roundToStep(_calc, props.step);
+		if (modelValue.value != steppedValue) {
+			emit("onChange", steppedValue, modelValue.value);
+		}
+		modelValue.value = steppedValue;
 	};
 	const handleMoseUp = () => {
 		window.removeEventListener("mousemove", handleMoseMove);
 		window.removeEventListener("mouseup", handleMoseUp);
 	};
 	const handleMoseDown = (e: MouseEvent) => {
+		if (props.disabled) return;
 		posX.value = e.x;
 		window.addEventListener("mousemove", handleMoseMove);
 		window.addEventListener("mouseup", handleMoseUp);
 	};
 	onBeforeMount(() => {
-		modelValue.value = props.value || 0;
+		modelValue.value = props.value;
 	});
 </script>
 <style scope lang="scss"></style>
