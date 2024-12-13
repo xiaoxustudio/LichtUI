@@ -1,16 +1,16 @@
 <template>
-	<div :class="[bem.b()]">
+	<div :class="[bem.b(), bem.is('disabled', disabled)]">
 		<div ref="sliderWrapper" :class="[bem.e('wrapper')]">
 			<div
-				:class="[bem.e('progress')]"
+				:class="[bem.e('progress'), bem.is('disabled', disabled)]"
 				:style="{ left: 0, width: `${modelValue}%` }"
 			/>
 			<div
 				:class="[bem.e('button')]"
 				:style="{ left: `${modelValue}%` }"
-				@mousedown.stop="handleMoseDown"
+				@mousedown.stop="!disabled && handleMoseDown"
 			>
-				<div :class="[bem.e('trigger')]" />
+				<div :class="[bem.e('trigger'), bem.is('disabled', disabled)]" />
 			</div>
 		</div>
 	</div>
@@ -18,10 +18,10 @@
 <script setup lang="ts">
 	import { createNamespace } from "@licht-ui/utils";
 	import { SliderEmits, sliderProp } from "./slider";
-	import { ref } from "vue";
+	import { onBeforeMount, ref } from "vue";
 	import { round } from "lodash-unified";
 	defineOptions({ name: "LiSlider" });
-	defineProps(sliderProp);
+	const props = defineProps(sliderProp);
 	const bem = createNamespace("slider");
 	const sliderWrapper = ref<HTMLDivElement | null>();
 	const posX = ref(0);
@@ -45,5 +45,8 @@
 		window.addEventListener("mousemove", handleMoseMove);
 		window.addEventListener("mouseup", handleMoseUp);
 	};
+	onBeforeMount(() => {
+		modelValue.value = props.value || 0;
+	});
 </script>
 <style scope lang="scss"></style>

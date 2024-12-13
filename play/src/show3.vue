@@ -73,6 +73,9 @@
 		<LiCol style="display: flex; gap: 20px">
 			<LiSlider :value="progress" @on-change="handleSliderChange" />
 		</LiCol>
+		<LiCol style="display: flex; gap: 20px">
+			<LiSlider :value="30" disabled />
+		</LiCol>
 	</LiRow>
 </template>
 <script setup lang="ts">

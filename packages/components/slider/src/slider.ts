@@ -14,6 +14,7 @@ export const sliderProp = {
 		default: 0,
 	},
 	value: Number,
+	disabled: Boolean,
 } as const;
 
 export type SliderEmits = {

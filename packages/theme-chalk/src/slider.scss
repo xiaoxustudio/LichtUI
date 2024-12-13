@@ -21,6 +21,9 @@
 		border-top-left-radius: $li--border-radius-base;
 		border-bottom-left-radius: $li--border-radius-base;
 		position: absolute;
+		@include when(disabled) {
+			background-color: $li--color-primary-light-9;
+		}
 	}
 	@include e(button) {
 		height: 36px;
@@ -51,5 +54,9 @@
 		transition: 0.2s;
 		-webkit-user-select: none;
 		user-select: none;
+		@include when(disabled) {
+			border-color: $li--color-primary-light-9;
+			cursor: not-allowed;
+		}
 	}
 }
