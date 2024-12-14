@@ -33,6 +33,7 @@
 		if (step === 0) return value;
 		return Math.round(value / step) * step;
 	};
+
 	const handleMoseMove = (e: MouseEvent) => {
 		if (!sliderWrapper.value) return;
 		const { left, width } = sliderWrapper.value.getBoundingClientRect();
