@@ -1,16 +1,12 @@
 <template>
 	<div :class="[bem.b(), bem.is('disabled', disabled)]">
 		<div ref="sliderWrapper" :class="[bem.e('wrapper')]">
-			<div
-				:class="[bem.e('progress'), bem.is('disabled', disabled)]"
-				:style="{ left: 0, width: `${modelValue}%` }"
-			/>
-			<div
-				:class="[bem.e('button')]"
-				:style="{ left: `${modelValue}%` }"
-				@mousedown.stop="handleMoseDown"
-			>
-				<div :class="[bem.e('trigger'), bem.is('disabled', disabled)]" />
+			<div :class="[bem.e('progress'), bem.is('disabled', disabled)]"
+				:style="{ left: 0, width: `${modelValue}%` }" />
+			<div :class="[bem.e('button')]" :style="{ left: `${modelValue}%` }" @mousedown.stop="handleMoseDown">
+				<LiToolTip :title="`${modelValue}%`">
+					<div :class="[bem.e('trigger'), bem.is('disabled', disabled)]" />
+				</LiToolTip>
 			</div>
 		</div>
 	</div>

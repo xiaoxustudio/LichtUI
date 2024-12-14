@@ -14,11 +14,12 @@
 <script setup lang="ts">
 	import { createNamespace } from "@licht-ui/utils";
 	import { tooltipProp } from "./tooltip";
-	import { nextTick, reactive, ref, watch } from "vue";
+	import { nextTick, onMounted, onUnmounted, reactive, ref, watch } from "vue";
 	defineOptions({ name: "LiToolTip" });
 	defineProps(tooltipProp);
 	const bem = createNamespace("tooltip");
 	const hover = ref(false);
+	const observer = ref<MutationObserver>()
 
 	const pos = reactive<{ x: number; y: number }>({
 		x: 0,
@@ -29,12 +30,18 @@
 	const update = () => {
 		if (!tooltipTriggerRef.value) return;
 		if (!tooltipRef.value) return;
-		const { x, y } = tooltipTriggerRef.value.getBoundingClientRect();
-		const { height, width } = tooltipRef.value.getBoundingClientRect();
-		pos.x = x + width / 2 - 15;
-		pos.y = y - height - 10;
+		const { left, top, width } = tooltipTriggerRef.value.getBoundingClientRect();
+		const { height, width: rWidth } = tooltipRef.value.getBoundingClientRect();
+		pos.x = left + (width / 2) - rWidth / 2;
+		pos.y = top - height - 10;
 	};
 	watch(hover, () => nextTick(() => update()))
+	onMounted(() => {
+		if (!tooltipTriggerRef.value) return
+	})
+	onUnmounted(() =>
+		observer.value && observer.value.disconnect()
+	)
 </script>
 <style scope lang="scss">
 
