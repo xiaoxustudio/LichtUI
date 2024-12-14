@@ -1,0 +1,36 @@
+@use "./common/var.scss" as *;
+@use "./mixins/mixins.scss" as *;
+
+@include b(tooltip) {
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	background-color: #303133;
+	border-radius: $li--border-base;
+	display: inline-flex;
+	border-radius: 4px;
+	padding: 5px 11px;
+	z-index: 2000;
+	font-size: 12px;
+	line-height: 20px;
+	min-width: 10px;
+	overflow-wrap: break-word;
+	color: white;
+	&::after {
+		content: "";
+		position: absolute;
+		top: calc(100% - 5px);
+		left: calc(50% - 5px);
+		width: 10px;
+		height: 10px;
+		background-color: #303133;
+		transform: rotate(45deg);
+		z-index: -1;
+	}
+	@include e(trigger) {
+	}
+	@include e(mask) {
+		padding: 0;
+		margin: 0;
+	}
+}

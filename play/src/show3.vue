@@ -79,6 +79,14 @@
 		<LiCol style="display: flex; gap: 20px">
 			<LiSlider :value="30" disabled />
 		</LiCol>
+		<LiCol style="display: flex; gap: 20px">
+			<LiSlider :value="30" disabled />
+		</LiCol>
+		<LiCol style="display: flex; gap: 20px">
+			<LiToolTip title="测试">
+				<LiButton>测试</LiButton>
+			</LiToolTip>
+		</LiCol>
 	</LiRow>
 </template>
 <script setup lang="ts">
