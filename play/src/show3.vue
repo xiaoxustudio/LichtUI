@@ -1,13 +1,8 @@
 <template>
 	<LiButton @click="handleClick">徐然</LiButton>
 	<LiButton @click="handleModal">Madal</LiButton>
-	<LiModal
-		:show="showModal"
-		ok-text="徐然"
-		cancle-text="徐然"
-		@on-ok="showModal = !showModal"
-		@on-cancle="showModal = !showModal"
-	>
+	<LiModal :show="showModal" ok-text="徐然" cancle-text="徐然" @on-ok="showModal = !showModal"
+		@on-cancle="showModal = !showModal">
 		我啊是第几哦按时间段俩势均力敌加萨里的吉拉斯觉得i来加深理解低价奥斯陆冬季俩手机的丽萨讲道理加萨莉的就是俩就类似啊甲第六十九i拉丝机
 	</LiModal>
 	<LiRow :gutter="20">
@@ -87,6 +82,11 @@
 				<LiButton>测试</LiButton>
 			</LiToolTip>
 		</LiCol>
+		<LiCol style="display: flex; gap: 20px">
+			<LiToolTip title="测试" :show="showTooltip">
+				<LiButton @click="showTooltip = !showTooltip">切换</LiButton>
+			</LiToolTip>
+		</LiCol>
 	</LiRow>
 </template>
 <script setup lang="ts">
@@ -128,6 +128,7 @@
 	};
 	const showModal = ref(false);
 	const progress = ref(0);
+	const showTooltip = ref(false);
 	const handleModal = () => (showModal.value = !showModal.value);
 	const handleSliderChange = (val: number) => console.log("SliderChange:", val);
 </script>
