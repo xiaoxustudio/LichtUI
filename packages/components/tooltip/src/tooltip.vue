@@ -16,13 +16,12 @@
 <script setup lang="ts">
 	import { createNamespace } from "@licht-ui/utils";
 	import { tooltipProp } from "./tooltip";
-	import { nextTick, onMounted, onUnmounted, reactive, ref, toRefs, watch } from "vue";
+	import { nextTick, onMounted, reactive, ref, toRefs, watch } from "vue";
 	defineOptions({ name: "LiToolTip" });
 	const props = defineProps(tooltipProp);
 	const bem = createNamespace("tooltip");
 	const { show } = toRefs(props);
 	const defaultState = ref(false)
-	const observerRef = ref<MutationObserver>()
 	const timeoutNum = ref<NodeJS.Timeout | number>(-1)
 
 	const pos = reactive<{ x: number; y: number }>({
@@ -89,9 +88,6 @@
 	})
 	onMounted(() => {
 		update();
-		onUnmounted(() => {
-			observerRef.value && observerRef.value.disconnect()
-		})
 	})
 </script>
 <style scope lang="scss">

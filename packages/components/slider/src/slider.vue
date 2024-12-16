@@ -1,9 +1,9 @@
 <template>
 	<div :class="[bem.b(), bem.is('disabled', disabled)]">
-		<div ref="sliderWrapper" :class="[bem.e('wrapper')]">
+		<div ref="sliderWrapper" :class="[bem.e('wrapper')]" @mousedown.stop="handleMouseDownProgress">
 			<div :class="[bem.e('progress'), bem.is('disabled', disabled)]"
 				:style="{ left: 0, width: `${modelValue}%` }" />
-			<div :class="[bem.e('button')]" :style="{ left: `${modelValue}%` }" @mousedown.stop="handleMoseDown">
+			<div :class="[bem.e('button')]" :style="{ left: `${modelValue}%` }" @mousedown.stop="handleMouseDown">
 				<LiToolTip :title="`${modelValue}%`" :show="visiable">
 					<div :class="[bem.e('trigger'), bem.is('disabled', disabled)]" />
 				</LiToolTip>
@@ -31,7 +31,14 @@
 		return Math.round(value / step) * step;
 	};
 
-	const handleMoseMove = (e: MouseEvent) => {
+	const handleMouseDownProgress = (e: MouseEvent) => {
+		if (props.disabled) return;
+		visiable.value = true
+		handleMouseMove(e)
+		window.addEventListener("mousemove", handleMouseMove);
+		window.addEventListener("mouseup", handleMouseUp);
+	};
+	const handleMouseMove = (e: MouseEvent) => {
 		if (!sliderWrapper.value) return;
 		const { left, width } = sliderWrapper.value.getBoundingClientRect();
 		const _cacheVal = e.clientX - left;
@@ -43,17 +50,17 @@
 		}
 		modelValue.value = steppedValue;
 	};
-	const handleMoseUp = () => {
+	const handleMouseUp = () => {
 		visiable.value = false
-		window.removeEventListener("mousemove", handleMoseMove);
-		window.removeEventListener("mouseup", handleMoseUp);
+		window.removeEventListener("mousemove", handleMouseMove);
+		window.removeEventListener("mouseup", handleMouseUp);
 	};
-	const handleMoseDown = (e: MouseEvent) => {
+	const handleMouseDown = (e: MouseEvent) => {
 		if (props.disabled) return;
 		visiable.value = true
 		posX.value = e.x;
-		window.addEventListener("mousemove", handleMoseMove);
-		window.addEventListener("mouseup", handleMoseUp);
+		window.addEventListener("mousemove", handleMouseMove);
+		window.addEventListener("mouseup", handleMouseUp);
 	};
 </script>
 <style scope lang="scss"></style>
