@@ -21,6 +21,7 @@
 		border-top-left-radius: $li--border-radius-base;
 		border-bottom-left-radius: $li--border-radius-base;
 		position: absolute;
+		user-select: none;
 		@include when(disabled) {
 			background-color: $li--color-primary-light-9;
 		}

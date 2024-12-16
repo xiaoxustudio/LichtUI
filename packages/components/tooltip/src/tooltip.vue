@@ -1,6 +1,7 @@
 <template>
-	<span ref="tooltipTriggerRef" :class="[bem.e('trigger')]" @mouseenter="handleMouseEnter"
-		@mouseleave="handleMouseLeave" @click="handleClick" @contextmenu="handleConextMenu">
+	<span ref="tooltipTriggerRef" :class="[bem.e('trigger')]" @mousedown="handleMouseDown"
+		@mouseenter="handleMouseEnter" @mouseleave="handleMouseLeave" @click="handleClick"
+		@contextmenu="handleConextMenu">
 		<slot />
 	</span>
 	<Teleport to="body">
@@ -15,12 +16,13 @@
 <script setup lang="ts">
 	import { createNamespace } from "@licht-ui/utils";
 	import { tooltipProp } from "./tooltip";
-	import { nextTick, onMounted, reactive, ref, toRefs, watch } from "vue";
+	import { nextTick, onMounted, onUnmounted, reactive, ref, toRefs, watch } from "vue";
 	defineOptions({ name: "LiToolTip" });
 	const props = defineProps(tooltipProp);
 	const bem = createNamespace("tooltip");
 	const { show } = toRefs(props);
 	const defaultState = ref(false)
+	const observerRef = ref<MutationObserver>()
 	const timeoutNum = ref<NodeJS.Timeout | number>(-1)
 
 	const pos = reactive<{ x: number; y: number }>({
@@ -29,6 +31,29 @@
 	});
 	const tooltipTriggerRef = ref<HTMLDivElement>();
 	const tooltipRef = ref<HTMLDivElement>();
+
+	const handleMouseMove = (e: MouseEvent) => {
+		if (!tooltipTriggerRef.value || !tooltipRef.value) return;
+		const { width } = tooltipTriggerRef.value.getBoundingClientRect();
+		const { width: rWidth } = tooltipRef.value.getBoundingClientRect();
+		const { clientX } = e;
+		pos.x = clientX + (width / 2) - (rWidth / 2) - 15;
+		if (pos.x < 0) {
+			pos.x = 0;
+		}
+		if (pos.x + rWidth >= window.innerWidth) {
+			pos.x = window.innerWidth - rWidth;
+		}
+	};
+
+	const handleMouseUp = () => {
+		window.removeEventListener('mousemove', handleMouseMove)
+		window.removeEventListener('mouseup', handleMouseUp)
+	}
+	const handleMouseDown = () => {
+		window.addEventListener('mousemove', handleMouseMove)
+		window.addEventListener('mouseup', handleMouseUp)
+	}
 	const handleMouseLeave = () => {
 		if (!show === undefined) return
 		if (props.trigger !== 'hover') return
@@ -64,6 +89,9 @@
 	})
 	onMounted(() => {
 		update();
+		onUnmounted(() => {
+			observerRef.value && observerRef.value.disconnect()
+		})
 	})
 </script>
 <style scope lang="scss">

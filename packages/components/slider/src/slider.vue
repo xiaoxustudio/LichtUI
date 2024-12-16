@@ -4,7 +4,7 @@
 			<div :class="[bem.e('progress'), bem.is('disabled', disabled)]"
 				:style="{ left: 0, width: `${modelValue}%` }" />
 			<div :class="[bem.e('button')]" :style="{ left: `${modelValue}%` }" @mousedown.stop="handleMoseDown">
-				<LiToolTip :title="`${modelValue}%`">
+				<LiToolTip :title="`${modelValue}%`" :show="visiable">
 					<div :class="[bem.e('trigger'), bem.is('disabled', disabled)]" />
 				</LiToolTip>
 			</div>
@@ -19,6 +19,7 @@
 	defineOptions({ name: "LiSlider" });
 	const props = defineProps(sliderProp);
 	const bem = createNamespace("slider");
+	const visiable = ref(false)
 	const sliderWrapper = ref<HTMLDivElement | null>();
 	const posX = ref(0);
 	const modelValue = defineModel({ default: 0 });
@@ -43,11 +44,13 @@
 		modelValue.value = steppedValue;
 	};
 	const handleMoseUp = () => {
+		visiable.value = false
 		window.removeEventListener("mousemove", handleMoseMove);
 		window.removeEventListener("mouseup", handleMoseUp);
 	};
 	const handleMoseDown = (e: MouseEvent) => {
 		if (props.disabled) return;
+		visiable.value = true
 		posX.value = e.x;
 		window.addEventListener("mousemove", handleMoseMove);
 		window.addEventListener("mouseup", handleMoseUp);
