@@ -79,7 +79,13 @@
 		</LiCol>
 		<LiCol style="display: flex; gap: 20px">
 			<LiToolTip title="测试">
-				<LiButton>测试</LiButton>
+				<LiButton>hover</LiButton>
+			</LiToolTip>
+			<LiToolTip title="测试" trigger="click">
+				<LiButton>click</LiButton>
+			</LiToolTip>
+			<LiToolTip title="测试" trigger="contextmenu">
+				<LiButton>contextmenu</LiButton>
 			</LiToolTip>
 		</LiCol>
 		<LiCol style="display: flex; gap: 20px">
