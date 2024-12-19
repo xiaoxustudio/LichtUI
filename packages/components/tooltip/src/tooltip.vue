@@ -20,7 +20,7 @@
 	defineOptions({ name: "LiToolTip" });
 	const props = defineProps(tooltipProp);
 	const bem = createNamespace("tooltip");
-	const { show } = toRefs(props);
+	const { show, disabled } = toRefs(props);
 	const defaultState = ref(false)
 	const timeoutNum = ref<NodeJS.Timeout | number>(-1)
 
@@ -61,17 +61,20 @@
 		}, 400);
 	};
 	const handleMouseEnter = () => {
+		if (disabled.value) return
 		if (!show === undefined) return
 		if (props.trigger !== 'hover') return
 		defaultState.value = true
 		clearTimeout(timeoutNum.value)
 	};
 	const handleClick = () => {
+		if (disabled.value) return
 		if (props.trigger !== 'click') return
 		defaultState.value = !defaultState.value
 	}
 	const handleConextMenu = (e: MouseEvent) => {
 		e.preventDefault()
+		if (disabled.value) return
 		if (props.trigger !== 'contextmenu') return
 		defaultState.value = !defaultState.value
 	}
@@ -81,7 +84,7 @@
 		const { left, top, width } = tooltipTriggerRef.value.getBoundingClientRect();
 		const { height, width: rWidth } = tooltipRef.value.getBoundingClientRect();
 		pos.x = left + (width / 2) - rWidth / 2;
-		pos.y = top - height - 10;
+		pos.y = top + document.documentElement.scrollTop - height - 10;
 	};
 	watch([defaultState, show], () => {
 		nextTick(() => update())

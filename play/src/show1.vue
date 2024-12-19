@@ -99,12 +99,7 @@
 		</LiCol>
 		<LiCol>
 			<LiInput label="$"></LiInput>
-			<LiInput
-				label="$"
-				v-model="val"
-				@change="handleChange"
-				clearable
-			></LiInput>
+			<LiInput label="$" v-model="val" @change="handleChange" clearable></LiInput>
 		</LiCol>
 		<LiCol>
 			<LiInput>
@@ -176,7 +171,9 @@
 				<LiRadio type="warning">测试</LiRadio>
 				<LiRadio type="info" value="测试">测试</LiRadio>
 			</LiRadioGroup>
-			<LiButton>获取值 {{ group }}</LiButton>
+			<LiToolTip title="获取值">
+				<LiButton>获取值 {{ group }}</LiButton>
+			</LiToolTip>
 		</LiCol>
 		<LiCol>
 			<LiRadio disabled>测试</LiRadio>
@@ -200,36 +197,11 @@
 					{{ checked }}
 				</template>
 			</LiSwitch>
-			<LiSwitch
-				v-model="switchVal"
-				enable-val="开"
-				disable-val="关"
-				type="primary"
-			/>
-			<LiSwitch
-				v-model="switchVal"
-				enable-val="开"
-				disable-val="关"
-				type="success"
-			></LiSwitch>
-			<LiSwitch
-				v-model="switchVal"
-				enable-val="开"
-				disable-val="关"
-				type="danger"
-			></LiSwitch>
-			<LiSwitch
-				v-model="switchVal"
-				enable-val="开"
-				disable-val="关"
-				type="warning"
-			></LiSwitch>
-			<LiSwitch
-				v-model="switchVal"
-				enable-val="开"
-				disable-val="关"
-				type="info"
-			></LiSwitch>
+			<LiSwitch v-model="switchVal" enable-val="开" disable-val="关" type="primary" />
+			<LiSwitch v-model="switchVal" enable-val="开" disable-val="关" type="success"></LiSwitch>
+			<LiSwitch v-model="switchVal" enable-val="开" disable-val="关" type="danger"></LiSwitch>
+			<LiSwitch v-model="switchVal" enable-val="开" disable-val="关" type="warning"></LiSwitch>
+			<LiSwitch v-model="switchVal" enable-val="开" disable-val="关" type="info"></LiSwitch>
 		</LiCol>
 		<LiCol>
 			<LiSwitch v-model="switchVal" disabled></LiSwitch>
@@ -240,11 +212,7 @@
 			<LiSwitch v-model="switchVal" disabled type="info"></LiSwitch>
 		</LiCol>
 		<LiCol>
-			<LiSelect
-				v-model="selectVal"
-				:list="optionList"
-				@command="(index, item) => console.log(index, item)"
-			>
+			<LiSelect v-model="selectVal" :list="optionList" @command="(index, item) => console.log(index, item)">
 			</LiSelect>
 			<LiSelect v-model="selectVal" disabled></LiSelect>
 		</LiCol>
@@ -254,19 +222,10 @@
 			</div>
 		</LiCol>
 		<LiCol style="height: 1000px">
-			<LiDropDown
-				:list="dropdown"
-				@command="handleDropdownItem"
-				trigger="click"
-			>
+			<LiDropDown :list="dropdown" @command="handleDropdownItem" trigger="click">
 				<LiButton>测试</LiButton>
 			</LiDropDown>
-			<LiDropDown
-				:list="dropdown"
-				@command="handleDropdownItem"
-				position="top"
-				trigger="click"
-			>
+			<LiDropDown :list="dropdown" @command="handleDropdownItem" position="top" trigger="click">
 				<LiButton>测试</LiButton>
 			</LiDropDown>
 			<LiDropDown :list="dropdown" @command="handleDropdownItem">

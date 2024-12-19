@@ -25,7 +25,6 @@
 	const modelValue = defineModel({ default: 0 });
 	const emit = defineEmits<SliderEmits>();
 
-	// 用于将值四舍五入到最近的步长
 	const roundToStep = (value: number, step: number) => {
 		if (step === 0) return value;
 		return Math.round(value / step) * step;
