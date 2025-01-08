@@ -9,7 +9,10 @@
 			<div ref="tooltipRef" v-if="show === undefined ? defaultState : show" :class="[bem.b()]" :style="{
 				left: `${pos.x}px`,
 				top: `${pos.y}px`,
-			}" @mouseleave="handleMouseLeave" @mouseenter="handleMouseEnter">{{ title }}</div>
+			}" @mouseleave="handleMouseLeave" @mouseenter="handleMouseEnter">
+				<slot v-if="$slots.title" name="title" />
+				<span v-else>{{ title }}</span>
+			</div>
 		</Transition>
 	</Teleport>
 </template>
@@ -83,10 +86,16 @@
 		if (!tooltipRef.value) return;
 		const { left, top, width } = tooltipTriggerRef.value.getBoundingClientRect();
 		const { height, width: rWidth } = tooltipRef.value.getBoundingClientRect();
-		pos.x = left + (width / 2) - rWidth / 2;
-		pos.y = top + document.documentElement.scrollTop - height - 10;
+		let calc = left + (width / 2) - rWidth / 2;
+		pos.y = top + document.documentElement.scrollTop - height - 15;
+		if (calc < 0) {
+			calc = 0;
+		} else if (calc + rWidth >= window.innerWidth) {
+			calc = window.innerWidth - rWidth;
+		}
+		pos.x = calc
 	};
-	watch([defaultState, show], () => {
+	watch([defaultState, show, pos], () => {
 		nextTick(() => update())
 	})
 	onMounted(() => {

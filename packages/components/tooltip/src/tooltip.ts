@@ -5,11 +5,11 @@ export const tooltipProp = {
 		type: Boolean,
 		default: undefined,
 	},
-	title: String,
 	trigger: {
 		type: String as PropType<(typeof triggerMode)[number]>,
 		default: "hover",
 	},
+	title: String,
 	disabled: Boolean,
 } as const;
 export type ToolTipProp = ExtractPropTypes<typeof tooltipProp>;

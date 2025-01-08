@@ -30,6 +30,12 @@
 
 <preview path="../../components/feedback/tooltip/tooltip-show.vue"></preview>
 
+## 自定义内容
+
+使用`title`插槽控制
+
+<preview path="../../components/feedback/tooltip/tooltip-slot.vue"></preview>
+
 ## ToolTip Attributes
 
 | 参数     | 说明       | 类型    | 可选值                      | 默认值      |
@@ -38,3 +44,9 @@
 | show     | 自定义显示 | boolean |                             | `undefined` |
 | disabled | 禁用       | boolean |                             | `false`     |
 | trigger  | 触发方式   | string  | hover / click / contextmenu | `hover`     |
+
+## ToolTip Slots
+
+| 插槽名 | 作用域参数 | 说明 |
+| ------ | ---------- | ---- |
+| title  |            | 标题 |

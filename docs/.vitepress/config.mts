@@ -74,6 +74,10 @@ export default defineConfig({
 						text: "Select 下拉框",
 						link: "/home/form/select",
 					},
+					{
+						text: "Slider 滑块",
+						link: "/home/form/slider",
+					},
 				],
 			},
 			{
