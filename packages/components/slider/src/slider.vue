@@ -15,7 +15,7 @@
 <script setup lang="ts">
 	import { createNamespace } from "@licht-ui/utils";
 	import { SliderEmits, sliderProp } from "./slider";
-	import { ref } from "vue";
+	import { ref, watch } from "vue";
 	defineOptions({ name: "LiSlider" });
 	const props = defineProps(sliderProp);
 	const bem = createNamespace("slider");
@@ -23,8 +23,8 @@
 	const sliderWrapper = ref<HTMLDivElement | null>();
 	const sliderCircle = ref<HTMLDivElement | null>();
 	const posX = ref(0);
-	const modelValue = defineModel({ default: 0 });
 	const leftValue = ref(0)
+	const modelValue = ref(props.min);
 	const emit = defineEmits<SliderEmits>();
 
 
@@ -76,9 +76,14 @@
 		if (props.disabled) return;
 		visiable.value = true
 		posX.value = e.x;
+		modelValue.value = props.min
 		window.addEventListener("mousemove", handleMouseMove);
 		window.addEventListener("mouseup", handleMouseUp);
 	};
+
+	watch(modelValue, (newValue: number) => {
+		emit('update:modelValue', newValue);
+	});
 
 </script>
 <style scope lang="scss"></style>

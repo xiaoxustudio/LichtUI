@@ -18,9 +18,11 @@ export const sliderProp = {
 		default: 1,
 	},
 	disabled: Boolean,
+	modelValue: Number,
 } as const;
 
 export type SliderEmits = {
 	onChange: [value: number, oldValue: number];
+	"update:modelValue": [value: number];
 };
 export type SliderProp = ExtractPropTypes<typeof sliderProp>;
