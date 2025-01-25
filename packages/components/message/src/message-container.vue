@@ -3,7 +3,7 @@
 		<div :class="bem.e('wrapper')">
 			<TransitionGroup name="fade" tag="div">
 				<Msg
-					v-for="(item, index) in queueLeft.value"
+					v-for="(item, index) in queueLeft"
 					:key="item.key"
 					:index="index"
 					:uuid="item.uuid"
@@ -22,7 +22,7 @@
 		<div :class="bem.e('wrapper')">
 			<TransitionGroup name="fade" tag="div">
 				<Msg
-					v-for="(item, index) in queueCenter.value"
+					v-for="(item, index) in queueCenter"
 					:key="item.key"
 					:index="index"
 					:uuid="item.uuid"
@@ -41,7 +41,7 @@
 		<div :class="bem.e('wrapper')">
 			<TransitionGroup name="fade" tag="div">
 				<Msg
-					v-for="(item, index) in queueRight.value"
+					v-for="(item, index) in queueRight"
 					:key="item.key"
 					:index="index"
 					:uuid="item.uuid"
@@ -64,14 +64,15 @@
 	import { createNamespace } from "@licht-ui/utils";
 	import { MessageEX } from "./message";
 	import Msg from "./message.vue";
-	import { Ref } from "vue";
+	import { Ref, toRefs } from "vue";
 	interface Prop {
 		queueLeft: Ref<MessageEX[]>;
 		queueCenter: Ref<MessageEX[]>;
 		queueRight: Ref<MessageEX[]>;
 	}
 	defineOptions({ name: "LiMessageContainer" });
-	const { queueCenter, queueLeft, queueRight } = defineProps<Prop>();
+	const prop = defineProps<Prop>();
+	const { queueCenter, queueLeft, queueRight } = toRefs(prop);
 	const bem = createNamespace("messagecontainer");
 
 	const handleRender = (uuid: string, loc: string) => {
@@ -103,7 +104,6 @@
 				break;
 		}
 		if (r) r._close = !r._close;
-		console.log(uuid)
 	};
 </script>
 <style scope lang="scss">

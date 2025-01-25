@@ -16,7 +16,9 @@
 		:style="dynamicStyles"
 	>
 		<span :class="[bem.e('wrapper')]">{{ content }}</span>
-		<span v-if="closed" :class="[bem.e('close')]" @click="handleClose">x</span>
+		<span v-if="closed" :class="[bem.e('close')]" @click.once="handleClose"
+			>x</span
+		>
 	</span>
 </template>
 <script setup lang="ts">

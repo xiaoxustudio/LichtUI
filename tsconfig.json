@@ -15,7 +15,6 @@
 		"noEmit": true,
 		"jsx": "preserve",
 		"experimentalDecorators": true,
-
 		/* Linting */
 		"strict": true,
 		"noUnusedLocals": true,
@@ -24,7 +23,11 @@
 		"paths": {
 			"@/*": ["./src/*"]
 		},
-		"types": ["vite/client", "unplugin-vue-define-options/macros-global"]
+		"types": [
+			"vite/client",
+			"unplugin-vue-define-options/macros-global",
+			"node"
+		]
 	},
 	"exclude": ["node_module", "**/__test__", "dist/**", "licht-ui/**"],
 	"ts-node": {
