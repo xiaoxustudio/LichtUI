@@ -1,7 +1,6 @@
 {
 	"name": "@licht-ui/components",
 	"version": "1.0.0",
-	"main": "./index.es.js",
 	"types": "./index.d.ts",
 	"description": "",
 	"keywords": [],
