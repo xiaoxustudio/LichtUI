@@ -1,7 +1,8 @@
-import { readdirSync, copyFileSync } from "fs";
+import { readdirSync, copyFileSync, mkdirSync } from "fs";
 import { build, defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import dts from "vite-plugin-dts";
+import { copyDirSync, deleteFolderRecursive } from "./utiles";
 
 const DefineOptions = require("unplugin-vue-define-options/vite");
 const path = require("path");
@@ -41,17 +42,22 @@ async function main() {
 				}),
 			],
 			build: {
-				commonjsOptions: {
-					include: [/docs/, /node_modules/, /play/],
-				},
 				lib: {
 					entry,
 					name: "licht-ui",
 					fileName: (format: any) => `index.${format}.js`,
-					formats: ["cjs", "es", "umd"],
+					formats: ["es", "umd"],
 				},
 				outDir: packageOutDir,
 				emptyOutDir: true,
+				chunkSizeWarningLimit: 1500,
+				terserOptions: {
+					compress: {
+						drop_console: true,
+
+						drop_debugger: true,
+					},
+				},
 				rollupOptions: {
 					external: ["vue"],
 					output: {
@@ -68,6 +74,12 @@ async function main() {
 			resolve(packageRoot + "/package.json"),
 			resolve(`./${buildDir}/${i}/package.json`)
 		);
+		mkdirSync(resolve(`./${buildDir}/style`), { recursive: true });
+		copyDirSync(
+			resolve(`${packageOutDir}/style`),
+			resolve(`./${buildDir}/style`)
+		);
+		deleteFolderRecursive(resolve(`${packageOutDir}/style`));
 	}
 }
 main();

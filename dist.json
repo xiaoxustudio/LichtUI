@@ -1,5 +1,5 @@
 {
-	"name": "licht-design",
+	"name": "licht-ui",
 	"version": "1.0.0",
 	"description": "Licht UI 是一个基于Vue3开发的轻量级组件库",
 	"scripts": {

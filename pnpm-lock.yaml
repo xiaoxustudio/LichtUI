@@ -17,6 +17,9 @@ importers:
       '@licht-ui/utils':
         specifier: workspace:^
         version: link:packages/utils
+      dist:
+        specifier: link:E:/编程练习/LichtUI/dist
+        version: link:dist
       lodash-unified:
         specifier: ^1.0.3
         version: 1.0.3(@types/lodash-es@4.17.12)(lodash-es@4.17.21)(lodash@4.17.21)

@@ -1,5 +1,5 @@
 {
-	"name": "licht-design",
+	"name": "licht-ui",
 	"version": "1.0.0",
 	"description": "Licht UI 是一个基于Vue3开发的轻量级组件库",
 	"scripts": {
@@ -32,6 +32,7 @@
 		"@licht-ui/components": "workspace:^",
 		"@licht-ui/theme-chalk": "workspace:^",
 		"@licht-ui/utils": "workspace:^",
+		"dist": "link:E:/编程练习/LichtUI/dist",
 		"lodash-unified": "^1.0.3",
 		"shiki": "^1.22.2",
 		"typescript": "^5.6.3",

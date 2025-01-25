@@ -9,9 +9,7 @@ export const avatarProp = {
 		type: String as PropType<(typeof sizeProp)[number]>,
 		default: "middle",
 	},
-	styleImg: {
-		type: Object as PropType<StyleValue>,
-	},
+	styleImg: Object as PropType<StyleValue>,
 	name: String,
 	src: String,
 	round: Boolean,

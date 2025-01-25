@@ -2,6 +2,8 @@
 	"name": "@licht-ui/theme-chalk",
 	"version": "1.0.0",
 	"description": "",
+	"main": "./index.es.js",
+	"module": "./index.es.js",
 	"types": "./index.d.ts",
 	"keywords": [],
 	"author": "",

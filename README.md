@@ -48,6 +48,31 @@ pnpm build
 
 3. 本地引入打包的源代码
 
+cd到你构建好的目录（默认是dist），然后输入以下命令
+
+```sh
+pnpm link -g # 当前是在构建好的dist目录下
+```
+
+然后在你需要使用的项目中添加刚才link的包
+
+```sh
+pnpm link -g licht-ui # 你需要使用licht-ui的项目下
+```
+
+最后在项目入口处全局导入
+
+```ts
+import { createApp } from "vue";
+import LichtUI from "licht-ui/components"; // 导入组件
+import "licht-ui/style/style.css"; // 导入样式
+import "./style.css";
+import App from "./App.vue";
+
+createApp(App).use(LichtUI).mount("#app");
+```
+
+
 
 ## 关于
 
