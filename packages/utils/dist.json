@@ -1,0 +1,14 @@
+{
+	"name": "@licht-ui/utils",
+	"version": "1.0.0",
+	"main": "./index.es.js",
+	"exports": {
+		"default": "./index.es.js",
+		"types": "./index.d.ts"
+	},
+	"types": "./index.d.ts",
+	"description": "",
+	"keywords": [],
+	"author": "",
+	"license": "MIT"
+}

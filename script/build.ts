@@ -71,7 +71,7 @@ async function main() {
 		copyFileSync(resolve("README.md"), resolve(`./${buildDir}/README.md`));
 		copyFileSync(resolve("./dist.json"), resolve(`./${buildDir}/package.json`));
 		copyFileSync(
-			resolve(packageRoot + "/package.json"),
+			resolve(packageRoot + "/dist.json"),
 			resolve(`./${buildDir}/${i}/package.json`)
 		);
 		mkdirSync(resolve(`./${buildDir}/style`), { recursive: true });
