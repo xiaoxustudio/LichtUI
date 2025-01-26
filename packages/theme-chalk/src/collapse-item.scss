@@ -1,0 +1,25 @@
+@use "mixins/mixins.scss" as *;
+
+@include b(collapse-item) {
+	border: solid 1px #eee;
+	min-height: 0;
+	padding: 10px 10px;
+	display: grid;
+	grid-template-rows: 1fr 0fr;
+	transition: grid 0.2s linear;
+	user-select: none;
+	@include m(title) {
+		padding-bottom: 2px;
+	}
+	@include m(content) {
+		margin-top: 2px;
+		font-size: 14px;
+		min-height: 0;
+		overflow: hidden;
+		user-select: text;
+		line-height: 1.7;
+	}
+	@include when(show) {
+		grid-template-rows: 1fr 1fr;
+	}
+}

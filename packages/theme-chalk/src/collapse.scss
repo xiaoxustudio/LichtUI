@@ -1,0 +1,10 @@
+@use "mixins/mixins.scss" as *;
+
+@include b(collapse) {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	padding: 10px 4px;
+	cursor: pointer;
+}

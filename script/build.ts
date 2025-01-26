@@ -2,19 +2,19 @@ import { readdirSync, copyFileSync, mkdirSync } from "fs";
 import { build, defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import dts from "vite-plugin-dts";
-import { copyDirSync, deleteFolderRecursive } from "./utiles";
+import { copyDirSync, deleteFolderRecursive } from "./utils";
 
-const DefineOptions = require("unplugin-vue-define-options/vite");
-const path = require("path");
+const DefineOptions = require("unplugin-vue-define-options/vite"); // todo 无法使用import导入
+const path = require("path"); // todo 无法使用import导入
 const rootDir = path.resolve(__dirname, "../");
+const packages = readdirSync(resolve("./packages/"));
 
 function resolve(...urlOrUrls: string[]) {
 	return path.resolve(rootDir, ...urlOrUrls);
 }
-const packages = readdirSync(resolve("./packages/"));
 
 const buildDir = "dist";
-async function main() {
+!(async function main() {
 	for (let i of packages) {
 		const packageRoot = resolve("./packages/" + i);
 		const packageOutDir = resolve(`./${buildDir}/${i}`);
@@ -50,14 +50,6 @@ async function main() {
 				},
 				outDir: packageOutDir,
 				emptyOutDir: true,
-				chunkSizeWarningLimit: 1500,
-				terserOptions: {
-					compress: {
-						drop_console: true,
-
-						drop_debugger: true,
-					},
-				},
 				rollupOptions: {
 					external: ["vue"],
 					output: {
@@ -81,5 +73,4 @@ async function main() {
 		);
 		deleteFolderRecursive(resolve(`${packageOutDir}/style`));
 	}
-}
-main();
+})();
