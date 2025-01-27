@@ -67,10 +67,20 @@ const buildDir = "dist";
 			resolve(`./${buildDir}/${i}/package.json`)
 		);
 		mkdirSync(resolve(`./${buildDir}/style`), { recursive: true });
-		copyDirSync(
-			resolve(`${packageOutDir}/style`),
-			resolve(`./${buildDir}/style`)
-		);
+
 		deleteFolderRecursive(resolve(`${packageOutDir}/style`));
 	}
+
+	copyDirSync(
+		resolve(`${resolve(`./packages/components`)}/style`),
+		resolve(`./${buildDir}/style`)
+	);
+	copyDirSync(
+		resolve(`./packages/theme-chalk/src`),
+		resolve(`./${buildDir}/theme-chalk/src`)
+	);
+	copyFileSync(
+		resolve(`./packages/theme-chalk/index.scss`),
+		resolve(`./${buildDir}/theme-chalk/index.scss`)
+	);
 })();

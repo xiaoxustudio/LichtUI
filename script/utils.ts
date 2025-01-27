@@ -5,6 +5,7 @@ import {
 	unlinkSync,
 	rmdirSync,
 	copyFileSync,
+	mkdirSync,
 } from "fs";
 const path = require("path");
 
@@ -25,9 +26,11 @@ export function deleteFolderRecursive(path: string) {
 }
 
 export function copyDirSync(src: string, dest: string) {
-	// 检查源目录是否存在
 	if (!existsSync(src)) {
 		return;
+	}
+	if (!existsSync(dest)) {
+		mkdirSync(dest, { recursive: true });
 	}
 
 	// 读取源目录内容
