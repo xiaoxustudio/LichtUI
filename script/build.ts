@@ -20,6 +20,23 @@ const buildDir = "dist";
 		const packageOutDir = resolve(`./${buildDir}/${i}`);
 		const entry = resolve(packageRoot + "/index.ts");
 		const baseConfig = defineConfig({
+			build: {
+				lib: {
+					entry,
+					name: "licht-ui",
+					fileName: (format: any) => `index.${format}.js`,
+					formats: ["es", "umd"],
+				},
+				outDir: packageOutDir,
+				emptyOutDir: true,
+				rollupOptions: {
+					external: ["vue"],
+					output: {
+						globals: (_name) => _name,
+						exports: "named",
+					},
+				},
+			},
 			plugins: [
 				DefineOptions({
 					exclude: "../docs",
@@ -41,23 +58,6 @@ const buildDir = "dist";
 					},
 				}),
 			],
-			build: {
-				lib: {
-					entry,
-					name: "licht-ui",
-					fileName: (format: any) => `index.${format}.js`,
-					formats: ["es", "umd"],
-				},
-				outDir: packageOutDir,
-				emptyOutDir: true,
-				rollupOptions: {
-					external: ["vue"],
-					output: {
-						globals: (_name) => _name,
-						exports: "named",
-					},
-				},
-			},
 		});
 		await build(baseConfig);
 		copyFileSync(resolve("README.md"), resolve(`./${buildDir}/README.md`));
