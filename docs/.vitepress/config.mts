@@ -112,6 +112,10 @@ export default defineConfig({
 						text: "Alert 警告提示",
 						link: "/home/show/alert",
 					},
+					{
+						text: "Collapse 折叠面板",
+						link: "/home/show/collapse",
+					},
 				],
 			},
 			{

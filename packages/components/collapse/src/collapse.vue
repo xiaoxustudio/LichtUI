@@ -10,7 +10,7 @@
 	defineOptions({
 		name: "LiCollapse",
 	});
-	defineProps(collapseProp);
+	const props = defineProps(collapseProp);
 
 	const bem = createNamespace("collapse");
 	const currentSelect = ref("");
@@ -18,7 +18,9 @@
 	const handleChangeSelect = (current: string) => {
 		currentSelect.value = current;
 	};
+
 	provide(CollapseProviderProp.currentSelect, currentSelect);
 	provide(CollapseProviderProp.setSelect, handleChangeSelect);
+	provide(CollapseProviderProp.accordion, props.accordion);
 </script>
 <style scope lang="scss"></style>

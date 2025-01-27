@@ -103,6 +103,10 @@
 				<LiCollapseItem title="测试">测试</LiCollapseItem>
 				<LiCollapseItem>测试</LiCollapseItem>
 			</LiCollapse>
+			<LiCollapse accordion>
+				<LiCollapseItem title="测试">测试</LiCollapseItem>
+				<LiCollapseItem>测试</LiCollapseItem>
+			</LiCollapse>
 		</LiCol>
 	</LiRow>
 </template>
