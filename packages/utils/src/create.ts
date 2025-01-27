@@ -1,3 +1,13 @@
+interface BEMStruct {
+	b: (block?: string) => string;
+	e: (elem?: string) => string;
+	m: (modifier?: string) => string;
+	be: (block?: string, elem?: string) => string;
+	bm: (block?: string, modifier?: string) => string;
+	em: (elem?: string, modifier?: string) => string;
+	bem: (block?: string, elem?: string, modifier?: string) => string;
+	is: (name: string, state: any) => string;
+}
 // css 类名规则转换
 function _bem(prefix: string, block: string, elem: string, modifier: string) {
 	if (block) {
@@ -12,7 +22,7 @@ function _bem(prefix: string, block: string, elem: string, modifier: string) {
 	return prefix;
 }
 
-function createBEM(prefix_name: string) {
+function createBEM(prefix_name: string): BEMStruct {
 	const b = (block: string = "") => _bem(prefix_name, block, "", "");
 	const e = (elem: string = "") =>
 		elem ? _bem(prefix_name, "", elem, "") : "";
