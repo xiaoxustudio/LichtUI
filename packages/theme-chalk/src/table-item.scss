@@ -1,0 +1,11 @@
+@use "mixins/mixins.scss" as *;
+@use "common/var.scss" as *;
+
+@include b(table-item) {
+	width: 100%;
+	font-weight: bold;
+	text-transform: capitalize; // 首字母大写
+	padding: 12px 8px;
+	border-bottom: solid 1px #eee;
+	color: $li--color-info;
+}

@@ -108,11 +108,55 @@
 				<LiCollapseItem>测试</LiCollapseItem>
 			</LiCollapse>
 		</LiCol>
+		<LiCol>
+			<LiTable :tableData="tableData">
+				<LiTableItem prop="date"></LiTableItem>
+				<LiTableItem prop="name"></LiTableItem>
+				<LiTableItem prop="address"></LiTableItem>
+			</LiTable>
+			<LiTable :tableData="tableData" stripe>
+				<LiTableItem prop="date"></LiTableItem>
+				<LiTableItem prop="name"></LiTableItem>
+				<LiTableItem prop="address"></LiTableItem>
+			</LiTable>
+			<LiTable :tableData="tableData" border>
+				<LiTableItem prop="date"></LiTableItem>
+				<LiTableItem prop="name"></LiTableItem>
+				<LiTableItem prop="address"></LiTableItem>
+			</LiTable>
+		</LiCol>
 	</LiRow>
 </template>
 <script setup lang="ts">
 	import { message } from "@licht-ui/components/message";
 	import { ref } from "vue";
+	const showModal = ref(false);
+	const progress = ref(0);
+	const showTooltip = ref(false);
+	const tableData = [
+		{
+			date: "2016-05-03",
+			name: "Tom",
+			address: "No. 189, Grove St, Los Angeles",
+		},
+		{
+			date: "20226-123-03",
+			name: "徐然",
+			address: "测试",
+		},
+		{
+			date: "2016-05-03",
+			name: "Tom",
+			address: "No. 189, Grove St, Los Angeles",
+		},
+		{
+			date: "20226-123-03",
+			name: "徐然",
+			address: "测试",
+		},
+	];
+	const handleModal = () => (showModal.value = !showModal.value);
+	const handleSliderChange = (val: number) => console.log("SliderChange:", val);
 	const handleClick = () => {
 		message({
 			content: "测试",
@@ -147,10 +191,5 @@
 			location: "right",
 		});
 	};
-	const showModal = ref(false);
-	const progress = ref(0);
-	const showTooltip = ref(false);
-	const handleModal = () => (showModal.value = !showModal.value);
-	const handleSliderChange = (val: number) => console.log("SliderChange:", val);
 </script>
 <style scope lang="scss"></style>

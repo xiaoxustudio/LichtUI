@@ -1,0 +1,59 @@
+@use "mixins/mixins.scss" as *;
+@use "common/var.scss" as *;
+
+@include b(table) {
+	padding: 12px 16px;
+	display: flex;
+	flex-direction: column;
+	border: solid 1px #eee;
+	color: $li--color-text-secondary;
+	@include e(header) {
+		@include m(wrapper) {
+			width: 100%;
+			display: flex;
+			flex-direction: row;
+		}
+	}
+	@include e(column-data) {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+	}
+	@include e(row) {
+		display: flex;
+		width: 100%;
+		position: relative;
+		transition: background-color $li--animation--time linear;
+		border-bottom: solid 1px #eee;
+		&:hover {
+			background-color: rgba($color: #eee, $alpha: 0.5);
+		}
+		@include m(stripe) {
+			background-color: rgba($color: #eee, $alpha: 0.4);
+			&:hover {
+				background-color: rgba($color: #eee, $alpha: 0.8);
+			}
+		}
+	}
+
+	@include e(row-data) {
+		width: 100%;
+		display: flex;
+		flex: 1;
+		padding: 8px;
+	}
+	@include m(border) {
+		border-left: solid 1px #ddd;
+	}
+	@include m(border-right) {
+		border-right: solid 1px #ddd;
+	}
+	@include m(empty) {
+		width: 100%;
+		padding: 12px 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-family: sans-serif;
+	}
+}
