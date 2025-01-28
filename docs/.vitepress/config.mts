@@ -116,6 +116,10 @@ export default defineConfig({
 						text: "Collapse 折叠面板",
 						link: "/home/show/collapse",
 					},
+					{
+						text: "Table 表格",
+						link: "/home/show/table",
+					},
 				],
 			},
 			{
