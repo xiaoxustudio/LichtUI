@@ -120,6 +120,10 @@ export default defineConfig({
 						text: "Table 表格",
 						link: "/home/show/table",
 					},
+					{
+						text: "Badge 徽章",
+						link: "/home/show/badge",
+					},
 				],
 			},
 			{
