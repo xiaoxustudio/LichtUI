@@ -26,6 +26,7 @@ import LiCollapse from "./collapse";
 import LiCollapseItem from "./collapse-item";
 import LiTable from "./table";
 import LiTableItem from "./table-item";
+import LiBadge from "./badge";
 export * from "./button";
 export * from "./icon";
 export * from "./row";
@@ -54,6 +55,7 @@ export * from "./collapse";
 export * from "./collapse-item";
 export * from "./table";
 export * from "./table-item";
+export * from "./badge";
 const List = [
 	LiButton,
 	LiIcon,
@@ -82,6 +84,7 @@ const List = [
 	LiCollapseItem,
 	LiTable,
 	LiTableItem,
+	LiBadge,
 ];
 export {
 	LiButton,
@@ -111,6 +114,7 @@ export {
 	LiCollapseItem,
 	LiTable,
 	LiTableItem,
+	LiBadge,
 };
 
 const RadioPool: RadioItemToken[] = [];

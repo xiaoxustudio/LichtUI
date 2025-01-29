@@ -1,0 +1,60 @@
+@use "./common/var.scss" as *;
+@use "./mixins/mixins.scss" as *;
+
+@include b(badge) {
+	margin: 0;
+	padding: 0;
+	font-size: calc($li--font-size-base - 2px);
+	position: relative;
+	@include e(instance) {
+		padding: 1px 4px;
+		position: absolute;
+		right: -20%;
+		top: -20%;
+		background: $li--color-danger;
+		color: white;
+		min-width: 20px;
+		min-height: 16.5px;
+		text-align: center;
+		text-wrap: nowrap;
+		line-height: 1.05em;
+		border-radius: 25px;
+		font-family: monospace;
+		z-index: $li--index-top;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-weight: bold;
+		@include m(dot) {
+			$limitValue: 8px;
+			min-width: $limitValue;
+			min-height: $limitValue;
+			max-width: $limitValue;
+			max-height: $limitValue;
+			right: -5%;
+			top: -10%;
+			display: flex;
+			padding: 0;
+		}
+		@include m(primary) {
+			color: $li--color-primary-light-9;
+			background: $li--color-primary;
+		}
+		@include m(info) {
+			color: $li--color-info-light-9;
+			background: $li--color-info;
+		}
+		@include m(success) {
+			color: $li--color-success-light-9;
+			background: $li--color-success;
+		}
+		@include m(warning) {
+			color: $li--color-warning-light-9;
+			background: $li--color-warning;
+		}
+		@include m(danger) {
+			color: $li--color-danger-light-9;
+			background: $li--color-danger;
+		}
+	}
+}

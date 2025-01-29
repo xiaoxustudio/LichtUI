@@ -125,6 +125,33 @@
 				<LiTableItem prop="address"></LiTableItem>
 			</LiTable>
 		</LiCol>
+		<LiCol style="display: flex; gap: 20px">
+			<LiBadge is-dot>
+				<LiButton>测试</LiButton>
+			</LiBadge>
+			<LiBadge>
+				<template #value> 徐然最帅 </template>
+				<LiButton>测试</LiButton>
+			</LiBadge>
+			<LiBadge value="徐然" :min="0" :max="99">
+				<LiButton>测试</LiButton>
+			</LiBadge>
+			<LiBadge :value="10" :min="0" :max="99">
+				<LiButton>测试</LiButton>
+			</LiBadge>
+			<LiBadge :value="10" :min="0" :max="99" type="primary">
+				<LiButton>测试</LiButton>
+			</LiBadge>
+			<LiBadge :value="10" :min="0" :max="99" type="success">
+				<LiButton>测试</LiButton>
+			</LiBadge>
+			<LiBadge :value="10" :min="0" :max="99" type="info">
+				<LiButton>测试</LiButton>
+			</LiBadge>
+			<LiBadge :value="10" :min="0" :max="99" type="warning">
+				<LiButton>测试</LiButton>
+			</LiBadge>
+		</LiCol>
 	</LiRow>
 </template>
 <script setup lang="ts">
