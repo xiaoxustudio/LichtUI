@@ -8,7 +8,8 @@ import {
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
 	title: "LichtUI",
-	description: "a UI component library based on vue3",
+	description: "a UI component library based on vue3", 
+	head: [['link', { rel: 'icon', href: '/favicon.ico' }]],
 	themeConfig: {
 		// https://vitepress.dev/reference/default-theme-config
 		nav: [
@@ -146,6 +147,21 @@ export default defineConfig({
 			message: "Released under the MIT License.",
 			copyright: "Copyright © 2024-present 徐然",
 		},
+		lastUpdated: {
+			text: '最后更新于',
+			formatOptions: {
+				dateStyle: 'full',
+				timeStyle: 'medium'
+			}
+		},
+		editLink: {
+			text: '在 GitHub 上编辑此页面',
+			pattern: 'https://github.com/xiaoxustudio/LichtUI/tree/main/docs/:path'
+		},
+		search: {
+			provider: 'local'
+		},
+		logo: '/Logo.png',
 	},
 	markdown: {
 		config: (md) => {

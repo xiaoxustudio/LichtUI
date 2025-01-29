@@ -24,7 +24,7 @@ dist-ssr
 *.sw?
 
 .vscode
-public
+./public
 licht-ui
 @licht-ui
 
