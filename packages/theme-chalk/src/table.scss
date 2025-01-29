@@ -5,7 +5,6 @@
 	padding: 12px 16px;
 	display: flex;
 	flex-direction: column;
-	border: solid 1px #eee;
 	color: $li--color-text-secondary;
 	@include e(header) {
 		@include m(wrapper) {

@@ -38,10 +38,11 @@
 	import { TableProviderpProp, tableProp } from "./table";
 	import { provide, ref } from "vue";
 	defineOptions({ name: "LiTable" });
-	defineProps(tableProp);
+	const props = defineProps(tableProp);
 	const bem = createNamespace("table");
 	const renderKeys = ref<string[]>([]);
-	provide(TableProviderpProp.renderKeys, renderKeys.value);
+	provide(TableProviderpProp.renderKeys, renderKeys);
+	provide(TableProviderpProp.border, props.border);
 	provide(TableProviderpProp.setRenderKeys, (keys: string) => {
 		renderKeys.value = [...new Set([...renderKeys.value, keys])].filter(
 			(v) => v && v.length > 0

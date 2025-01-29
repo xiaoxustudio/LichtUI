@@ -1,4 +1,4 @@
-import { ExtractPropTypes, InjectionKey, PropType } from "vue";
+import { ExtractPropTypes, InjectionKey, PropType, Ref } from "vue";
 
 interface ObjectProp {
 	[key: string]: string;
@@ -13,7 +13,8 @@ export const tableProp = {
 	border: Boolean,
 } as const;
 export const TableProviderpProp = {
-	renderKeys: Symbol("renderKeys") as InjectionKey<string[]>,
+	renderKeys: Symbol("renderKeys") as InjectionKey<Ref<string[]>>,
+	border: Symbol("border") as InjectionKey<boolean>,
 	setRenderKeys: Symbol("setRenderKeys") as InjectionKey<
 		(keys: string) => void
 	>,
