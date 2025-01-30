@@ -8,8 +8,8 @@ import {
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
 	title: "LichtUI",
-	description: "a UI component library based on vue3", 
-	head: [['link', { rel: 'icon', href: '/favicon.ico' }]],
+	description: "a UI component library based on vue3",
+	head: [['link', { rel: 'icon', type: "image/x-icon", href: '/favicon.ico' }]],
 	themeConfig: {
 		// https://vitepress.dev/reference/default-theme-config
 		nav: [

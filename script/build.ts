@@ -1,4 +1,4 @@
-import { readdirSync, copyFileSync, mkdirSync } from "fs";
+import { readdirSync, copyFileSync, mkdirSync, unlinkSync } from "fs";
 import { build, defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import dts from "vite-plugin-dts";
@@ -71,10 +71,11 @@ const buildDir = "dist";
 		deleteFolderRecursive(resolve(`${packageOutDir}/style`));
 	}
 
-	copyDirSync(
-		resolve(`${resolve(`./packages/components`)}/style`),
-		resolve(`./${buildDir}/style`)
+	copyFileSync(
+		resolve(`${resolve(`./${buildDir}/components`)}/style.css`),
+		resolve(`./${buildDir}/style/style.css`)
 	);
+	unlinkSync(resolve(`${resolve(`./${buildDir}/components`)}/style.css`));
 	copyDirSync(
 		resolve(`./packages/theme-chalk/src`),
 		resolve(`./${buildDir}/theme-chalk/src`)
