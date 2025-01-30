@@ -1,6 +1,6 @@
 import { ExtractPropTypes, InjectionKey, PropType, Ref } from "vue";
 
-interface ObjectProp {
+export interface ObjectProp {
 	[key: string]: string;
 }
 
