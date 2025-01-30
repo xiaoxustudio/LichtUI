@@ -11,4 +11,22 @@
 	@include when(column) {
 		flex-direction: column;
 	}
+	@include when(justify-center) {
+		justify-content: center;
+	}
+	@include when(justify-left) {
+		justify-content: left;
+	}
+	@include when(justify-right) {
+		justify-content: right;
+	}
+	@include when(align-start) {
+		align-items: start;
+	}
+	@include when(align-middle) {
+		align-items: center;
+	}
+	@include when(align-end) {
+		align-items: end;
+	}
 }

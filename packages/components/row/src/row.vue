@@ -4,6 +4,12 @@
 			bem.b(),
 			bem.is('row', direction === 'row'),
 			bem.is('column', direction === 'column'),
+			bem.is('justify-left', justify === 'left'),
+			bem.is('justify-center', justify === 'center'),
+			bem.is('justify-right', justify === 'right'),
+			bem.is('align-left', align === 'start'),
+			bem.is('align-center', align === 'middle'),
+			bem.is('align-right', align === 'end'),
 		]"
 		:style="{
 			marginLeft: gutter ? `${gutter / 2}px` : '',
