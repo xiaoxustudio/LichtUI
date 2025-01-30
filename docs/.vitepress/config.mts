@@ -50,6 +50,10 @@ export default defineConfig({
 						text: "Link 链接",
 						link: "/home/base/link",
 					},
+					{
+						text: "Color 颜色",
+						link: "/home/base/color",
+					},
 				],
 			},
 			{

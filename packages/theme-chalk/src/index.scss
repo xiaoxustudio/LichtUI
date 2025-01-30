@@ -1,5 +1,45 @@
 @use "common/common.scss" as *;
 @use "common/var.scss" as *;
+
+// css color
+:root {
+	--li--color-primary: #{$li--color-primary};
+	--li--color-success: #{$li--color-success};
+	--li--color-info: #{$li--color-info};
+	--li--color-danger: #{$li--color-danger};
+	--li--color-warning: #{$li--color-warning};
+	@for $i from 1 to 10 {
+		--li--color-primary-light-#{$i}: #{lighten($li--color-primary, $i * 3)};
+	}
+	@for $i from 1 to 10 {
+		--li--color-primary-dark-#{$i}: #{darken($li--color-primary, $i * 3)};
+	}
+	@for $i from 1 to 10 {
+		--li--color-success-light-#{$i}: #{lighten($li--color-success, $i * 4.5)};
+	}
+	@for $i from 1 to 10 {
+		--li--color-success-dark-#{$i}: #{darken($li--color-success, $i * 3)};
+	}
+	@for $i from 1 to 10 {
+		--li--color-danger-light-#{$i}: #{lighten($li--color-danger, $i * 3)};
+	}
+	@for $i from 1 to 10 {
+		--li--color-danger-dark-#{$i}: #{darken($li--color-danger, $i * 3)};
+	}
+	@for $i from 1 to 10 {
+		--li--color-info-light-#{$i}: #{lighten($li--color-info, $i * 3)};
+	}
+	@for $i from 1 to 10 {
+		--li--color-info-dark-#{$i}: #{darken($li--color-info, $i * 3)};
+	}
+	@for $i from 1 to 10 {
+		--li--color-warning-light-#{$i}: #{lighten($li--color-warning, $i * 3)};
+	}
+	@for $i from 1 to 10 {
+		--li--color-warning-dark-#{$i}: #{darken($li--color-warning, $i * 3)};
+	}
+}
+
 body {
 	font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB",
 		"Microsoft YaHei", "微软雅黑", Arial, sans-serif;
