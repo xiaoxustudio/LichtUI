@@ -4,8 +4,10 @@
 	"description": "Licht UI 是一个基于Vue3开发的轻量级组件库",
 	"scripts": {
 		"dev": "pnpm -C play dev",
-		"build": "ts-node script/build",
+		"build": "pnpm build:comp && pnpm gen",
+		"gen": "ts-node script/gen-comp-types dist",
 		"dev:docs": "pnpm -C docs docs:dev",
+		"build:comp": "ts-node script/build dist",
 		"build:docs": "pnpm -C docs docs:build",
 		"preview:docs": "pnpm -C docs docs:preview"
 	},

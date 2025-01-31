@@ -13,7 +13,8 @@ function resolve(...urlOrUrls: string[]) {
 	return path.resolve(rootDir, ...urlOrUrls);
 }
 
-const buildDir = "dist";
+const buildDir = process.argv[3] || "dist";
+
 !(async function main() {
 	for (let i of packages) {
 		const packageRoot = resolve("./packages/" + i);
