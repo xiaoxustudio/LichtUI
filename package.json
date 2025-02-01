@@ -6,6 +6,7 @@
 		"dev": "pnpm -C play dev",
 		"build": "pnpm build:comp && pnpm gen",
 		"gen": "ts-node script/gen-comp-types dist",
+		"cp": "ts-node script/cp",
 		"dev:docs": "pnpm -C docs docs:dev",
 		"build:comp": "ts-node script/build dist",
 		"build:docs": "pnpm -C docs docs:build",

@@ -6,9 +6,7 @@
 
 基础用法
 
-:::raw
 <preview path="../../components/show/badge/badge.vue" ></preview>
-:::
 
 ## 限制
 

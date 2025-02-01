@@ -4,7 +4,7 @@ import { Project } from "ts-morph";
 const build = process.argv[3] || "dist";
 const project = new Project();
 console.time("types");
-console.log("\x1B[36m%s\x1B[0m", "正在生成类型中...");
+console.log("\x1B[36m%s\x1B[0m", "正在生成类型中...\n");
 
 // todo 自动生成类型文件
 project.addSourceFilesAtPaths(`./${build}/components/*/*.d.ts`);
@@ -23,7 +23,7 @@ for (let index = 0; index < sourceFiles.length; index++) {
 	if (getExoports.has("default") && module) {
 		const o = module.getInterface("GlobalComponents")!.getChildren()[3];
 		const name = o.getFirstChild()?.getChildren()[0].getText();
-		text += "		";
+		text += "\t".repeat(2);
 		text += `${name}: typeof import("licht-ui/components/${baseName}")["default"];\n`;
 	}
 }
@@ -32,7 +32,7 @@ const code = `
 // 自动生成类型文件 ${new Date().toLocaleString()}
 declare module "vue" {
 	export interface GlobalComponents {
-${text}
+${text.replace(/\n$/, "")}
 	}
 }
 export {};

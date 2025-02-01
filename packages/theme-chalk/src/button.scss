@@ -37,6 +37,8 @@
 	padding: 0 20px;
 	transition: 0.1s;
 	background-color: $li--color-default;
+	position: relative;
+
 	& + .li-button {
 		margin-left: 12px;
 	}
@@ -85,7 +87,7 @@
 			scale: 0.95;
 		}
 		@include when(plain) {
-			border: solid 1px $li--color-default-light-1;
+			border: solid 1px $li--color-black;
 			background-color: $li--color-default;
 		}
 		@include when(disabled) {
