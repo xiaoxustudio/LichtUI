@@ -4,17 +4,17 @@
 
 ## 基础用法
 
-<preview  path='../../components/feedback/modal/modal.vue'></preview>
+<ViewSfc src='../../components/feedback/modal/modal.vue'></ViewSfc>
 
 ## 按钮文本
 
 使用`ok-text`、`cancle-text`控制
 
-<preview path="../../components/feedback/modal/modal-text.vue"></preview>
+<ViewSfc src="../../components/feedback/modal/modal-text.vue"></ViewSfc>
 
 ## 插槽
 
-<preview path="../../components/feedback/modal/modal-slot.vue"></preview>
+<ViewSfc src="../../components/feedback/modal/modal-slot.vue"></ViewSfc>
 
 ## message Attributes
 

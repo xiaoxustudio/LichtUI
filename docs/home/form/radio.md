@@ -5,20 +5,20 @@
 ## 基础用法
 
 :::raw
-<preview path="../../components/form/radio/radio.vue"></preview>
+<ViewSfc src="../../components/form/radio/radio.vue"></ViewSfc>
 :::
 
 ## 禁用状态
 
 使用`disabled`控制禁用状态
 :::raw
-<preview path="../../components/form/radio/radio-disabled.vue"></preview>
+<ViewSfc src="../../components/form/radio/radio-disabled.vue"></ViewSfc>
 :::
 
 ## 插槽
 
 :::raw
-<preview path="../../components/form/radio/radio-slot.vue"></preview>
+<ViewSfc src="../../components/form/radio/radio-slot.vue"></ViewSfc>
 :::
 
 ## Input Attributes

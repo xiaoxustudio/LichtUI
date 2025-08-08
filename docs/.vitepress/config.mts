@@ -1,9 +1,6 @@
 import { fileURLToPath, URL } from "node:url";
 import { defineConfig } from "vitepress";
-import {
-	containerPreview,
-	componentPreview,
-} from "@vitepress-demo-preview/plugin";
+import PreviewSfc from "@vitepress-preview-sfc/core";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -169,8 +166,7 @@ export default defineConfig({
 	},
 	markdown: {
 		config: (md) => {
-			md.use(containerPreview);
-			md.use(componentPreview);
+			md.use(PreviewSfc);
 		},
 	},
 	base: "/LichtUI/",

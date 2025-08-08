@@ -4,37 +4,37 @@
 
 ## 基础用法
 
-<preview  path='../../components/feedback/tooltip/tooltip.vue'></preview>
+<ViewSfc src='../../components/feedback/tooltip/tooltip.vue'></ViewSfc>
 
 ## 触发方式
 
 使用`trigger`控制
 
-<preview path="../../components/feedback/tooltip/tooltip-trigger.vue"></preview>
+<ViewSfc src="../../components/feedback/tooltip/tooltip-trigger.vue"></ViewSfc>
 
 ## 标题
 
 使用`title`控制
 
-<preview path="../../components/feedback/tooltip/tooltip-title.vue"></preview>
+<ViewSfc src="../../components/feedback/tooltip/tooltip-title.vue"></ViewSfc>
 
 ## 禁用
 
 使用`disabled`控制
 
-<preview path="../../components/feedback/tooltip/tooltip-disabled.vue"></preview>
+<ViewSfc src="../../components/feedback/tooltip/tooltip-disabled.vue"></ViewSfc>
 
 ## 自定义显示
 
 使用`show`控制
 
-<preview path="../../components/feedback/tooltip/tooltip-show.vue"></preview>
+<ViewSfc src="../../components/feedback/tooltip/tooltip-show.vue"></ViewSfc>
 
 ## 自定义内容
 
 使用`title`插槽控制
 
-<preview path="../../components/feedback/tooltip/tooltip-slot.vue"></preview>
+<ViewSfc src="../../components/feedback/tooltip/tooltip-slot.vue"></ViewSfc>
 
 ## ToolTip Attributes
 

@@ -8,31 +8,31 @@
 
 使用`list`绑定数据
 
-<preview path="../../components/nav/menu/menu.vue" ></preview>
+<ViewSfc src="../../components/nav/menu/menu.vue" ></ViewSfc>
 
 ## 默认选择
 
 默认选择使用`default-index`控制
 
-<preview path="../../components/nav/menu/menu-default.vue" ></preview>
+<ViewSfc src="../../components/nav/menu/menu-default.vue" ></ViewSfc>
 
 ## 子菜单
 
 使用`list`增加
 
-<preview path="../../components/nav/menu/menu-submenu.vue" ></preview>
+<ViewSfc src="../../components/nav/menu/menu-submenu.vue" ></ViewSfc>
 
 ## 事件
 
 默认选择使用`@command`、`@sub-command`控制
 
-<preview path="../../components/nav/menu/menu-submenuEvent.vue" ></preview>
+<ViewSfc src="../../components/nav/menu/menu-submenuEvent.vue" ></ViewSfc>
 
 ## 插槽
 
 插槽控制页面的切换，并用`data`接收菜单项数据
 
-<preview path="../../components/nav/menu/menu-slot.vue" ></preview>
+<ViewSfc src="../../components/nav/menu/menu-slot.vue" ></ViewSfc>
 
 ## Menu Attributes
 

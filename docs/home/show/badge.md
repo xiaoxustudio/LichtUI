@@ -6,23 +6,23 @@
 
 基础用法
 
-<preview path="../../components/show/badge/badge.vue" ></preview>
+<ViewSfc src="../../components/show/badge/badge.vue" ></ViewSfc>
 
 ## 限制
 
 使用`min`、`max`属性
 
-<preview path="../../components/show/badge/badge-limit.vue" ></preview>
+<ViewSfc src="../../components/show/badge/badge-limit.vue" ></ViewSfc>
 
 ## 小点
 
 使用`is-dot`属性
 
-<preview path="../../components/show/badge/badge-is-dot.vue" ></preview>
+<ViewSfc src="../../components/show/badge/badge-is-dot.vue" ></ViewSfc>
 
 ## 插槽
 
-<preview path="../../components/show/badge/badge-slot.vue" ></preview>
+<ViewSfc src="../../components/show/badge/badge-slot.vue" ></ViewSfc>
 
 ## Badge Attributes
 

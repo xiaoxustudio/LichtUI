@@ -6,25 +6,25 @@
 
 基础用法
 
-<preview path="../../components/nav/dropdown/dropdown.vue" ></preview>
+<ViewSfc src="../../components/nav/dropdown/dropdown.vue" ></ViewSfc>
 
 ## 方向
 
 使用`position`进行控制，可选值：`top`、`bottom`(默认)
 
-<preview path="../../components/nav/dropdown/dropdown-position.vue" ></preview>
+<ViewSfc src="../../components/nav/dropdown/dropdown-position.vue" ></ViewSfc>
 
 ## 触发方式
 
 使用`trigger`进行控制，可选值：`click`、`hover`(默认)
 
-<preview path="../../components/nav/dropdown/dropdown-trigger.vue" ></preview>
+<ViewSfc src="../../components/nav/dropdown/dropdown-trigger.vue" ></ViewSfc>
 
 ## 事件
 
 使用`command`进行拦截，可接收点击项的参数
 
-<preview path="../../components/nav/dropdown/dropdown-command.vue" ></preview>
+<ViewSfc src="../../components/nav/dropdown/dropdown-command.vue" ></ViewSfc>
 
 ## DropDown Attributes
 

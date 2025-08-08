@@ -7,7 +7,7 @@
 基础用法
 
 :::raw
-<preview path="../../components/show/collapse/collapse.vue" ></preview>
+<ViewSfc src="../../components/show/collapse/collapse.vue" ></ViewSfc>
 :::
 
 ## 手风琴
@@ -15,13 +15,13 @@
 使用`accordion`属性
 
 :::raw
-<preview path="../../components/show/collapse/collapse-accordion.vue" ></preview>
+<ViewSfc src="../../components/show/collapse/collapse-accordion.vue" ></ViewSfc>
 :::
 
 ## 插槽
 
 :::raw
-<preview path="../../components/show/collapse/collapse-slot.vue" ></preview>
+<ViewSfc src="../../components/show/collapse/collapse-slot.vue" ></ViewSfc>
 :::
 
 

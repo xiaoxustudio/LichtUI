@@ -4,25 +4,25 @@
 
 ## 基础用法
 
-<preview path="../../components/form/switch/switch.vue"></preview>
+<ViewSfc src="../../components/form/switch/switch.vue"></ViewSfc>
 
 ## 禁用状态
 
 使用`disabled`控制禁用状态
 
-<preview path="../../components/form/switch/switch-disabled.vue"></preview>
+<ViewSfc src="../../components/form/switch/switch-disabled.vue"></ViewSfc>
 
 ## 自定义值
 
 使用`enable-val`、`disable-val`控制禁用状态
 
-<preview path="../../components/form/switch/switch-label.vue"></preview>
+<ViewSfc src="../../components/form/switch/switch-label.vue"></ViewSfc>
 
 ## 插槽
 
 使用`checked`获取当前值
 
-<preview path="../../components/form/switch/switch-slot.vue"></preview>
+<ViewSfc src="../../components/form/switch/switch-slot.vue"></ViewSfc>
 
 ## Input Attributes
 

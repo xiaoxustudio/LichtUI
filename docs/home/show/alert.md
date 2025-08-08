@@ -6,25 +6,25 @@
 
 基础用法
 
-<preview path="../../components/show/alert/alert.vue" ></preview>
+<ViewSfc src="../../components/show/alert/alert.vue" ></ViewSfc>
 
 ## 类型
 
 使用`type`属性
 
-<preview path="../../components/show/alert/alert-type.vue" ></preview>
+<ViewSfc src="../../components/show/alert/alert-type.vue" ></ViewSfc>
 
 ## 关闭按钮
 
 使用`closable`属性
 
-<preview path="../../components/show/alert/alert-closable.vue" ></preview>
+<ViewSfc src="../../components/show/alert/alert-closable.vue" ></ViewSfc>
 
 ## 关闭事件
 
 使用`on-close`属性
 
-<preview path="../../components/show/alert/alert-onclose.vue" ></preview>
+<ViewSfc src="../../components/show/alert/alert-onclose.vue" ></ViewSfc>
 
 ## alert Attributes
 

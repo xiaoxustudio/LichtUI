@@ -6,14 +6,14 @@
 
 基础用法
 :::raw
-<preview path="../../components/base/link/link.vue" ></preview>
+<ViewSfc src="../../components/base/link/link.vue" ></ViewSfc>
 :::
 
 ## 禁用
 
 使用`disabled`控制主题
 :::raw
-<preview path="../../components/base/link/link-disabled.vue" ></preview>
+<ViewSfc src="../../components/base/link/link-disabled.vue" ></ViewSfc>
 :::
 
 ## Row Attributes

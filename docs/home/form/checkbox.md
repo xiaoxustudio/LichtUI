@@ -4,17 +4,17 @@
 
 ## 基础用法
 
-<preview path="../../components/form/checkbox/checkbox.vue"></preview>
+<ViewSfc src="../../components/form/checkbox/checkbox.vue"></ViewSfc>
 
 ## 禁用状态
 
 使用`disabled`控制禁用状态
 
-<preview path="../../components/form/checkbox/checkbox-disabled.vue"></preview>
+<ViewSfc src="../../components/form/checkbox/checkbox-disabled.vue"></ViewSfc>
 
 ## 插槽
 
-<preview path="../../components/form/checkbox/checkbox-slot.vue"></preview>
+<ViewSfc src="../../components/form/checkbox/checkbox-slot.vue"></ViewSfc>
 
 ## Input Attributes
 

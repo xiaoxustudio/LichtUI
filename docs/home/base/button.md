@@ -6,19 +6,19 @@
 
 基础的按钮用法。
 
-<preview  path='../../components/base/button/button.vue'></preview>
+<ViewSfc src='../../components/base/button/button.vue'></ViewSfc>
 
 ## 无装饰
 
 无装饰的按钮用法。
 
-<preview path="../../components/base/button/button-plain.vue" description="使用`plain`控制"></preview>
+<ViewSfc src="../../components/base/button/button-plain.vue" description="使用`plain`控制"></ViewSfc>
 
 ## 圆角
 
 圆角的按钮用法。
 
-<preview  path="../../components/base/button/button-round.vue" description="使用`round`控制"></preview>
+<ViewSfc src="../../components/base/button/button-round.vue" description="使用`round`控制"></ViewSfc>
 
 ## Button Attributes
 

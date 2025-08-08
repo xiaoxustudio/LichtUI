@@ -6,25 +6,25 @@
 
 这几种样式：`default`、`primary`、`danger`、`success`、`warning`、`info`。
 
-<preview  path='../../components/feedback/message/msg.vue'></preview>
+<ViewSfc src='../../components/feedback/message/msg.vue'></ViewSfc>
 
 ## 退出时间
 
 使用`duration`控制
 
-<preview path="../../components/feedback/message/msg-duration.vue"></preview>
+<ViewSfc src="../../components/feedback/message/msg-duration.vue"></ViewSfc>
 
 ## 关闭按钮
 
 使用`closed`控制
 
-<preview path="../../components/feedback/message/msg-close.vue"></preview>
+<ViewSfc src="../../components/feedback/message/msg-close.vue"></ViewSfc>
 
 ## 出现位置
 
 使用`location`控制
 
-<preview path="../../components/feedback/message/msg-location.vue"></preview>
+<ViewSfc src="../../components/feedback/message/msg-location.vue"></ViewSfc>
 
 ## message Attributes
 

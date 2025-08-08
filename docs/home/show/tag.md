@@ -6,25 +6,25 @@
 
 基础用法
 
-<preview path="../../components/show/tag/tag.vue" ></preview>
+<ViewSfc src="../../components/show/tag/tag.vue" ></ViewSfc>
 
 ## 主题
 
 使用`theme`属性
 
-<preview path="../../components/show/tag/tag-theme.vue" ></preview>
+<ViewSfc src="../../components/show/tag/tag-theme.vue" ></ViewSfc>
 
 ## 圆角
 
 使用`round`属性
 
-<preview path="../../components/show/tag/tag-round.vue" ></preview>
+<ViewSfc src="../../components/show/tag/tag-round.vue" ></ViewSfc>
 
 ## 可关闭
 
 使用`closable`属性
 
-<preview path="../../components/show/tag/tag-closable.vue" ></preview>
+<ViewSfc src="../../components/show/tag/tag-closable.vue" ></ViewSfc>
 
 ## tag Attributes
 

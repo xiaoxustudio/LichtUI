@@ -4,18 +4,15 @@ import DefaultTheme from "vitepress/theme";
 import LichtUI from "@licht-ui/components";
 import "@licht-ui/theme-chalk/index.scss";
 
-import {
-	AntDesignContainer,
-	ElementPlusContainer,
-	NaiveUIContainer,
-} from "@vitepress-demo-preview/component";
-import "@vitepress-demo-preview/component/dist/style.css";
+import ViewSfc from "@vitepress-preview-sfc/components";
+import  "@vitepress-preview-sfc/components/dist/view-sfc.css";
 import "./index.scss";
+
 export default {
 	...DefaultTheme,
 	enhanceApp(ctx) {
 		const { app } = ctx;
-		app.component("demo-preview", ElementPlusContainer);
+		app.component("ViewSfc", ViewSfc);
 		LichtUI.install(app);
 	},
 } satisfies Theme;

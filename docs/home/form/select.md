@@ -5,14 +5,14 @@
 ## 基础用法
 
 :::raw
-<preview path="../../components/form/select/select.vue"></preview>
+<ViewSfc src="../../components/form/select/select.vue"></ViewSfc>
 :::
 
 ## 禁用状态
 
 使用`disabled`控制禁用状态
 :::raw
-<preview path="../../components/form/select/select-disabled.vue"></preview>
+<ViewSfc src="../../components/form/select/select-disabled.vue"></ViewSfc>
 :::
 
 ## 事件
@@ -20,7 +20,7 @@
 使用`command`监听选择事件
 
 :::raw
-<preview path="../../components/form/select/select-command.vue"></preview>
+<ViewSfc src="../../components/form/select/select-command.vue"></ViewSfc>
 :::
 
 ## Input Attributes

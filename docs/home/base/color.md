@@ -7,7 +7,7 @@ Licht UI 为了避免视觉传达差异，使用一套特定的调色板来规�
 亮色
 
 :::raw
-<preview path="../../components/base/color/color.vue" ></preview>
+<ViewSfc src="../../components/base/color/color.vue" ></ViewSfc>
 :::
 
 ## 暗色
@@ -15,5 +15,5 @@ Licht UI 为了避免视觉传达差异，使用一套特定的调色板来规�
 暗色
 
 :::raw
-<preview path="../../components/base/color/color-dark.vue" ></preview>
+<ViewSfc src="../../components/base/color/color-dark.vue" ></ViewSfc>
 :::

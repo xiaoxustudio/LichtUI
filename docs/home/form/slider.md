@@ -17,7 +17,7 @@
 
 :::raw
 
-<preview path="../../components/form/slider/slider.vue"></preview>
+<ViewSfc src="../../components/form/slider/slider.vue"></ViewSfc>
 
 :::
 
@@ -27,7 +27,7 @@
 
 :::raw
 
-<preview path="../../components/form/slider/slider-limit.vue"></preview>
+<ViewSfc src="../../components/form/slider/slider-limit.vue"></ViewSfc>
 
 :::
 
@@ -37,7 +37,7 @@
 
 :::raw
 
-<preview path="../../components/form/slider/slider-step.vue"></preview>
+<ViewSfc src="../../components/form/slider/slider-step.vue"></ViewSfc>
 
 :::
 

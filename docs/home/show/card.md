@@ -6,20 +6,20 @@
 
 基础用法
 :::raw
-<preview path="../../components/show/card/card.vue" ></preview>
+<ViewSfc src="../../components/show/card/card.vue" ></ViewSfc>
 :::
 
 ## 移入效果
 
 使用`show-type`控制卡片是否使用移入效果
 :::raw
-<preview path="../../components/show/card/card-show-type.vue" ></preview>
+<ViewSfc src="../../components/show/card/card-show-type.vue" ></ViewSfc>
 :::
 
 ## 插槽
 
 :::raw
-<preview path="../../components/show/card/card-slot.vue" ></preview>
+<ViewSfc src="../../components/show/card/card-slot.vue" ></ViewSfc>
 :::
 
 ## Card Attributes

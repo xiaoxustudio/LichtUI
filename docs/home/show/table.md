@@ -6,19 +6,19 @@
 
 基础用法
 
-<preview path="../../components/show/table/table.vue" ></preview>
+<ViewSfc src="../../components/show/table/table.vue" ></ViewSfc>
 
 ## 带斑马纹表格
 
 使用`stripe`属性
 
-<preview path="../../components/show/table/table-stripe.vue" ></preview>
+<ViewSfc src="../../components/show/table/table-stripe.vue" ></ViewSfc>
 
 ## 带边框表格
 
 使用`border`属性
 
-<preview path="../../components/show/table/table-border.vue" ></preview>
+<ViewSfc src="../../components/show/table/table-border.vue" ></ViewSfc>
 
 ## Table Attributes
 

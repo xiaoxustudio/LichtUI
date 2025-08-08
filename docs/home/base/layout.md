@@ -12,7 +12,7 @@
 
 通过使用`row`组件和`col`组件，并通过向`col`组件传递`span`参数进行自由的布局操作
 
-<preview path="../../components/base/layout.vue" desciption="通过使用`row`组件和`col`组件，并通过向`col`组件传递`span`参数进行自由的布局操作" ></preview>
+<ViewSfc src="../../components/base/layout.vue" description="通过使用`row`组件和`col`组件，并通过向`col`组件传递`span`参数进行自由的布局操作" ></ViewSfc>
 
 ## Row Attributes
 

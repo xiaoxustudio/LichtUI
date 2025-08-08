@@ -6,25 +6,25 @@
 
 基础用法
 
-<preview path="../../components/show/avatar/avatar.vue" ></preview>
+<ViewSfc src="../../components/show/avatar/avatar.vue" ></ViewSfc>
 
 ## 大小
 
 大小使用`size`操作
 
-<preview path="../../components/show/avatar/avatar-size.vue" ></preview>
+<ViewSfc src="../../components/show/avatar/avatar-size.vue" ></ViewSfc>
 
 ## 颜色
 
 颜色使用`bg-color`、`name-color`操作
 
-<preview path="../../components/show/avatar/avatar-color.vue" ></preview>
+<ViewSfc src="../../components/show/avatar/avatar-color.vue" ></ViewSfc>
 
 ## 图片链接
 
 使用`src`操作
 
-<preview path="../../components/show/avatar/avatar-src.vue" ></preview>
+<ViewSfc src="../../components/show/avatar/avatar-src.vue" ></ViewSfc>
 
 ## Avatar Attributes
 
