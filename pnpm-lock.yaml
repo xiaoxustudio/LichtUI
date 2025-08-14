@@ -49,8 +49,8 @@ importers:
         specifier: ^1.0.9
         version: 1.0.9(typescript@5.6.3)
       '@vitepress-preview-sfc/core':
-        specifier: ^1.0.8
-        version: 1.0.8
+        specifier: ^1.0.9
+        version: 1.0.9
       '@vue/eslint-config-typescript':
         specifier: ^13.0.0
         version: 13.0.0(eslint-plugin-vue@9.33.0(eslint@9.14.0))(eslint@9.14.0)(typescript@5.6.3)
@@ -806,8 +806,8 @@ packages:
   '@vitepress-preview-sfc/components@1.0.9':
     resolution: {integrity: sha512-e7nIQGwyrqRyfYu6L2n+0PjzhdcB1qZUdw59gsN6PfAhrzCNpHHbBH03E53m+HF37B9ESpRe4/pf7VFntmiuUw==}
 
-  '@vitepress-preview-sfc/core@1.0.8':
-    resolution: {integrity: sha512-MXfR7CCyaiWWQwTeZ659ixvYTRw6b7hz4u1ax12D6eWPQvZ24GOKnPahlOeA8srRTKze59VZ1TE5P+HE6fTsTg==}
+  '@vitepress-preview-sfc/core@1.0.9':
+    resolution: {integrity: sha512-AlpghIJ5gwDzLD0Wv/D4ajnV7S7OQYJkZ0D+JXD0xP6txmUm6sjFNFPnbW5CCtDicpcPfXaIiEiYmQ3i4Uhw0g==}
 
   '@volar/language-core@2.4.23':
     resolution: {integrity: sha512-hEEd5ET/oSmBC6pi1j6NaNYRWoAiDhINbT8rmwtINugR39loROSlufGdYMF9TaKGfz+ViGs1Idi3mAhnuPcoGQ==}
@@ -2717,7 +2717,7 @@ snapshots:
     transitivePeerDependencies:
       - typescript
 
-  '@vitepress-preview-sfc/core@1.0.8': {}
+  '@vitepress-preview-sfc/core@1.0.9': {}
 
   '@volar/language-core@2.4.23':
     dependencies:
